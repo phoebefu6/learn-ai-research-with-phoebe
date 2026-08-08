@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 9 · Interviews and coding at scale - learn ai research with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-research-with-phoebe</a> / Researcher session 9 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Research with Phoebe · Researcher track · Session 9 of 10</div>
+    <h1>Interviews and <span class="accent">coding at scale</span></h1>
+    <p class="sub">Everything so far has been evidence someone else produced. Tonight it is evidence you produced yourself, out of human speech, which is the only kind you are fully accountable for. Qualitative work has a specific failure mode: it is very easy to spend three weeks confirming what you already believed, and very hard for anyone to prove you did. AI makes that failure faster. So we take the coding frame, the two numbers that let you defend it, the tool claims as they are actually published, and the rails on participant material - and then we tie a twelve-interview study back to the audit and ask what it can honestly carry.</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 Researcher track</span>
+      <span class="chip audience">Analysts · academics · UX &amp; market researchers</span>
+      <span class="chip audience">Qualitative rigour</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where we are</span>
+      <span class="a2" style="flex:4">3-20 · Coding, agreement, saturation</span>
+      <span class="a3" style="flex:5">20-41 · Tools, rails, build-along</span>
+      <span class="a4" style="flex:1">41-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where this sits in the track</h2>
+    </div>
+    <p class="lede">b6 audited claims that rested on other people's studies. b7 stress-tested their statistics. b8 wrote the confidence language. This session covers the evidence you generate: interviews, open-text responses, session recordings, support tickets. It is the part of the Cadence question that decides whether "institutions hold the budget" is a finding or a hunch with quotes attached. The rules from b6 do not change here. What changes is that you are now both the instrument and the analyst, so the audit trail has to be built as you go rather than reconstructed afterwards.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Live evidence lab - toggle levers, watch claims survive or die</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A coding frame with the two AI-useful and two AI-dangerous points marked, Cohen's kappa read under both the lenient and the strict interpretation, a defensible way to talk about saturation, what three qualitative tools actually publish about accuracy, and the participant-data rails you cannot argue your way around.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: CODING ============ -->
+  <section class="section" id="coding">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the frame, and where AI sits in it</span>
+      <h2>Coding without laundering your own assumptions <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">The standard frame for thematic analysis is Braun and Clarke's six phases: familiarisation, generating initial codes, searching for themes, reviewing themes, defining and naming themes, and producing the report. One honesty note before we use it - the phase wording here is a standard paraphrase drawn from a teaching guide, not a verbatim quotation of the original paper, so treat the labels as a working frame rather than a citable string. The frame matters tonight because AI enters it at exactly two harmless points and two dangerous ones, and most tools sell you the dangerous ones.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The six phases of thematic analysis, marking the two phases where AI genuinely helps and the two where it quietly biases the analysis.">
+        <style>
+          .qc1N { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .qc1H { font: 700 12.5px Inter, sans-serif; fill: #121826; }
+          .qc1X { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .qc1G { font: 700 11.5px Inter, sans-serif; fill: #1B2200; }
+          .qc1R { font: 700 11.5px Inter, sans-serif; fill: #991B1B; }
+          .qc1B { font: 700 11.5px Inter, sans-serif; fill: #121826; }
+          .qc1K { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+        </style>
+
+        <rect x="24" y="24" width="34" height="36" rx="7" fill="#0B1428"/>
+        <text class="qc1N" x="35" y="47">1</text>
+        <rect x="70" y="24" width="244" height="36" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="qc1H" x="84" y="47">Familiarisation</text>
+        <rect x="328" y="24" width="150" height="36" rx="7" fill="#F5F8DE" stroke="#5A6B00" stroke-width="1.5"/>
+        <text class="qc1G" x="342" y="47">AI HELPS</text>
+        <rect x="492" y="24" width="358" height="36" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="qc1X" x="506" y="47">transcribe and time-stamp; you still listen</text>
+
+        <rect x="24" y="68" width="34" height="36" rx="7" fill="#1B2F57"/>
+        <text class="qc1N" x="35" y="91">2</text>
+        <rect x="70" y="68" width="244" height="36" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="qc1H" x="84" y="91">Generating initial codes</text>
+        <rect x="328" y="68" width="150" height="36" rx="7" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="qc1R" x="342" y="91">AI BIASES YOU</text>
+        <rect x="492" y="68" width="358" height="36" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="qc1X" x="506" y="91">auto-applying your codebook confirms it</text>
+
+        <rect x="24" y="112" width="34" height="36" rx="7" fill="#34507F"/>
+        <text class="qc1N" x="35" y="135">3</text>
+        <rect x="70" y="112" width="244" height="36" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="qc1H" x="84" y="135">Searching for themes</text>
+        <rect x="328" y="112" width="150" height="36" rx="7" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="qc1R" x="342" y="135">AI BIASES YOU</text>
+        <rect x="492" y="112" width="358" height="36" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="qc1X" x="506" y="135">a cluster looks like a theme and is not</text>
+
+        <rect x="24" y="156" width="34" height="36" rx="7" fill="#1B2F57"/>
+        <text class="qc1N" x="35" y="179">4</text>
+        <rect x="70" y="156" width="244" height="36" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="qc1H" x="84" y="179">Reviewing themes</text>
+        <rect x="328" y="156" width="150" height="36" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="qc1B" x="342" y="179">HUMAN ONLY</text>
+        <rect x="492" y="156" width="358" height="36" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="qc1X" x="506" y="179">does it hold across the whole set?</text>
+
+        <rect x="24" y="200" width="34" height="36" rx="7" fill="#34507F"/>
+        <text class="qc1N" x="35" y="223">5</text>
+        <rect x="70" y="200" width="244" height="36" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="qc1H" x="84" y="223">Defining and naming themes</text>
+        <rect x="328" y="200" width="150" height="36" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="qc1B" x="342" y="223">HUMAN ONLY</text>
+        <rect x="492" y="200" width="358" height="36" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="qc1X" x="506" y="223">naming is the analysis, not a label</text>
+
+        <rect x="24" y="244" width="34" height="36" rx="7" fill="#5A6B00"/>
+        <text class="qc1N" x="35" y="267">6</text>
+        <rect x="70" y="244" width="244" height="36" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="qc1H" x="84" y="267">Producing the report</text>
+        <rect x="328" y="244" width="150" height="36" rx="7" fill="#F5F8DE" stroke="#5A6B00" stroke-width="1.5"/>
+        <text class="qc1G" x="342" y="267">AI HELPS</text>
+        <rect x="492" y="244" width="358" height="36" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="qc1X" x="506" y="267">retrieve every quote for a code, fast</text>
+
+        <rect x="24" y="294" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="qc1K" x="48" y="306">Code a sample by hand before a tool touches the set. You cannot audit a codebook you never read.</text>
+        <rect x="24" y="318" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="qc1K" x="48" y="330">Watch for codes that only appear when the tool applied them. That is the tool, not the data.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the six phases, with AI's two safe entries and its two quiet biases</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The codebook is the assumption, so interrogate it first<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every qualitative AI feature on the market has the same shape: it applies <em>your</em> existing tag structure to new material at speed. Read that sentence twice. If your codebook encodes the frame you arrived with, a tool that applies it perfectly will return a beautifully consistent confirmation of the frame you arrived with - and it will do it across a hundred transcripts, which makes the confirmation look like weight of evidence.</p>
+        <p>Three practical rules stop this, and none of them are expensive:</p>
+        <ul>
+          <li><strong>Code a sample by hand first.</strong> Six to ten transcripts, no tool, before the codebook is finalised. This is the only phase where you can still be surprised, and being surprised is the whole point of talking to people.</li>
+          <li><strong>Keep an explicit "does not fit" bucket.</strong> Every segment that resists your codes goes there, and the bucket gets read at the end. A codebook with no residual is not comprehensive, it is closed.</li>
+          <li><strong>Check for tool-only codes.</strong> Pull the list of codes that never appear in your hand-coded sample and only appear where the tool applied them. Each one is either a genuine discovery you missed or a pattern-match artifact, and you cannot tell which without going back to the audio.</li>
+        </ul>
+        <p>The order matters more than the tooling. Human sample, then codebook, then tool, then residual review. Reverse any two of those and you have automated your own priors.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Prompting for disconfirmation instead of themes<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Asking a model for themes gets you themes, always, whether or not the data has any. Ask for the opposite:</p>
+        <div class="prompt-box bad">
+          <span class="label">Produces themes on demand</span>
+          <p>"Read these 20 interview transcripts and identify the key themes about how institutions buy note-taking software."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Produces something you can use</span>
+          <p>"Here is my codebook and 20 transcripts. Do three things separately. (1) List every passage that does not fit any code, verbatim, with the speaker id. (2) For my code 'institution holds budget', list the passages that contradict it as well as the ones that support it, and count both. (3) Name the codes that appear in fewer than three transcripts, so I can see which of my themes rest on one or two people."</p>
+        </div>
+        <p>All three outputs are checkable against the transcript, which is what makes them usable. "The key themes are..." is not checkable, and a theme you cannot check is a theme you cannot defend when someone asks how many participants actually said it.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: AGREEMENT AND SATURATION ============ -->
+  <section class="section" id="numbers">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the two numbers that defend the work</span>
+      <h2>Agreement and saturation, with real numbers <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Qualitative research gets dismissed as unfalsifiable mainly by people who have never seen it done with these two numbers attached. <strong>Agreement</strong> answers "would another competent coder have produced this?" <strong>Saturation</strong> answers "why did you stop at that many interviews?" Neither is hard. Both are routinely skipped, and their absence is the first thing a quantitative reviewer notices.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Cohen's kappa, and why one set of thresholds is not enough<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Cohen's kappa measures agreement between two coders above what chance alone would produce:</p>
+        <p><strong>κ = [Pr(a) - Pr(e)] / [1 - Pr(e)]</strong>, where Pr(a) is observed agreement and Pr(e) is the agreement expected by chance.</p>
+        <p>The chance correction is the point. Two coders applying a codebook where 90% of segments get the same common code will agree most of the time by construction, and raw percentage agreement will flatter them. Kappa strips that out.</p>
+        <p>The thresholds everyone quotes come from Landis and Koch (1977). The caveat almost nobody quotes comes from McHugh (<em>Biochem Med</em> 2012;22(3):276-282), who argues those bands are too lenient when the coding feeds a consequential decision, and proposes a stricter reading in which 0.60-0.79 is moderate and 0.80-0.90 is strong. Both readings are in the table below. Report the number and say which ladder you are reading it against - that single sentence pre-empts the entire argument.</p>
+      </div>
+    </details>
+
+    <table class="clean">
+      <thead>
+        <tr><th>κ value</th><th>Landis and Koch (1977)</th><th>McHugh (2012), the stricter reading</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>below 0</strong></td><td>Poor</td><td>Below the ladder, which starts at 0.60</td></tr>
+        <tr><td><strong>0.00 - 0.20</strong></td><td>Slight</td><td>Below the ladder</td></tr>
+        <tr><td><strong>0.21 - 0.40</strong></td><td>Fair</td><td>Below the ladder</td></tr>
+        <tr><td><strong>0.41 - 0.60</strong></td><td>Moderate</td><td>Below the ladder - what one reading calls moderate, the other treats as not good enough for a consequential decision</td></tr>
+        <tr><td><strong>0.61 - 0.80</strong></td><td>Substantial</td><td>0.60 - 0.79 is moderate</td></tr>
+        <tr><td><strong>0.81 - 1.00</strong></td><td>Almost perfect</td><td>0.80 - 0.90 is strong</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout tip">
+      <strong>Do not fill in the blanks in that right-hand column</strong>
+      The stricter ladder we can verify states two bands, 0.60-0.79 and 0.80-0.90. Anything above 0.90, and every band below 0.60, is not something we are reproducing from a source, so the honest cell says "below the ladder" rather than inventing a label. This is the same discipline as the rest of the track: report what the source says, mark what it does not.
+    </div>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Saturation: the 12 that plans your sample, not the 6 that excuses it<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Guest, Bunce and Johnson (<em>Field Methods</em> 2006;18(1):59-82) ran 60 interviews and reported code saturation by the 12th, with about 80% of all codes appearing within the first 6. It is the most-cited number in applied qualitative work and the most misused.</p>
+        <ul>
+          <li><strong>What it licenses.</strong> Planning honestly. If you are scoping a study and someone asks why 15 interviews rather than 50, you now have a published basis for the shape of the curve and a reason to build in a check.</li>
+          <li><strong>What it does not licence.</strong> Stopping at six because 80% is most of them. The last 20% of codes are frequently the ones that disagree with you, and the study that produced this finding ran 60 interviews to be able to say it.</li>
+          <li><strong>What to report.</strong> Not "we reached saturation" as an assertion. Report where new codes actually stopped appearing in <em>your</em> data: "no new codes appeared after interview 14 of 18." That is a checkable sentence, and it is the qualitative equivalent of recording your number's location.</li>
+        </ul>
+        <p>One more honesty note. Code saturation and meaning saturation are not the same thing. Running out of new labels is not the same as understanding the labels you have, and a tool that stops surfacing new codes tells you about the tool's sensitivity as much as about your data.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: TOOLS ============ -->
+  <section class="section" id="tools">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · what the vendors actually publish</span>
+      <h2>Read the AI page, not the pricing page <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Three qualitative research platforms, read the way b6 taught you to read a vendor source: what is documented, what is scoped, and what is silent. Every claim below comes from the vendors' own published pages. Notice that the silences are more consistent than the claims.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Dovetail: precise about the plumbing, silent on accuracy<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Dovetail documents its stack unusually well, which makes the gap easier to see:</p>
+        <ul>
+          <li><strong>Magic Highlight</strong> auto-applies your existing tag structure to new material. That is the exact mechanism Part 1 warned about, described accurately by the vendor.</li>
+          <li><strong>Magic Cluster</strong> groups highlights; chat features are "Powered by the latest release of Claude"; transcription runs on Amazon Transcribe and AssemblyAI.</li>
+          <li>Dovetail states that customer data is not used for training, which is a real and checkable commitment and matters for Part 4.</li>
+          <li><strong>The gap:</strong> its AI documentation carries no accuracy figure and no instruction to verify output. You are told what model family sits behind the feature and nothing about how often the feature is right.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Looppanel and Marvin: a scoped number, and no number<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Looppanel</strong> claims "95%+ accurate transcripts", scoped to English - and its own pages elsewhere say 90% and 93%+, so the figure is inconsistent across the site. It supports 96 further languages, but translation and non-English AI notes are gated to Enterprise. So the headline number applies to one language, and the multilingual capability the pricing page advertises is not the capability the accuracy claim describes.</p>
+        <p><strong>Marvin</strong> offers cited answers and PII blur, with no accuracy claim and no published language list. Cited answers are genuinely useful - a citation is a location you can check - but "cited" is a property of the interface, not evidence about the classification underneath it.</p>
+        <p>Neither pattern is disqualifying. Both are things you write down next to the tool's name before you let it near a claim.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>State the cross-cutting finding plainly: all three of these tools auto-apply codes to human speech, and not one of them publishes a coding or theme-assignment accuracy figure.</strong> What they publish, at best, is transcription accuracy - and transcription accuracy is not coding accuracy. Getting the words right and getting the meaning-label right are different tasks with different failure modes, and a 95% transcript can carry a wholly misassigned theme. When a stakeholder says "the tool is 95% accurate", the correct follow-up is "at what?"</p>
+    </div>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Four questions for any qualitative AI feature<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Tools change monthly; these questions do not. Ask them at evaluation, write the answers into your methods appendix, and re-ask them at renewal:</p>
+        <ul>
+          <li><strong>What exactly does the feature apply?</strong> My codebook, its own inferred categories, or a generic sentiment scheme? Only the first is auditable against my frame, and only if I read the frame first.</li>
+          <li><strong>Is there a published accuracy figure for the coding step, and on what data?</strong> A number without a methodology is positioning, not evidence. Absence of a number is information too - record it.</li>
+          <li><strong>Where does the transcript go, who can see it, and is it used for training?</strong> This is Part 4's question, and it is the one with legal consequences.</li>
+          <li><strong>Can I export the full mapping of segment to code?</strong> If you cannot get the assignments out, you cannot compute agreement, spot tool-only codes, or reproduce the analysis - and your audit trail has a hole where the analysis should be.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 4: RAILS ============ -->
+  <section class="section" id="rails">
+    <div class="section-kicker">
+      <span class="klabel">Part 4 · the rails on participant material</span>
+      <h2>What you may and may not do with a transcript <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">A transcript is not a document. It is a recording of an identifiable person who agreed to something specific, and pasting it into a tool is a processing decision with a legal shape. Three frameworks bite here. The first two are law, the third is professional code, and all three land in the same place: stripping the obvious identifiers does not make the problem go away.</p>
+
+    <div class="callout tip">
+      <strong>Not legal advice</strong>
+      This session summarises published provisions so you know what to ask about and what to record. It is not legal advice, and the specifics of your study, jurisdiction and contracts matter. Take a real decision to whoever owns privacy and ethics in your organisation, with your data-handling notes already written down.
+    </div>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>GDPR: pseudonymisation is not anonymisation<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This is the single most consequential misunderstanding in applied qualitative research. Article 4(5) defines pseudonymisation, and Recital 26 makes the consequence explicit: data which could be attributed to a natural person by the use of additional information should be considered information on an identifiable natural person.</p>
+        <p><strong>What that means in practice: replacing "Sarah, Head of IT at a named university" with "P07" before pasting the transcript into a third-party tool does not take the transcript outside GDPR.</strong> You still hold the key. The role, the institution type, the specific procurement anecdote and the speech patterns are all still in there. Pseudonymisation is a genuine and expected safeguard - it is just a safeguard applied to personal data, not an exit from the regime.</p>
+        <p>The operational consequence is small and specific: the tool you paste into needs the same treatment as any other processor of personal data. Know where the text goes, know whether it trains anything, know how long it is kept, and record what you knew at the time.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Singapore PDPA: the research exception has four conditions<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The Second Schedule research exception permits use without consent, but only where all of the following hold:</p>
+        <ul>
+          <li>the research purpose <strong>cannot reasonably be accomplished</strong> without individually identifiable data;</li>
+          <li>there is <strong>clear public benefit</strong>;</li>
+          <li>the results <strong>will not be used to make decisions affecting the individual</strong>; and</li>
+          <li>published results <strong>do not identify the individual</strong>.</li>
+        </ul>
+        <p>Read the third condition against a commercial insights project. If your interviews feed a decision about the participant's own account, pricing or renewal, the research exception is not the route you are on. That is a design constraint worth discovering before fieldwork rather than during review.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>ICC/ESOMAR Code 2025: three articles that touch AI directly<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>For anyone doing market or UX research under the professional code, three provisions apply the moment AI enters the workflow:</p>
+        <ul>
+          <li><strong>Article 7(f)</strong> - research data used with AI must remain confidential, with access "strictly limited to a secure and controlled environment". A consumer chat window is not that environment, and the article is what you point at when someone suggests pasting transcripts into one.</li>
+          <li><strong>Article 6(c)</strong> - guard against re-identification by inference. Note how directly this speaks to Part 1: a rich thematic summary of a small sample can re-identify a participant without ever naming them.</li>
+          <li><strong>Article 4(a)(ii)</strong> - where a synthetic persona collects data, that must be clearly notified to the data subject at the beginning of the research. Not in a debrief, not in a footnote.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The quotes rule, and why it is absolute<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>One rule with no exceptions: <strong>anything you present as a participant's words must be verbatim from the transcript.</strong> Never a model's paraphrase, never a tidied composite, never a "representative" quote assembled from several people.</p>
+        <p>This is easy to breach accidentally now. Ask a tool to summarise a code and it will hand back fluent sentences in the participants' register, and those sentences will be extremely quotable. They are not quotes. A summarising model is optimised to sound like the source, which is precisely what makes its output dangerous in quotation marks.</p>
+        <p>The workflow that prevents it: quotes are copied from the transcript with a line or timestamp reference recorded next to them, and the reference travels with the quote into the deck, the memo and the paper. Light edits for readability are normal practice - mark them, keep them to disfluencies, and never let an edit change what the person meant.</p>
+      </div>
+    </details>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The qualitative audit trail: codebook version, coder agreement, saturation evidence, verbatim quotes, and consent with data handling.">
+        <style>
+          .qatH { font: 700 12.5px Inter, sans-serif; fill: #121826; }
+          .qatX { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .qatN { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .qatK { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+          .qatL { stroke: #A7B6D0; stroke-width: 2; fill: none; }
+        </style>
+        <path class="qatL" d="M44,52 L44,268"/>
+
+        <circle cx="44" cy="52" r="15" fill="#0B1428"/>
+        <text class="qatN" x="40" y="57">1</text>
+        <rect x="76" y="30" width="300" height="44" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="qatH" x="90" y="57">Codebook version</text>
+        <rect x="390" y="30" width="460" height="44" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="qatX" x="404" y="57">which version coded which transcript, and who changed it</text>
+
+        <circle cx="44" cy="106" r="15" fill="#1B2F57"/>
+        <text class="qatN" x="40" y="111">2</text>
+        <rect x="76" y="84" width="300" height="44" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="qatH" x="90" y="111">Coder agreement</text>
+        <rect x="390" y="84" width="460" height="44" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="qatX" x="404" y="111">kappa on a double-coded sample, and which ladder you read</text>
+
+        <circle cx="44" cy="160" r="15" fill="#34507F"/>
+        <text class="qatN" x="40" y="165">3</text>
+        <rect x="76" y="138" width="300" height="44" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="qatH" x="90" y="165">Saturation evidence</text>
+        <rect x="390" y="138" width="460" height="44" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="qatX" x="404" y="165">the interview number after which no new codes appeared</text>
+
+        <circle cx="44" cy="214" r="15" fill="#1B2F57"/>
+        <text class="qatN" x="40" y="219">4</text>
+        <rect x="76" y="192" width="300" height="44" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="qatH" x="90" y="219">Verbatim quotes</text>
+        <rect x="390" y="192" width="460" height="44" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="qatX" x="404" y="219">every presented quote traced to a line in the transcript</text>
+
+        <circle cx="44" cy="268" r="15" fill="#5A6B00"/>
+        <text class="qatN" x="40" y="273">5</text>
+        <rect x="76" y="246" width="300" height="44" rx="8" fill="#F5F8DE" stroke="#5A6B00" stroke-width="1.5"/>
+        <text class="qatH" x="90" y="273">Consent and data handling</text>
+        <rect x="390" y="246" width="460" height="44" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="qatX" x="404" y="273">what participants agreed to, and which tools saw the text</text>
+
+        <rect x="24" y="308" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="qatK" x="48" y="320">A reviewer who asks for one of these five is about to ask for all five. Build it as you go.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the five records that make qualitative work auditable</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ PART 5: SURVEY AND PANEL LIMITS ============ -->
+  <section class="section" id="mixed">
+    <div class="section-kicker">
+      <span class="klabel">Part 5 · for mixed-methods work</span>
+      <h2>What a panel survey can and cannot carry <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">Most applied qualitative studies get paired with a survey, usually run on an opt-in panel, and the survey number is usually the one that ends up on the slide. Two verified limits worth knowing before you put it there.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Margin of error does not apply to opt-in panels<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>AAPOR's position is direct: margin of sampling error "does not apply to opt-in online surveys", and "it is impossible to develop statistically valid margins of sampling error from nonprobability surveys". The substitute is a model-based credibility interval, which is valid only if the adopted model is valid.</p>
+        <p>Practically, that draws a line you can hold: <strong>directional signal and within-sample contrasts, yes; probability-grade projection to a population, no.</strong> "Of the 400 lecturers we surveyed, 62% said their department chooses the tool" is a defensible sentence. "62% of lecturers, plus or minus 4.9 points" is not, and it is the version that gets quoted back at you.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Synthetic respondents: the means look right, the relationships do not<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Someone will offer to replace the panel with model-generated respondents. The best available evidence on that is Bisbee et al. (<em>Political Analysis</em> 2024;32(4), DOI 10.1017/pan.2024.5), who compared persona-generated responses against the American National Election Studies. Averages corresponded closely - and that is the trap, because averages are what you check first. But "48% of coefficients... are statistically significantly different" from their ANES counterparts, and among those cases the sign of the effect flips 32% of the time.</p>
+        <p>Read that as a specific warning rather than a general one. If you only need a mean, synthetic data may look fine. If you need a <em>relationship</em> - does budget ownership predict willingness to pay? - roughly half the coefficients are wrong and a third of those point the wrong way. Relationships are exactly what research questions are made of.</p>
+        <p>On the professional-code side: ESOMAR's 2025 guidance covers <strong>augmented</strong> synthetic data only, meaning boosting and imputation, and it does not endorse fully synthetic respondents as a replacement for human samples. If a vendor implies otherwise, ask them to point at the passage.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Can twelve interviews carry a budget claim? <span class="tag demo">★ 12 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">Back to the audit, with the qualitative source in focus. The lab below runs with four levers on - question, tiering, extraction and contradiction - which puts you at <strong>7 of 10</strong> across 22 sources. Find the buyer-interview source in the corpus: twelve interviews, published methods, tier 2. It is one of the sources carrying the claim that institutions rather than students hold the budget. Tonight's question is not whether the audit passes it. It is what would have to be true for a twelve-interview study to support a budget-ownership claim at all.</p>
+
+    <div class="steps">
+      <div class="step"><p>Four levers on: <strong>7 of 10</strong>, 22 sources. Open the claim about budget ownership and read which sources are carrying it, and at which tiers.</p></div>
+      <div class="step"><p>Find the buyer-interview row. Note what earns it tier 2: published methods. Not the sample size, and not the vendor's confidence in it.</p></div>
+      <div class="step"><p>Write the three things that would have to be true for twelve interviews to carry this claim: agreement reported on a double-coded sample, saturation stated as an interview number, and a population that matches the one you are selling to.</p></div>
+      <div class="step"><p>Turn <strong>Contradiction check</strong> off. Watch the claim's status change, then say out loud which source disagreed - the student survey was in your set the whole time.</p></div>
+      <div class="step"><p>Now write the calibrated sentence from b6, using the qualitative evidence properly: the claim, the weight, the basis including <em>n</em> and method, and what would change your mind.</p></div>
+    </div>
+
+    <div class="rlbox" data-mode="lab" data-levers="question,tiering,extraction,contradiction"></div>
+
+    <div class="callout tip">
+      <strong>What is real here and what is a teaching corpus</strong>
+      The 22 sources are a teaching corpus built for one decision - they are plausible, not real publications. The audit is genuinely a rule engine: each source carries a type, tier, year, sample size and funder, and every verdict is derived from those attributes plus what the source supports or contradicts. The transferable part is the rules and the reasoning about the interview study, not the corpus.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 35-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Take a codebook you already use and interrogate it: which codes encode a conclusion you arrived with? Add a "does not fit" bucket, then re-read ten segments you previously coded and see whether any belong in it.</li>
+      <li>Double-code a sample of six transcripts with a colleague and compute kappa. Report the number twice, against Landis and Koch and against McHugh's stricter ladder, and write the one sentence that says which you are using and why.</li>
+      <li>For your most recent qualitative study, write the saturation sentence you should have written: the interview number after which no new codes appeared. If you cannot reconstruct it, that is the finding, and it changes how you log the next one.</li>
+      <li>Open the AI page of whichever qualitative tool your team uses and answer the four questions from Part 3 in writing, including what the page does <em>not</em> say. Put the answers in the methods appendix your b10 memo will need.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session teaches the working core of qualitative rigour as an applied researcher needs it, plus the published limits of the tools and panels that surround it. Normative documents stay with their bodies and are linked in the track's source map. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Thematic analysis as a coding frame, with AI's safe and unsafe entry points</span><span class="note">Part 1 · phase wording is a standard paraphrase, not verbatim</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Cohen's kappa under both threshold readings, and saturation evidence</span><span class="note">Part 2 · Landis and Koch 1977, McHugh 2012, Guest et al. 2006</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Qualitative tool AI claims, and the coding-accuracy figure none of them publish</span><span class="note">Part 3 · Dovetail, Looppanel, Marvin, from their own pages</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Participant-data rails - GDPR, Singapore PDPA, ICC/ESOMAR Code 2025</span><span class="note">Part 4 · the provisions that bite on AI · full treatment in leader session a4</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Nonprobability panel limits and synthetic respondents</span><span class="note">Part 5 · AAPOR, Bisbee et al. 2024, ESOMAR scope · more in a3 and a6</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">1 · Two coders on a consequential study return κ = 0.65. What is the honest report?</p>
+      <button class="qopt" type="button">A · Substantial on Landis and Koch, but only moderate on McHugh's stricter ladder - say which you are reading</button>
+      <button class="qopt" type="button">B · Almost perfect agreement, so the codebook is settled</button>
+      <button class="qopt" type="button">C · Below chance, because kappa under 0.8 means the coders disagreed</button>
+      <p class="qwhy">0.61-0.80 is substantial under Landis and Koch (1977). McHugh (2012) argues those bands are too lenient for consequential decisions and places 0.60-0.79 at moderate. Reporting the number with the ladder you read it against pre-empts the whole argument.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · Guest, Bunce and Johnson found code saturation by the 12th of 60 interviews, with about 80% of codes in the first 6. What does that licence?</p>
+      <button class="qopt" type="button">A · Stopping at six interviews, since 80% of the codes are already in</button>
+      <button class="qopt" type="button">B · Planning sample size honestly, then reporting the interview number where new codes actually stopped in your own data</button>
+      <button class="qopt" type="button">C · Treating twelve as the required sample size for any qualitative study</button>
+      <p class="qwhy">The finding describes the shape of the curve, so it is a planning input. The study ran 60 interviews to be able to report it, and the last 20% of codes are often the ones that disagree with you. Report where new codes stopped in your data rather than asserting saturation.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · You replace every name in a transcript with a participant id, then paste it into a third-party AI tool. Under GDPR, what have you done?</p>
+      <button class="qopt" type="button">A · Anonymised it, so the transcript is outside GDPR from that point on</button>
+      <button class="qopt" type="button">B · Pseudonymised it - still personal data under Article 4(5) and Recital 26, so the tool needs treating as a processor of personal data</button>
+      <button class="qopt" type="button">C · Nothing relevant, because GDPR covers structured databases rather than free text</button>
+      <p class="qwhy">Recital 26 is explicit that data attributable to a person with additional information is still information on an identifiable person. Pseudonymisation is an expected safeguard applied to personal data, not an exit from the regime. The role, the institution type and the anecdote are all still in the text.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 9 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Six phases</b><span>Familiarisation → initial codes → searching for themes → reviewing themes → defining and naming → report. Paraphrased wording, not verbatim.</span></div>
+      <div class="cheat-item"><b>Where AI belongs</b><span>Safe: transcription and quote retrieval. Dangerous: auto-applying your codebook, and clustering that looks like theming.</span></div>
+      <div class="cheat-item"><b>Three coding rules</b><span>Hand-code a sample first · keep a "does not fit" bucket · hunt for codes that only appear where the tool applied them.</span></div>
+      <div class="cheat-item"><b>Kappa</b><span>κ = [Pr(a) - Pr(e)] / [1 - Pr(e)]. Landis and Koch: 0.61-0.80 substantial. McHugh: 0.60-0.79 only moderate. Name your ladder.</span></div>
+      <div class="cheat-item"><b>Saturation</b><span>Guest et al. 2006: 60 interviews, code saturation by the 12th, about 80% of codes in the first 6. Plans a sample; does not excuse six.</span></div>
+      <div class="cheat-item"><b>Tool silence</b><span>Dovetail, Looppanel and Marvin all auto-apply codes to speech. None publishes a coding accuracy figure. Transcription accuracy is not coding accuracy.</span></div>
+      <div class="cheat-item"><b>Participant rails</b><span>Pseudonymisation is not anonymisation (Art 4(5), Recital 26) · PDPA research exception has four conditions · ESOMAR 7(f) secure environment, 6(c) inference, 4(a)(ii) notify.</span></div>
+      <div class="cheat-item"><b>Quotes and panels</b><span>Quotes verbatim from the transcript, always, with a line reference. Opt-in panels: directional signal yes, margin of sampling error no.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 9 of 10 · learn-ai-research-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b8-synthesis.html">← Previous: Synthesis you can defend</a> &nbsp;·&nbsp; <a href="b10-capstone-memo.html">Next: Capstone - the research memo →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/research-live.js?v=1"></script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

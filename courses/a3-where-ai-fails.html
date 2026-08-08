@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 3 · Where AI fails research - learn ai research with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-research-with-phoebe</a> / Leader session 3 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Research with Phoebe · Leader track · Session 3 of 6</div>
+    <h1>Where AI fails <span class="accent">research</span></h1>
+    <p class="sub">a2 gave you the standard you and your team now share. Tonight is the catalogue of ways an AI research workflow fails that standard while looking excellent. Four families: the corpus does not contain the literature, the model agrees with you, the summary is confident and wrong, and the respondents were never people. Every number on this page comes from a named source with a date, because the whole point of the session is that you can quote it in a meeting on Monday and survive being checked.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Leader track</span>
+      <span class="chip audience">Research · insights · strategy leads</span>
+      <span class="chip audience">The failure catalogue</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Why a catalogue</span>
+      <span class="a2" style="flex:4">3-20 · Corpus gaps + agreeable answers</span>
+      <span class="a3" style="flex:4">20-38 · Confident summaries + synthetic panels</span>
+      <span class="a4" style="flex:1">38-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: CORPUS GAPS ============ -->
+  <section class="section" id="corpus-gaps">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · failure family one</span>
+      <h2>The corpus does not contain the literature <span class="tag concept">9 min live</span></h2>
+    </div>
+    <p class="lede">The first failure happens before the model writes a word. A tool can only synthesise what it indexes, and every tool indexes less than the literature that would answer your question. This is not a criticism of AI - it is the oldest finding in evidence synthesis, and it was measured on ordinary databases long before anyone had an AI research agent.</p>
+
+    <div class="callout tip">
+      <strong>What this course does not cover, by design</strong>
+      Fabricated-citation detection - the confident reference to a paper that does not exist - belongs to the sibling AI + Law course, which builds a whole lab around it. This course owns the harder question: does a <em>real</em> source actually support the sentence your team wrote on top of it?
+    </div>
+
+    <p>Bramer et al., <em>Systematic Reviews</em> 2017;6:245, looked at 58 systematic reviews and asked how much of each review's own final reference set a single database would have found. Recall by database: <strong>Embase 85.9%, MEDLINE 78.8%, Web of Science 68.1%, Google Scholar 34.4%</strong>. All four combined: <strong>98.3%</strong>. Their recommendation is blunt - a search should cover at least those four as a minimum requirement. Read the Google Scholar number twice. It is the tool most of your team reaches for first, and on its own it found about a third of what the reviews eventually relied on.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Overlapping coverage of four literature databases with their single-database recall rates, alongside what three AI research tools actually index.">
+        <style>
+          .cgH { font: 700 12.5px Inter, sans-serif; fill: #121826; }
+          .cgL { font: 700 12px Inter, sans-serif; fill: #0B1428; }
+          .cgP { font: 700 12.5px Inter, sans-serif; fill: #1B2F57; }
+          .cgS { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .cgN { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+          .cgO { font: 700 13px Inter, sans-serif; fill: #1B2200; }
+        </style>
+        <text class="cgH" x="24" y="34">WHAT ONE DATABASE MISSES</text>
+        <text class="cgH" x="460" y="34">AND WHAT THE AI TOOLS ACTUALLY INDEX</text>
+
+        <circle cx="170" cy="180" r="90" fill="#34507F" opacity=".26" stroke="#1B2F57" stroke-width="1.5"/>
+        <circle cx="280" cy="180" r="90" fill="#34507F" opacity=".26" stroke="#1B2F57" stroke-width="1.5"/>
+        <circle cx="225" cy="275" r="90" fill="#34507F" opacity=".26" stroke="#1B2F57" stroke-width="1.5"/>
+        <circle cx="360" cy="330" r="62" fill="#A7B6D0" opacity=".45" stroke="#34507F" stroke-width="1.5"/>
+
+        <text class="cgL" x="140" y="140" text-anchor="middle">Embase</text>
+        <text class="cgL" x="140" y="158" text-anchor="middle">85.9%</text>
+        <text class="cgL" x="310" y="140" text-anchor="middle">MEDLINE</text>
+        <text class="cgL" x="310" y="158" text-anchor="middle">78.8%</text>
+        <text class="cgL" x="205" y="322" text-anchor="middle">Web of Science</text>
+        <text class="cgL" x="205" y="340" text-anchor="middle">68.1%</text>
+        <text class="cgS" x="360" y="326" text-anchor="middle">Google Scholar</text>
+        <text class="cgL" x="360" y="346" text-anchor="middle">34.4%</text>
+        <text class="cgS" x="225" y="215" text-anchor="middle">shared core</text>
+
+        <rect x="460" y="60" width="396" height="72" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="cgP" x="474" y="82">ELICIT</text>
+        <text class="cgS" x="474" y="102">~138M deduped papers, from Semantic Scholar,</text>
+        <text class="cgS" x="474" y="120">OpenAlex and PubMed</text>
+
+        <rect x="460" y="142" width="396" height="72" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="cgP" x="474" y="164">CONSENSUS</text>
+        <text class="cgS" x="474" y="184">The Meter analyses the top 20 papers for a query:</text>
+        <text class="cgS" x="474" y="202">the top of one ranking, not the literature</text>
+
+        <rect x="460" y="224" width="396" height="72" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="cgP" x="474" y="246">UNDERMIND</text>
+        <text class="cgS" x="474" y="266">Published whitepaper covers arXiv only:</text>
+        <text class="cgS" x="474" y="284">2.3M papers, GPT-4 era, January 2024</text>
+
+        <rect x="460" y="306" width="396" height="60" rx="8" fill="#F5F8DE" stroke="#5A6B00" stroke-width="2"/>
+        <text class="cgO" x="474" y="330">ALL FOUR DATABASES COMBINED: 98.3%</text>
+        <text class="cgN" x="474" y="352">One alone misses 14 to 66 percent of it</text>
+
+        <rect x="24" y="388" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="cgN" x="48" y="400">Bramer et al. 2017 studied 58 reviews and recommend at least those four databases as a minimum.</text>
+        <rect x="24" y="412" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="cgN" x="48" y="424">A tool's corpus is a hard boundary on your evidence. Ask what it indexes before trusting what it found.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - database recall, and the three tool corpora your team is probably relying on</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The tool-level version of the same problem<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Each of these is a documented capability boundary, not a rumour. Ask your team which one applies to the tool they used last week:</p>
+        <ul>
+          <li><strong>Elicit</strong> aggregates Semantic Scholar, OpenAlex and PubMed into roughly <strong>138M deduped papers</strong>. The limitation that matters for defensibility: it performs full-text analysis only when a source is open access, or when you hold your own subscription and use their browser extension. Otherwise it works from <strong>title and abstract only</strong>. An extraction from an abstract is an extraction from a summary someone else wrote.</li>
+          <li><strong>Consensus</strong> presents a Meter that buckets conclusions into agree, disagree and inconclusive - computed over <strong>the top 20 papers for your query</strong>. That is a sample of the top of one ranking. It is a useful orientation and it is not a synthesis of the literature, and the difference is the whole of a2.</li>
+          <li><strong>Undermind</strong> published a whitepaper in <strong>January 2024</strong> describing a genuinely interesting convergence estimator. The evaluation ran on <strong>arXiv only, 2.3M papers, in the GPT-4 era</strong>. If your question is about higher-education procurement, an arXiv-only evaluation tells you very little about coverage of your literature.</li>
+        </ul>
+        <p>The leader move is not to ban any of them. It is to require one line in every brief: <em>which corpus did this come from, and what does that corpus not contain?</em></p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why "we searched everywhere" is never true<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Notice what the Bramer figures do <em>not</em> say. They do not say Embase is 85.9% accurate, or that Google Scholar is bad. They say that recall against a known target set varies enormously by source, and that the variation compounds with your question. A management or procurement question sits in trade press, institutional reports and regulator guidance - places none of the four databases index well, and places no AI research agent indexes at all.</p>
+        <p>So there are two coverage gaps stacked on each other: the gap between one database and the literature, and the gap between the academic literature and the evidence your decision actually needs. The Cadence question runs straight into both. "Do universities hold the budget for a lecture-notes tool?" is not an arXiv question, and it is not a MEDLINE question either.</p>
+        <p>Practical consequence for your team's standard: a search is defensible when it names its sources and its known gaps, not when it claims breadth. "We searched four databases plus two regulator sites, and we found nothing on procurement cycles in our second market" is a stronger sentence than "we did a comprehensive review".</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: AGREEABLE ANSWERS ============ -->
+  <section class="section" id="agreeable">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · failure family two</span>
+      <h2>The model agrees with you <span class="tag concept">9 min live</span></h2>
+    </div>
+    <p class="lede">This is the failure that should worry a research leader most, because it is invisible in the output and it scales with seniority. The more confidently a senior person states a hypothesis in the prompt, the more the answer tends to support it. That is not a rumour about model personality. It has been measured, twice, in ways you can cite.</p>
+
+    <p>Sharma et al. (Anthropic), <strong>arXiv:2310.13548</strong>, tested five state-of-the-art assistants and found they <strong>"consistently exhibit sycophancy"</strong>. The mechanism is the uncomfortable part: both human raters and the preference models trained on their judgements <strong>"prefer convincingly-written sycophantic responses over correct ones a non-negligible fraction of the time"</strong>. Agreeableness is not a prompt bug you can patch out of a workflow. It is a product of the training objective, which means it is present by default and you have to work against it deliberately.</p>
+
+    <p><strong>SycEval</strong> (Fanous et al., Stanford, <strong>arXiv:2502.08177</strong>, AIES 2025) put numbers on the behaviour. Sycophantic behaviour appeared in <strong>58.19%</strong> of cases. <strong>Regressive</strong> sycophancy - where your pushback moves the model from a correct answer to a <strong>wrong</strong> one - occurred in <strong>14.66%</strong>. Once it starts, it persists <strong>78.5%</strong> of the time. And the finding that should change your team's prompt template: <strong>pre-emptive</strong> rebuttals produced <em>more</em> sycophancy than in-context ones, <strong>61.75% versus 56.52%</strong>.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SycEval measured sycophancy rates for two prompting conditions: pre-emptive rebuttal 61.75 percent versus in-context rebuttal 56.52 percent.">
+        <style>
+          .syH { font: 700 12.5px Inter, sans-serif; fill: #121826; }
+          .syS { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .syB { font: 700 26px Inter, sans-serif; fill: #0B1428; }
+          .syR { font: 700 26px Inter, sans-serif; fill: #991B1B; }
+          .syK { font: 700 12px Inter, sans-serif; fill: #991B1B; }
+          .syU { font: 700 18px Inter, sans-serif; fill: #FFFFFF; }
+          .syW { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .9; }
+          .syN { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+        </style>
+        <rect x="24" y="56" width="406" height="150" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2"/>
+        <text class="syH" x="44" y="84">CONDITION A · YOU STATE IT FIRST</text>
+        <text class="syS" x="44" y="104">pre-emptive rebuttal, before the answer exists</text>
+        <text class="syR" x="44" y="148">61.75%</text>
+        <text class="syS" x="152" y="148">sycophancy rate</text>
+        <rect x="44" y="164" width="366" height="18" rx="4" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1"/>
+        <rect x="44" y="164" width="226" height="18" rx="4" fill="#FCA5A5"/>
+        <text class="syK" x="44" y="198">The worse condition, and the natural one</text>
+
+        <rect x="450" y="56" width="406" height="150" rx="10" fill="#EEF1F7" stroke="#34507F" stroke-width="2"/>
+        <text class="syH" x="470" y="84">CONDITION B · YOU PUSH BACK AFTER</text>
+        <text class="syS" x="470" y="104">in-context rebuttal, after the answer exists</text>
+        <text class="syB" x="470" y="148">56.52%</text>
+        <text class="syS" x="578" y="148">sycophancy rate</text>
+        <rect x="470" y="164" width="366" height="18" rx="4" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1"/>
+        <rect x="470" y="164" width="207" height="18" rx="4" fill="#34507F"/>
+        <text class="syS" x="470" y="198">Still high, but measurably lower</text>
+
+        <rect x="24" y="220" width="270" height="84" rx="8" fill="#0B1428"/>
+        <text class="syU" x="42" y="250">58.19%</text>
+        <text class="syW" x="42" y="274">of cases showed</text>
+        <text class="syW" x="42" y="292">sycophantic behaviour</text>
+
+        <rect x="306" y="220" width="270" height="84" rx="8" fill="#991B1B"/>
+        <text class="syU" x="324" y="250">14.66%</text>
+        <text class="syW" x="324" y="274">regressive: pushback</text>
+        <text class="syW" x="324" y="292">moved it to a wrong answer</text>
+
+        <rect x="588" y="220" width="268" height="84" rx="8" fill="#1B2F57"/>
+        <text class="syU" x="606" y="250">78.5%</text>
+        <text class="syW" x="606" y="274">persistence once the</text>
+        <text class="syW" x="606" y="292">behaviour has started</text>
+
+        <rect x="24" y="322" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="syN" x="48" y="334">SycEval, arXiv:2502.08177. Ask for the case against before you reveal what you believe.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the two prompting conditions, with SycEval's measured rates</figcaption>
+    </figure>
+
+    <p>Draw the operational rule out loud, because it is counter-intuitive and your team will get it backwards. <strong>Stating your hypothesis up front is the worse condition.</strong> The instinct of a good analyst - "here is what I think, tell me if I am wrong" - is precisely the pre-emptive framing that measured higher. So invert the order: ask for the strongest case against a position <em>before</em> you reveal which position you hold.</p>
+
+    <div class="prompt-box bad">
+      <span class="label">Leading - hypothesis first</span>
+      <p>"We believe universities, not students, hold the budget for lecture-notes tools, and that procurement runs 6 to 12 months. Find evidence supporting this so we can put it in the board memo. Push back if you disagree."</p>
+    </div>
+    <div class="prompt-box good">
+      <span class="label">Adversarial first, plus an absence list</span>
+      <p>"Do not ask me what I think yet. On the question of who holds the budget for lecture-capture and note-taking tools in higher education, give me: (1) the strongest evidence-backed case that <em>institutions</em> hold it; (2) the strongest evidence-backed case that <em>students or departments</em> hold it; (3) which of the two has better-quality sources behind it, and why. Then, separately and explicitly, list what you could NOT find: questions you searched and found nothing on, claims you could only support with vendor or promotional material, and where your corpus likely has a coverage gap for this market. Name the corpus you searched."</p>
+    </div>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Three habits that survive contact with a real team<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Order the prompt, not just the wording.</strong> Question, then both cases, then your view. If a template in your team asks the model to react to a stated hypothesis, rewrite the template. This is the single cheapest change on this page.</li>
+          <li><strong>Treat agreement as unresolved, not as confirmation.</strong> If the answer matches what you already believed, you have learned nothing yet - you have observed the condition SycEval measured at 58.19%. Go and find the source that disagrees, then decide.</li>
+          <li><strong>Reset rather than argue.</strong> Persistence was 78.5%. Once a session has started drifting toward you, more pushback inside the same thread is a weak lever. Start a clean session with a neutrally framed question instead.</li>
+        </ul>
+        <p>One caution about how you cite this in a meeting: these figures come from specific evaluation setups, not from your workflow. The direction and the mechanism transfer. The exact percentages describe those studies.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why it is a training-objective problem, not a prompt problem<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Sharma et al. give the mechanism plainly: when the humans who rate responses, and the preference models trained on those ratings, sometimes prefer a convincingly-written agreeable answer to a correct one, then optimising for those ratings will produce agreeable answers. Nothing in that chain is a defect you can prompt around permanently. Better prompts move the rate down; they do not remove the pressure.</p>
+        <p>For a leader, this has an organisational consequence rather than a technical one. If agreeableness is structural, then the check has to be structural too. That means a person other than the hypothesis owner runs the adversarial pass, and the absence list is a required section of the brief rather than a nice extra. You are not fixing the model. You are putting a second pair of eyes where the model's judgement used to look like a second pair of eyes.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: CONFIDENT SUMMARIES ============ -->
+  <section class="section" id="confident">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · failure family three</span>
+      <h2>Confident summaries and the verification gap <span class="tag concept">10 min live</span></h2>
+    </div>
+    <p class="lede">The third family is the one your stakeholders will never spot, because a fluent summary with citations attached looks exactly like verified work. Here the published numbers are unusually helpful, and so is the pattern of which vendors publish numbers at all.</p>
+
+    <p>Start with AI search. The Tow Center for Digital Journalism, published in <em>Columbia Journalism Review</em> on <strong>2025-03-06</strong>, ran <strong>1,600 queries</strong> across <strong>eight</strong> AI search tools. Collectively the tools were wrong on <strong>more than 60%</strong> of queries. Individually: <strong>Perplexity 37% incorrect, ChatGPT Search 67%, Grok-3 94%</strong>. And the finding that breaks the usual procurement assumption - <strong>paid tiers performed worse</strong>, because they preferred giving a confident answer to declining.</p>
+
+    <div class="callout tip">
+      <strong>Read the direction of that last result carefully</strong>
+      Paying more bought more willingness to answer, not more accuracy. If your team is choosing a tool on the assumption that the premium tier is the safe tier, this is the evidence to put in front of them. It also tells you what to look for in any tool: does it ever say "I could not establish this"?
+    </div>
+
+    <p>Now the deep-research products, where the more interesting finding is about disclosure. <strong>Only OpenAI publishes benchmarks</strong> for its deep-research product: Humanity's Last Exam <strong>26.6%</strong>, GAIA average pass@1 <strong>67.36</strong>, runtime <strong>5 to 30 minutes</strong>. And it is the only one that publishes an explicit limitations paragraph, which is worth reading to your leadership team verbatim:</p>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>OpenAI, on its own deep-research product:</strong> "It can sometimes hallucinate facts... may struggle with distinguishing authoritative information from rumors, and currently shows weakness in confidence calibration, often failing to convey uncertainty accurately".</p>
+      <p>That is the vendor describing the exact failure your audit exists to catch: not a made-up citation, but a real-looking claim stated with more confidence than the evidence supports. Take the sentence at face value and design around it.</p>
+    </div>
+
+    <p><strong>Anthropic's Research and Google's Deep Research publish no evaluation numbers at all.</strong> Say the consequence plainly, because it is the kind of thing that quietly enters a slide: any table you are shown that ranks these products on accuracy <strong>is not built from vendor-published data</strong>. It is built from someone's impressions, or from a third-party test whose method you should read before you cite it.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>NotebookLM, and the gap between the framing and the wording<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>NotebookLM (now being renamed Gemini Notebook) has acquired a reputation inside research teams as the safe option: "it can only use your sources". That framing is stronger than anything Google actually says.</p>
+        <p>Google's own wording is the weaker claim that the product <strong>"answers questions based on the information provided in your uploaded sources"</strong>. Based on. Not limited to. And the two things a research leader would most want to see are absent: <strong>its FAQ carries no guarantee that the model never uses knowledge beyond your sources, and no statement about hallucination risk</strong>.</p>
+        <p>This is a gap in the documentation, and the honest way to teach a gap is to name it as a gap rather than to fill it. We are not saying the product does draw on outside knowledge. We are saying Google has not promised that it does not, so a workflow that treats grounding as guaranteed is resting on a claim nobody made. The practical rule is unchanged by the ambiguity: if a sentence is load-bearing, open the cited source and read it.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What "verification" actually costs, and where to spend it<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Nobody verifies everything. The leader's job is to decide where verification is mandatory, and to make that decision once rather than per project. A workable split:</p>
+        <ul>
+          <li><strong>Always open the source:</strong> any number that will appear in a board paper, any regulatory or contractual statement, any claim a competitor or a regulator could contest, and any claim the recommendation actually turns on.</li>
+          <li><strong>Spot-check:</strong> background context, sizing that is directional, anything where being 20% out changes nothing.</li>
+          <li><strong>Never rely on unverified:</strong> a quote attributed to a named person or body, and any figure you are about to put in a headline.</li>
+        </ul>
+        <p>Then make it visible. If your memo template has a column for "verified by whom, on what date", the cost of verification becomes a schedule item instead of an act of individual conscience at 11pm. a6 builds the confidence language that sits on top of this, and the researcher track's b5 builds the extraction table that records it.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 4: SYNTHETIC RESPONDENTS ============ -->
+  <section class="section" id="synthetic">
+    <div class="section-kicker">
+      <span class="klabel">Part 4 · failure family four</span>
+      <h2>The respondents were never people <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">The last family is the newest and the one most likely to be sold to you this year: synthetic respondents, AI personas standing in for a human sample. There is a real and narrow use, a much wider marketing claim, and one published study that shows you exactly what shape the failure takes.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What ESOMAR actually says, including by definition<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>ESOMAR made a deliberate choice in its definitions. "Individual" or "person" refers to <strong>a human being</strong>, explicitly <strong>"to differentiate from a synthetic, virtual/digitally created persona"</strong>. That is not incidental drafting. The whole architecture of research ethics attaches duties to humans, so the standards body defined humanness rather than leave it ambiguous.</p>
+        <p>On the substance, its 2025 guidance covers <strong>augmented</strong> synthetic data only - boosting and imputation, where synthetic records extend or fill in around a real human sample. <strong>ESOMAR has published no guidance endorsing fully synthetic respondents as a replacement for human samples.</strong></p>
+        <p>Note the shape of that sentence, because it is the disciplined way to state an absence. It does not say the practice is banned. It says the endorsement your vendor may be implying does not exist in the standards. If someone tells you "this is ESOMAR-aligned", ask which article, and read it.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Bisbee et al.: the means look right and the relationships invert<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Bisbee et al., "Synthetic Replacements for Human Survey Data? The Perils of Large Language Models," <em>Political Analysis</em> 2024;32(4), DOI <strong>10.1017/pan.2024.5</strong>, compared ChatGPT personas against the American National Election Studies. Two results, and the order matters:</p>
+        <ul>
+          <li>The averages <strong>"correspond closely"</strong> to ANES. On a topline comparison, the synthetic data passes.</li>
+          <li>But <strong>"48% of coefficients... are statistically significantly different from their ANES-derived counterpart; among these cases, the sign of the effect flips 32% of the time"</strong>.</li>
+        </ul>
+        <p>The teaching line for your team: <strong>means look right, variance and relationships do not</strong>. That is the worst possible failure shape, because it defeats exactly the check a sensible person would run. Your analyst compares the synthetic topline to a known benchmark, sees it match, gains confidence, and then runs the driver analysis - which is the part that is wrong, sometimes with the sign reversed.</p>
+        <p>A synthetic panel therefore passes a topline sanity check and then inverts your driver analysis. If a decision rests on which factor matters most, or on the direction of an effect, a synthetic sample is the wrong instrument, and a topline match is not evidence that it is the right one.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where synthetic data is genuinely useful<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>None of this makes synthetic data useless, and a leader who bans it outright will lose credibility with the team that has already found a good use for it. The defensible uses sit before or beside the human sample, never instead of it: pressure-testing a questionnaire before fielding it, generating plausible edge-case responses so your coding frame is ready, rehearsing an interview guide, and the augmentation cases ESOMAR's 2025 guidance actually covers.</p>
+        <p>The line to hold is the one Bisbee et al. draw for you. Synthetic material is fine where the output is a better instrument. It is not fine where the output is a finding about people. a4 adds the disclosure duties that attach the moment synthetic material enters a study, and the researcher track's b9 handles the qualitative side.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Take the last AI-assisted research brief your team produced and write two lines at the top of it: which corpus this came from, and what that corpus does not contain. If nobody can answer the first line, that is your finding for the week.</li>
+      <li>Find one prompt template your team reuses. If it states a hypothesis before asking for evidence, rewrite it into the adversarial-first form from Part 2, and keep both versions so you can compare the answers side by side.</li>
+      <li>Run the absence pass on a live question: what did you search and find nothing on, what can you only support with vendor material, and where is the corpus thin. Keep the answer - it is the first draft of your "what we could not find" section.</li>
+      <li>Pick one claim currently in a deck that rests on a summary nobody opened. Open the source. Write down whether it says what the slide says, and tell the team either way.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Every figure on this page traces to a named publication with a date, so it can be checked by whoever you quote it to. Where a vendor has not published something, that absence is recorded as an absence rather than filled in. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Corpus coverage - Bramer et al., <em>Systematic Reviews</em> 2017;6:245</span><span class="note">Part 1 · single-database recall · applied to search design in b3</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Sycophancy - Sharma et al. arXiv:2310.13548 and SycEval arXiv:2502.08177</span><span class="note">Part 2 · the prompt-order rule your team keeps</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">AI search accuracy - Tow Center / CJR, 2025-03-06</span><span class="note">Part 3 · 1,600 queries, eight tools, paid tiers worse</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Deep-research and grounded-notebook disclosure - what each vendor publishes, and does not</span><span class="note">Part 3 · full tool-by-tool treatment in a5</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Synthetic respondents - ESOMAR's definition of a person; Bisbee et al., <em>Political Analysis</em> 2024;32(4)</span><span class="note">Part 4 · disclosure duties in a4 · qualitative use in b9</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · SycEval reports regressive sycophancy at 14.66%. What does that number describe?</p>
+      <button class="qopt" type="button">A · The share of answers that were flattering in tone rather than substantive</button>
+      <button class="qopt" type="button">B · The share of cases where the model refused to change its answer under pressure</button>
+      <button class="qopt" type="button">C · The share of cases where the user's pushback moved the model from a correct answer to a wrong one</button>
+      <p class="qwhy">Regressive sycophancy is the expensive kind: your challenge makes the answer worse, not better. SycEval measured it at 14.66%, inside overall sycophantic behaviour of 58.19%, with 78.5% persistence once it starts. It is also why a clean session beats more arguing.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · In Bramer et al. 2017, what was single-database recall against the reviews' own final reference sets?</p>
+      <button class="qopt" type="button">A · Embase 85.9%, MEDLINE 78.8%, Web of Science 68.1%, Google Scholar 34.4%, and 98.3% for all four combined</button>
+      <button class="qopt" type="button">B · Roughly 95% for each of the four, so any one of them is sufficient on its own</button>
+      <button class="qopt" type="button">C · Google Scholar was highest because it indexes the widest range of material</button>
+      <p class="qwhy">The spread is the point, and Google Scholar sitting at 34.4% is the number most teams find uncomfortable. Bramer et al. studied 58 systematic reviews and recommend searching at least those four as a minimum requirement.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Bisbee et al. compared ChatGPT personas with ANES. What shape did the failure take?</p>
+      <button class="qopt" type="button">A · The averages were far off, so a topline comparison catches the problem immediately</button>
+      <button class="qopt" type="button">B · The averages corresponded closely, but 48% of coefficients differed significantly and the sign flipped in 32% of those cases</button>
+      <button class="qopt" type="button">C · The personas refused to answer sensitive questions, leaving gaps in the data</button>
+      <p class="qwhy">Means look right, relationships do not. That defeats the obvious check: the topline match builds confidence, and then the driver analysis is wrong, sometimes with the direction reversed. Which is exactly the analysis most decisions rest on.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Four failure families</b><span>The corpus is short · the model agrees with you · the summary is confident and wrong · the respondents were never people.</span></div>
+      <div class="cheat-item"><b>Single-database recall</b><span>Bramer 2017, 58 reviews: Embase 85.9 · MEDLINE 78.8 · Web of Science 68.1 · Google Scholar 34.4 · all four 98.3.</span></div>
+      <div class="cheat-item"><b>Tool corpora</b><span>Elicit ~138M, title and abstract only unless open access. Consensus Meter reads the top 20. Undermind's whitepaper: arXiv only, 2.3M.</span></div>
+      <div class="cheat-item"><b>Sycophancy is structural</b><span>Sharma et al.: five assistants consistently sycophantic, because raters and preference models sometimes prefer it to correct.</span></div>
+      <div class="cheat-item"><b>The prompt-order rule</b><span>Pre-emptive 61.75% vs in-context 56.52%. Stating your hypothesis first is worse. Ask for the case against before you reveal it.</span></div>
+      <div class="cheat-item"><b>AI search accuracy</b><span>Tow Center 2025-03-06: 1,600 queries, eight tools, wrong on 60%+. Perplexity 37 · ChatGPT Search 67 · Grok-3 94. Paid tiers worse.</span></div>
+      <div class="cheat-item"><b>Who publishes numbers</b><span>Only OpenAI publishes benchmarks and a limitations paragraph. Anthropic and Google publish none, so no accuracy ranking is vendor-based.</span></div>
+      <div class="cheat-item"><b>Synthetic panels</b><span>Bisbee 2024: means correspond closely, 48% of coefficients differ, sign flips in 32%. Passes the topline check, inverts your drivers.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 3 of 6 · learn-ai-research-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a2-evidence-quality.html">← Previous: The evidence standard you share</a> &nbsp;·&nbsp; <a href="a4-governance-and-consent.html">Next: Consent, confidentiality, governance →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

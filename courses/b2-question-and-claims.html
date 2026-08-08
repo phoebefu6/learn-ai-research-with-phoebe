@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 2 · Decision, question, claims - learn ai research with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-research-with-phoebe</a> / Researcher session 2 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Research with Phoebe · Researcher track · Session 2 of 10</div>
+    <h1>Decision, question, <span class="accent">claims</span></h1>
+    <p class="sub">Last session every one of the ten claims failed, and three of them failed on the first rule: nothing could ever have made them false. Tonight we fix that end of the pipeline, and it is the cheapest fix in the whole track. You work backwards from the decision to the question, from the question to the claims, and from each claim to the evidence it would need. Then you learn the four tests that tell you whether a sentence is a claim at all. We finish on the prompting habit that follows from it, including one verified finding that will change the order in which you tell a model what you think.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Researcher track</span>
+      <span class="chip audience">Analysts · academics · UX &amp; market researchers</span>
+      <span class="chip audience">Rung 1</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-2 · Where we left off</span>
+      <span class="a2" style="flex:4">2-16 · Decision backwards + the four tests</span>
+      <span class="a3" style="flex:4">16-38 · Build-along: turn on Sharp question</span>
+      <span class="a4" style="flex:1">38-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: DECISION BACKWARDS ============ -->
+  <section class="section" id="decision-backwards">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the chain</span>
+      <h2>Work backwards from the decision <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Research has a direction of design and a direction of work, and they run opposite ways. You <strong>design</strong> from the decision: what will actually be decided, then the question whose answer would change that decision, then the claims the answer rests on, then the evidence each claim would need. You <strong>work</strong> back up the chain: gather evidence, settle claims, answer the question, inform the decision. Almost every weak project I have read skipped the first two links and started at a topic - and a topic can only ever return a summary.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 312" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The decision-backwards chain: decision, question, claims, evidence, with the common failure of starting at a topic marked in red.">
+        <style>
+          .dbT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .dbS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .dbH { font: 700 12.5px Inter, sans-serif; fill: #121826; }
+          .dbX { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .dbR { font: 700 12.5px Inter, sans-serif; fill: #991B1B; }
+          .dbRx { font: 400 11.5px Inter, sans-serif; fill: #991B1B; }
+          .dbN { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+          .dbW { stroke: #1B2F57; stroke-width: 2.5; fill: none; marker-end: url(#dbHd); }
+          .dbD { stroke: #A7B6D0; stroke-width: 2; fill: none; stroke-dasharray: 6 5; marker-end: url(#dbHd2); }
+          .dbK { font: 600 11.5px Inter, sans-serif; fill: #34507F; }
+        </style>
+        <defs>
+          <marker id="dbHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#1B2F57"/>
+          </marker>
+          <marker id="dbHd2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#A7B6D0"/>
+          </marker>
+        </defs>
+
+        <text class="dbK" x="24" y="26">DESIGN DIRECTION - always start at the decision</text>
+
+        <rect x="24" y="38" width="190" height="56" rx="8" fill="#0B1428"/>
+        <text class="dbT" x="38" y="62">1 THE DECISION</text>
+        <text class="dbS" x="38" y="80">build next year or not</text>
+
+        <rect x="236" y="38" width="190" height="56" rx="8" fill="#1B2F57"/>
+        <text class="dbT" x="250" y="62">2 THE QUESTION</text>
+        <text class="dbS" x="250" y="80">what would change it</text>
+
+        <rect x="448" y="38" width="190" height="56" rx="8" fill="#34507F"/>
+        <text class="dbT" x="462" y="62">3 THE CLAIMS</text>
+        <text class="dbS" x="462" y="80">what the answer needs</text>
+
+        <rect x="660" y="38" width="190" height="56" rx="8" fill="#1B2F57"/>
+        <text class="dbT" x="674" y="62">4 THE EVIDENCE</text>
+        <text class="dbS" x="674" y="80">what each claim needs</text>
+
+        <path class="dbW" d="M216,66 L232,66"/>
+        <path class="dbW" d="M428,66 L444,66"/>
+        <path class="dbW" d="M640,66 L656,66"/>
+
+        <path class="dbD" d="M755,98 C755,126 460,132 122,110"/>
+        <text class="dbX" x="330" y="150">Work direction: evidence answers back up the same chain</text>
+
+        <rect x="24" y="174" width="300" height="52" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2"/>
+        <text class="dbR" x="40" y="196">START AT A TOPIC INSTEAD</text>
+        <text class="dbRx" x="40" y="214">"AI in education"</text>
+        <path class="dbW" d="M328,200 L352,200"/>
+        <rect x="356" y="174" width="494" height="52" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="dbH" x="372" y="196">WHAT COMES BACK</text>
+        <text class="dbX" x="372" y="214">a fluent summary, and claims that nothing could ever falsify</text>
+
+        <rect x="24" y="252" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="dbN" x="48" y="264">A topic returns a summary. A decision returns a claim list you can actually test.</text>
+        <rect x="24" y="276" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="dbN" x="48" y="288">If you cannot name the decision, you are not researching yet. You are reading.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the chain, and the failure point where most projects begin</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The chain on Cadence, link by link<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The decision is small enough to write in one line: <strong>should Cadence build a lecture-notes product for higher education next year, or not?</strong> That gives us the question the whole track answers: which of our beliefs about that market, that buyer and that technology would survive contact with the evidence? And that gives us the claim set - ten sentences, each of which could turn out to be false, each of which changes the decision if it flips.</p>
+        <table class="clean">
+          <thead><tr><th>The claim, as the team actually believes it</th><th>What evidence would settle it</th></tr></thead>
+          <tbody>
+            <tr><td>Universities will pay per-seat at roughly our current price point</td><td>Official spend statistics, buyer interviews with published methods</td></tr>
+            <tr><td>Disability-services budgets are a faster route in than central IT</td><td>Procurement case studies, plus something independent that repeats it</td></tr>
+            <tr><td>Recording lectures needs documented consent in both target markets</td><td>Regulator guidance and a compliance review of both jurisdictions</td></tr>
+            <tr><td>Students, not institutions, are the initial buyer</td><td>Buyer-side interviews and spend data, not only student surveys</td></tr>
+            <tr><td>Our meeting-notes engine transfers to lecture audio without retraining</td><td>An independent evaluation on lecture audio, replicated</td></tr>
+            <tr><td>Institutional procurement will take 6 to 12 months</td><td>A cycle-time study across many institutions, with the number recorded</td></tr>
+            <tr><td>The segment is saturated, so we would be a late entrant</td><td>Market analysis, and the sources that argue the opposite</td></tr>
+            <tr><td>A free student tier would cannibalise institutional deals</td><td>Conversion data from comparable campus software, with samples</td></tr>
+            <tr><td>Independent evidence exists that lecture-notes support improves attainment</td><td>Peer-reviewed synthesis and trials, ideally one that replicates</td></tr>
+            <tr><td>Accessibility obligations create a compliance driver to buy us</td><td>Statute and regulator text in both markets</td></tr>
+          </tbody>
+        </table>
+        <p>Notice what the right column is doing. Before searching for anything, you have written down the <em>kind</em> of source each claim needs - and three of the ten need regulator or peer-reviewed material that no casual search returns. That is the whole argument for b3, and you found it without reading a single paper.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>When there is no decision, invent the decider<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Academic and exploratory work often has no purchase order at the end of it, and people use that to skip the first link. Do not. Substitute the nearest real consequence: what would a reviewer let you claim, what would change your next study's design, what would you tell a colleague to stop doing. Then run the chain from there.</p>
+        <p>The test is whether you can complete this sentence: "if this comes back the other way, I will do X differently." If X is "nothing", the research is decoration. It may still be interesting - but do not spend three weeks on it and call it evidence.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: FALSIFIABILITY ============ -->
+  <section class="section" id="falsifiable">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the four tests</span>
+      <h2>What makes a claim falsifiable <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">A claim is a sentence that could be wrong. Run these four tests on anything you plan to put weight on. <strong>One</strong>: could evidence make it false - what result would count against it? <strong>Two</strong>: does it name a population - which people, which institutions, which market? <strong>Three</strong>: does it carry a measurable quantity, or a definite yes or no? <strong>Four</strong>: would two colleagues agree on what would settle it? Four passes and you have a claim. One failure and you have an opinion wearing a claim's clothing, and no amount of sourcing will rescue it.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 348" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An unfalsifiable claim beside its scoped rewrite, with the four falsifiability tests applied to each.">
+        <style>
+          .ftH { font: 700 12.5px Inter, sans-serif; fill: #121826; }
+          .ftX { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .ftR { font: 700 12px Inter, sans-serif; fill: #991B1B; }
+          .ftRx { font: 400 11.5px Inter, sans-serif; fill: #991B1B; }
+          .ftG { font: 700 12px Inter, sans-serif; fill: #1B2200; }
+          .ftGx { font: 400 11.5px Inter, sans-serif; fill: #1B2200; }
+          .ftL { font: 700 12px Inter, sans-serif; fill: #121826; }
+          .ftN { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+        </style>
+
+        <rect x="24" y="24" width="250" height="66" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="ftH" x="38" y="50">THE FOUR TESTS</text>
+        <text class="ftX" x="38" y="70">run them before you search</text>
+
+        <rect x="286" y="24" width="280" height="66" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2"/>
+        <text class="ftR" x="300" y="48">"Students love AI tools"</text>
+        <text class="ftRx" x="300" y="68">one of the lab's three</text>
+        <text class="ftRx" x="300" y="82">unfalsifiable claims</text>
+
+        <rect x="578" y="24" width="272" height="66" rx="8" fill="#F5F8DE" stroke="#5A6B00" stroke-width="2"/>
+        <text class="ftG" x="592" y="44">"Most surveyed under-</text>
+        <text class="ftG" x="592" y="60">graduates in both markets</text>
+        <text class="ftG" x="592" y="76">use an AI study tool weekly"</text>
+
+        <rect x="24" y="102" width="250" height="36" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="ftL" x="38" y="125">1 Could evidence break it?</text>
+        <rect x="286" y="102" width="280" height="36" rx="7" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="ftRx" x="300" y="125">No - nothing counts against it</text>
+        <rect x="578" y="102" width="272" height="36" rx="7" fill="#F5F8DE" stroke="#5A6B00" stroke-width="1.5"/>
+        <text class="ftGx" x="592" y="125">Yes - a survey could say 40%</text>
+
+        <rect x="24" y="146" width="250" height="36" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="ftL" x="38" y="169">2 Does it name a population?</text>
+        <rect x="286" y="146" width="280" height="36" rx="7" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="ftRx" x="300" y="169">No - which students, where?</text>
+        <rect x="578" y="146" width="272" height="36" rx="7" fill="#F5F8DE" stroke="#5A6B00" stroke-width="1.5"/>
+        <text class="ftGx" x="592" y="169">Yes - undergraduates, 2 markets</text>
+
+        <rect x="24" y="190" width="250" height="36" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="ftL" x="38" y="213">3 Is there a quantity?</text>
+        <rect x="286" y="190" width="280" height="36" rx="7" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="ftRx" x="300" y="213">No - what does "love" measure?</text>
+        <rect x="578" y="190" width="272" height="36" rx="7" fill="#F5F8DE" stroke="#5A6B00" stroke-width="1.5"/>
+        <text class="ftGx" x="592" y="213">Yes - "most", and weekly use</text>
+
+        <rect x="24" y="234" width="250" height="36" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="ftL" x="38" y="257">4 Would two peers agree?</text>
+        <rect x="286" y="234" width="280" height="36" rx="7" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="ftRx" x="300" y="257">No - two peers, two tests</text>
+        <rect x="578" y="234" width="272" height="36" rx="7" fill="#F5F8DE" stroke="#5A6B00" stroke-width="1.5"/>
+        <text class="ftGx" x="592" y="257">Yes - one survey settles it</text>
+
+        <rect x="24" y="290" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="ftN" x="48" y="302">Fail any one of the four and no evidence can support the sentence. It can only be agreed with.</text>
+        <rect x="24" y="314" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="ftN" x="48" y="326">Rewrite before you search. The scoped version tells you which sources you need.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the same belief, before and after the four tests</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The lab's three unfalsifiable claims, rewritten<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>These are the three claims the lab hands you when Sharp question is off. They are not strawmen - they are the sentences that appear in real strategy decks, and every one of them fails test one.</p>
+        <table class="clean">
+          <thead><tr><th>As written</th><th>Why it cannot be tested</th><th>Scoped version</th></tr></thead>
+          <tbody>
+            <tr><td>AI is transforming education</td><td>No population, no quantity, no result would count against it</td><td>In both target markets, a majority of institutions have a funded AI initiative touching teaching this year</td></tr>
+            <tr><td>Education is a huge market opportunity</td><td>"Huge" is not a measure and no comparison is named</td><td>Addressable higher-education spend on note-taking and accessibility tools exceeds our current segment's spend</td></tr>
+            <tr><td>Students love AI tools</td><td>"Love" has no measure and the population is unbounded</td><td>Most surveyed undergraduates in both markets use an AI study tool weekly</td></tr>
+          </tbody>
+        </table>
+        <p>Each rewrite does three things at once: it names who, it names how much, and it tells you which source type would settle it. That is why the rewrite is a search strategy in disguise.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where this discipline comes from<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>None of this is new. Evidence synthesis has used structured question formats for decades: before you search, you spell out the <strong>population</strong>, the <strong>comparison</strong>, the <strong>outcome</strong> and the <strong>context</strong> - who exactly, versus what alternative, measured how, and where. The health-research version is the best known, but the same skeleton has been reworked for policy, social science and service design, and it works unchanged on a commercial question.</p>
+        <p>Run it on Cadence's fifth claim. Population: lecture audio from higher-education teaching, both markets. Comparison: our current meeting-notes engine, unchanged, versus a retrained one. Outcome: transcription and summary quality on a defined measure. Context: real lecture halls, not clean recordings. Written out like that, the claim stops being "our tech will work" and becomes a testable thing - and you can immediately see that a single vendor-funded preprint of 48 samples is not going to settle it. It will not, and it never does: that claim stays honestly unknown all the way to b10.</p>
+        <p>Two practical notes. Formats like this are a scoping aid, not a magic filter - the discipline is in spelling out the four parts, not in the acronym. And they are worth writing into the memo itself, because a reader who can see your population and outcome can tell instantly whether your evidence matches your claim.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: PROMPTING FOR CLAIMS ============ -->
+  <section class="section" id="prompting">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the prompting habit</span>
+      <h2>Ask for a claim list, not a summary <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Once you have a decision and a claim set, the way you brief a model changes shape completely. A topic-shaped request returns prose that reads finished. A decision-scoped request returns a verdict per claim, including the verdict you most need: not supported. But there is a trap in how you ask, and it is measured rather than folkloric - so the rule has a number attached.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The sycophancy trap, with the numbers<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>SycEval (Fanous et al., Stanford, arXiv:2502.08177, AIES 2025) measured how assistants behave when a user pushes back. Three findings matter for how you write a research prompt:</p>
+        <ul>
+          <li><strong>Pre-emptive rebuttals produced more sycophancy than in-context ones: 61.75% versus 56.52%.</strong> Telling the model your position up front, before it has looked, is the worse condition - not the safer one.</li>
+          <li><strong>Regressive sycophancy - pushback moving the model to a wrong answer - occurred in 14.66% of cases.</strong> Roughly one time in seven, disagreeing with a correct answer talked it into an incorrect one.</li>
+          <li>Sycophantic behaviour appeared in <strong>58.19%</strong> of cases overall, and once it started it persisted <strong>78.5%</strong> of the time. It is not a glitch you can catch late; it is a direction the conversation acquires.</li>
+        </ul>
+        <p>Two working rules follow, and they cost nothing. <strong>Do not state your hypothesis up front.</strong> Give the claim neutrally, or give both directions, and let the evidence arrive before your opinion does. <strong>Ask for the case against before you reveal what you believe.</strong> If you want your view tested, the order is: model's read first, your view second, and then treat any agreement that arrives immediately after your view with suspicion.</p>
+        <p>Related and worth knowing: Sharma et al. (Anthropic, arXiv:2310.13548) found five state-of-the-art assistants consistently exhibit sycophancy, and that humans and preference models prefer convincingly-written sycophantic responses over correct ones a non-negligible fraction of the time. It is a product of the training objective, which is why it will not be prompted away entirely - only managed.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Pair one: topic-shaped versus decision-scoped<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="prompt-box bad">
+          <span class="label">Topic-shaped - returns prose that reads finished</span>
+          <p>"Give me an overview of AI note-taking in higher education. Cover the market size, the main players, key trends and the opportunities and risks."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Decision-scoped - returns a verdict per claim</span>
+          <p>"In three weeks we decide whether to build a lecture-notes product for higher education in two markets. Below are four claims the decision rests on. For each one, separately: (a) the strongest evidence for, with source type and date; (b) the strongest evidence against; (c) your verdict from supported / mixed / unsupported / cannot tell; (d) what would settle it. Then, in its own section, tell me what you could not find and where your coverage on this question is likely thin. Claim 1: recording lectures requires documented consent in both markets. Claim 2: institutional procurement takes 6 to 12 months. Claim 3: a free student tier reduces institutional deal value. Claim 4: our meeting-notes engine handles lecture audio without retraining. Do not tell me which way you think the overall decision should go."</p>
+        </div>
+        <p>The second prompt can come back "claim 4 is unsupported, and here is what I could not find" - the single most valuable sentence in the project, and one the first prompt is structurally incapable of producing. The last line matters too: you are asking for claim verdicts, not for a recommendation, because a recommendation is the thing you are being paid to make.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Pair two: the leading follow-up<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="prompt-box bad">
+          <span class="label">Leading - the 61.75% condition</span>
+          <p>"I am fairly sure institutions hold the budget and students are not the real buyer. Can you confirm that and pull together the evidence?"</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Neutral, then adversarial second pass</span>
+          <p>"Who holds the purchasing budget for study and accessibility tools in higher education in these two markets? Give the evidence on both sides - institution-led and student-led - and say which side the stronger source types fall on. Do not resolve it if the evidence does not."</p>
+        </div>
+        <p>Then, and only then, a second turn: "I had assumed institutions hold the budget. Argue the strongest case that I am wrong, and name the source types that would undermine my assumption." You have now had the neutral read before your view entered the conversation, which is exactly the ordering the measurement recommends.</p>
+        <p>One more habit worth keeping: when a model changes its answer right after you push back, ask what new evidence changed it. If the answer names none, you are looking at agreement rather than a correction - and one time in seven, per SycEval's 14.66%, that agreement is moving you towards something wrong.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Turn on Sharp question, and only that <span class="tag demo">★ 14 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">Same lab as last session, and it starts where it started: <strong>0 of 10</strong>, nine sources, every levers off. Tonight you read only the three rows at the top - the three that fail on <em>Not decision-scoped</em> - and then you turn on one lever and watch what a sharpened question is actually worth on its own. The answer is deliberately humbling: <strong>1 of 10</strong>. A better question does not find you better sources. It just makes the rest of the pipeline possible.</p>
+
+    <div class="steps">
+      <div class="step"><p>Levers all off. Find the three claims failing on <strong>Not decision-scoped</strong> and read the failure text on each. These are the three we rewrote in Part 2.</p></div>
+      <div class="step"><p>Note the other seven failures before you change anything: six have no support at all inside the nine sources a plain search returned, and one rests on a vendor blog alone.</p></div>
+      <div class="step"><p>Turn on <strong>Sharp question</strong> alone. The three unfalsifiable claims are replaced by testable ones, the source count stays at nine, and the audit reads <strong>1 of 10</strong>.</p></div>
+      <div class="step"><p>Find the survivor: <em>"Students, not institutions, are the initial buyer."</em> Ask why that one. Its support - a student survey and a forum thread - happens to sit inside the set a popularity-ranked search returned. It survives on luck of ranking, not on strength.</p></div>
+      <div class="step"><p>Predict what happens to it next session. When tiering surfaces the buyer interviews and the spend statistics, they point the other way, and this claim fails on unhandled contradiction. A sharp question does not protect a weak claim - it just lets the audit see it.</p></div>
+    </div>
+
+    <div class="rlbox" data-mode="lab" data-levers=""></div>
+
+    <div class="callout tip">
+      <strong>What is real here and what is a teaching corpus</strong>
+      The 22 sources are a teaching corpus built for this one decision - plausible sources, not real publications. The audit is a real rule engine: each source carries a type, tier, year, sample size and funder, and each claim's verdict traces to specific sources by id. So the numbers on the screen are computed, not scripted, and the rules are the part that transfers to your own work.
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>One survivor out of ten is the honest return on a better question, and it is still the highest-leverage hour in the project.</strong> Three of the ten claims went from unanswerable to answerable, which is why rungs 3 to 5 can later reach nine. Do this work at the start and it costs an hour. Do it after four weeks of reading and you rewrite the claims, discover your evidence was gathered for different sentences, and go back to searching. The question is cheap up front and expensive on credit.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Take a live question of your own and write the chain on one page: the decision, the question whose answer would change it, three to six claims, and the source type each claim needs. Stop there. Do not search yet.</li>
+      <li>Run the four tests on each of your claims. Rewrite every failure until all four pass, and keep the before-and-after pair - the contrast is what you will show a stakeholder who wants "a general overview".</li>
+      <li>Write the decision-scoped prompt from Part 3 for your own claim set, including the "tell me what you could not find" section. Run it, then run the leading version of the same prompt and compare how confident the two answers sound.</li>
+      <li>Next time a model reverses its position after you push back, ask what new evidence changed its mind. Log whether it names any. Three or four of these and the 14.66% stops being an abstraction.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session covers the question-design end of the evidence-synthesis tradition, and the measured evidence on why prompt ordering matters. The normative documents stay with their bodies and are linked where they bite:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Decision-backwards framing and the four falsifiability tests</span><span class="note">Parts 1-2 · applied to all ten Cadence claims</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">SycEval - sycophancy figures (Fanous et al., arXiv:2502.08177, AIES 2025)</span><span class="note">Part 3 · 61.75% vs 56.52% pre-emptive, 14.66% regressive, 58.19% overall, 78.5% persistence</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Sharma et al. - sycophancy as a product of the training objective (arXiv:2310.13548)</span><span class="note">Named as the mechanism · full failure-mode treatment in leader session a3</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Structured question formats - population, comparison, outcome, context</span><span class="note">Taught as the scoping discipline · turned into search strings in b3</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Audit rule 1, decision-scoped, with its standards lineage</span><span class="note">The one rule this session owns · all seven together in b6</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · You are handed a broad topic and two weeks. What is the first artifact you produce?</p>
+      <button class="qopt" type="button">A · A search string, so gathering can start while you think</button>
+      <button class="qopt" type="button">B · A reading list of the twenty most-cited sources on the topic</button>
+      <button class="qopt" type="button">C · The decision, the question that would change it, and the claims the answer rests on</button>
+      <p class="qwhy">Design runs decision to question to claims to evidence; work runs back up the same chain. Start at the topic and you get a summary, because a topic has no failure condition. Writing the claims first also tells you which source types you need, before you have read anything.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · SycEval measured pre-emptive rebuttals against in-context ones. Which produced more sycophancy?</p>
+      <button class="qopt" type="button">A · Pre-emptive - 61.75% versus 56.52%, so stating your hypothesis up front is the worse condition</button>
+      <button class="qopt" type="button">B · In-context - interrupting mid-answer is what destabilises the model</button>
+      <button class="qopt" type="button">C · Neither - the two conditions came out the same within error</button>
+      <p class="qwhy">Pre-emptive was worse: 61.75% against 56.52%. That is the practical reason to withhold your hypothesis until after the model's neutral read, and to ask for the case against before revealing what you believe. Regressive sycophancy, where pushback moves the model to a wrong answer, ran at 14.66%.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · With Sharp question on and nothing else, exactly one claim survives. Why that one?</p>
+      <button class="qopt" type="button">A · It is the strongest claim in the set, so it survives every rung</button>
+      <button class="qopt" type="button">B · Its support happens to sit inside the nine sources a plain ranked search returned - it survives on ranking luck, not strength</button>
+      <button class="qopt" type="button">C · The audit always passes at least one claim so the ladder has somewhere to start</button>
+      <p class="qwhy">A sharp question does not improve your evidence base, it only makes claims testable. The survivor rests on a student survey and a forum thread, both of which a popularity-ranked search returns. Once tiering surfaces the buyer interviews and spend statistics, they contradict it and it fails.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The chain</b><span>Decision → question → claims → evidence. Design that way, work back up it. If you cannot name the decision, you are reading, not researching.</span></div>
+      <div class="cheat-item"><b>The four tests</b><span>Could evidence break it · does it name a population · is there a quantity or a definite yes/no · would two peers agree what settles it.</span></div>
+      <div class="cheat-item"><b>Fail any one</b><span>No evidence can support the sentence - it can only be agreed with. Rewrite before you search.</span></div>
+      <div class="cheat-item"><b>The rewrite is a search plan</b><span>A scoped claim names the population, the quantity and therefore the source type you need. Three of Cadence's ten need regulator or peer-reviewed material.</span></div>
+      <div class="cheat-item"><b>Structured scoping</b><span>Spell out population, comparison, outcome, context before searching. Put them in the memo so a reader can match your evidence to your claim.</span></div>
+      <div class="cheat-item"><b>Do not lead</b><span>SycEval: pre-emptive rebuttals 61.75% sycophancy vs in-context 56.52%. State the claim, not your hypothesis. Ask for the case against first.</span></div>
+      <div class="cheat-item"><b>Watch the reversal</b><span>Regressive sycophancy 14.66%. If a model flips after pushback, ask what new evidence changed it. No evidence named means agreement, not correction.</span></div>
+      <div class="cheat-item"><b>Tonight's rung</b><span>Sharp question alone: 1 of 10, still nine sources. The survivor is a ranking accident. Next rung is source tiering.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 2 of 10 · learn-ai-research-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b1-researchers-ai-loop.html">← Previous: The researcher's AI loop</a> &nbsp;·&nbsp; <a href="b3-search-and-source-tiering.html">Next: Search strategy and source tiers →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/research-live.js?v=1"></script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

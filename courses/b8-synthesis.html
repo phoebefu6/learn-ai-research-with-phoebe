@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 8 · Synthesis you can defend - learn ai research with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-research-with-phoebe</a> / Researcher session 8 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Research with Phoebe · Researcher track · Session 8 of 10</div>
+    <h1>Synthesis you can <span class="accent">defend</span></h1>
+    <p class="sub">Nine of ten claims now survive the audit. This is the session where they become prose, and it is the hardest writing in the track, because every sentence has to carry its own weight and say where that weight came from. Three moves: turn extraction rows into a narrative grouped by decision rather than by source, write confidence language in four parts so "moderate" means something agreed, and write the tenth claim as an honest unknown with a price and a test. Then disclosure, which nobody agrees on and everybody enforces.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Researcher track</span>
+      <span class="chip audience">Analysts · academics · UX &amp; market researchers</span>
+      <span class="chip audience">The hard writing</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-2 · Where we are</span>
+      <span class="a2" style="flex:5">2-24 · Narrative, confidence, unknowns, disclosure</span>
+      <span class="a3" style="flex:4">24-42 · Build-along: draft the memo body</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: ROWS TO NARRATIVE ============ -->
+  <section class="section" id="narrative">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · structure</span>
+      <h2>From rows to a narrative <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">You have 22 sources, an extraction table and nine surviving claims. The temptation is to write the table up in source order, one paragraph per paper, and call it a literature review. That produces a document nobody can act on and nobody can audit, because the reader has to do the synthesis themselves. The order that works instead is decision-first, and it is four moves.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="From extraction rows to claims grouped by decision to a narrative, with the averaging-away failure branch marked in red.">
+        <style>
+          .snT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .snS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .snH { font: 700 12.5px Inter, sans-serif; fill: #121826; }
+          .snX { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .snR { font: 700 12.5px Inter, sans-serif; fill: #991B1B; }
+          .snN { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+          .snW { stroke: #1B2F57; stroke-width: 2.5; fill: none; marker-end: url(#snHd); }
+        </style>
+        <defs>
+          <marker id="snHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#1B2F57"/>
+          </marker>
+        </defs>
+
+        <rect x="24" y="34" width="250" height="58" rx="8" fill="#0B1428"/>
+        <text class="snT" x="38" y="58">1 EXTRACTION ROWS</text>
+        <text class="snS" x="38" y="76">one per source, 22 of them</text>
+        <rect x="314" y="34" width="250" height="58" rx="8" fill="#1B2F57"/>
+        <text class="snT" x="328" y="58">2 CLAIMS, GROUPED</text>
+        <text class="snS" x="328" y="76">by the decision they serve</text>
+        <rect x="604" y="34" width="246" height="58" rx="8" fill="#34507F"/>
+        <text class="snT" x="618" y="58">3 A NARRATIVE</text>
+        <text class="snS" x="618" y="76">what you believe, and why</text>
+
+        <path class="snW" d="M276,63 L310,63"/>
+        <path class="snW" d="M566,63 L600,63"/>
+        <path class="snW" d="M149,92 L149,126"/>
+        <path class="snW" d="M439,92 L439,126"/>
+        <path class="snW" d="M727,92 L727,126"/>
+
+        <rect x="24" y="132" width="250" height="62" rx="10" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="snH" x="38" y="154">NOT YET A FINDING</text>
+        <text class="snX" x="38" y="171">rows are inputs, not answers</text>
+        <text class="snX" x="38" y="188">grouping by source hides both</text>
+
+        <rect x="314" y="132" width="250" height="62" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2"/>
+        <text class="snR" x="328" y="154">AVERAGED AWAY</text>
+        <text class="snX" x="328" y="171">"the evidence is mixed"</text>
+        <text class="snX" x="328" y="188">disagreement is now invisible</text>
+
+        <rect x="604" y="132" width="246" height="62" rx="10" fill="#F5F8DE" stroke="#5A6B00" stroke-width="2"/>
+        <text class="snH" x="618" y="154">AUDITABLE</text>
+        <text class="snX" x="618" y="171">each claim carries its weight</text>
+        <text class="snX" x="618" y="188">and what would change it</text>
+
+        <rect x="24" y="214" width="826" height="48" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="snH" x="40" y="236">A SUMMARY COMPRESSES WHAT SOURCES SAID</text>
+        <text class="snX" x="40" y="253">A synthesis states what you now believe and why. Only the second one can be audited.</text>
+
+        <rect x="24" y="278" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="snN" x="48" y="290">Group claims by the decision they serve. Source order is filing, not thinking, and it moves work to the reader.</text>
+        <rect x="24" y="302" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="snN" x="48" y="314">Keep disagreement visible. "Mixed evidence" is where a split literature goes to die quietly.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - rows, grouped claims, narrative, and the averaging-away failure</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The order that works, in four moves<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Group claims by the decision they serve, not by source.</strong> Cadence's decision has four parts: who holds the budget, what consent recording requires, how long procurement takes, and whether the engine transfers. Every claim goes under one of those headings. If a claim does not fit any of them, it is interesting and it does not belong in this memo.</li>
+          <li><strong>State each claim with its weight.</strong> Not "several studies suggest" but a stated certainty level and the basis for it. A reader should be able to tell, from the sentence alone, whether to plan on it or hedge against it.</li>
+          <li><strong>Keep disagreement visible instead of averaging it away.</strong> "The evidence is mixed" is the phrase that destroys the most value in research writing. It sounds balanced and it deletes everything you learned in b7: the size of the split and which side the stronger studies fall on.</li>
+          <li><strong>Put the unknowns in the body, not a footnote.</strong> If a decision rests partly on something you could not establish, that belongs in the paragraph where the decision is discussed. Unknowns moved to the back matter are unknowns nobody reads before committing budget.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why a synthesis is not a summary<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A summary compresses what sources said. A synthesis states what you now believe and why. The difference is not stylistic, and it is not about length. Only the second one can be audited, because only the second one makes a claim that could be wrong.</p>
+        <div class="prompt-box bad">
+          <span class="label">Summary - accurate and unusable</span>
+          <p>"Smith (2023) found institutional purchasing dominant in higher education software. A 2024 student survey reported strong individual willingness to pay. A sector procurement study described cycles of six to twelve months. Views on transferability of speech models across domains vary."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Synthesis - a position with its receipts</span>
+          <p>"We should plan for institutional procurement with a six to twelve month cycle. Three independent procurement sources support this and two smaller vendor-run student surveys point the other way; we weight the procurement sources higher on independence and sample. The one thing we cannot yet establish is whether our engine transfers to lecture audio, and that is the item we are pricing separately below."</p>
+        </div>
+        <p>Every sentence in the second version is falsifiable, which is what makes it defensible. Ask of any paragraph you write: could a reviewer disagree with this, and would they know where to aim? If the answer is no, you have written a summary.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: CONFIDENCE LANGUAGE ============ -->
+  <section class="section" id="confidence">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the sentence</span>
+      <h2>Confidence language in four parts <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">A defensible claim has four parts, and most writing ships with one or two of them. <strong>Claim</strong>: what you believe. <strong>Weight</strong>: how strongly, in vocabulary that means the same thing to you and your reader. <strong>Basis</strong>: what the weight rests on. <strong>Revision trigger</strong>: what would change your mind. The fourth part is the one people leave out, and it is the one that converts a memo from an argument into a working instrument.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 392" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The anatomy of a defensible paragraph, labelled claim, weight, basis, disagreement and revision trigger.">
+        <style>
+          .apT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .apH { font: 700 12.5px Inter, sans-serif; fill: #121826; }
+          .apX { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .apN { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+        </style>
+
+        <rect x="24" y="24" width="170" height="52" rx="8" fill="#0B1428"/>
+        <text class="apT" x="38" y="46">CLAIM</text>
+        <text class="apT" x="38" y="64" style="font-weight:400;opacity:.9">what you believe</text>
+        <rect x="206" y="24" width="644" height="52" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="apH" x="222" y="46">"Institutions, not students, hold the budget for lecture-notes tools."</text>
+        <text class="apX" x="222" y="64">Falsifiable, and scoped to the decision we are actually making.</text>
+
+        <rect x="24" y="88" width="170" height="52" rx="8" fill="#1B2F57"/>
+        <text class="apT" x="38" y="110">WEIGHT</text>
+        <text class="apT" x="38" y="128" style="font-weight:400;opacity:.9">how strongly</text>
+        <rect x="206" y="88" width="644" height="52" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="apH" x="222" y="110">"We hold this with moderate certainty."</text>
+        <text class="apX" x="222" y="128">GRADE vocabulary, so moderate means the same thing to writer and reader.</text>
+
+        <rect x="24" y="152" width="170" height="52" rx="8" fill="#34507F"/>
+        <text class="apT" x="38" y="174">BASIS</text>
+        <text class="apT" x="38" y="192" style="font-weight:400;opacity:.9">resting on what</text>
+        <rect x="206" y="152" width="644" height="52" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="apH" x="222" y="174">"Three tier-1 procurement sources plus one sector body, S04 S09 S11 S17."</text>
+        <text class="apX" x="222" y="192">Tier and source ids come straight from the extraction table.</text>
+
+        <rect x="24" y="216" width="170" height="52" rx="8" fill="#1B2F57"/>
+        <text class="apT" x="38" y="238">DISAGREEMENT</text>
+        <text class="apT" x="38" y="256" style="font-weight:400;opacity:.9">who says otherwise</text>
+        <rect x="206" y="216" width="644" height="52" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="apH" x="222" y="238">"Two student surveys point the other way; both smaller and vendor-run."</text>
+        <text class="apX" x="222" y="256">Visible and weighted, never averaged into "the evidence is mixed".</text>
+
+        <rect x="24" y="280" width="170" height="52" rx="8" fill="#5A6B00"/>
+        <text class="apT" x="38" y="302">REVISION</text>
+        <text class="apT" x="38" y="320" style="font-weight:400;opacity:.9">what changes it</text>
+        <rect x="206" y="280" width="644" height="52" rx="8" fill="#F5F8DE" stroke="#5A6B00" stroke-width="2"/>
+        <text class="apH" x="222" y="302">"Three institutional buyers telling us students pay would flip this."</text>
+        <text class="apX" x="222" y="320">The part everyone omits. It turns a memo into a working instrument.</text>
+
+        <rect x="24" y="348" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="apN" x="48" y="360">Four parts, one paragraph. Drop the weight and it is bluster; drop the revision trigger and it cannot be updated.</text>
+        <rect x="24" y="372" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="apN" x="48" y="384">Every element above is already in your extraction table. Synthesis is assembly, not invention.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the anatomy of a paragraph a reviewer cannot dismantle</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Borrowing GRADE's vocabulary so "moderate" means something<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The problem with confidence words is that they are private. Your "likely" and your reader's "likely" are different numbers, and neither of you finds out until the decision goes wrong. GRADE solves this for evidence certainty with <strong>four levels</strong> and published wording, and you can borrow it directly even when you are writing a market memo rather than a clinical review:</p>
+        <ul>
+          <li><strong>High</strong> - "We are very confident that the true effect lies close to that of the estimate."</li>
+          <li><strong>Moderate</strong> - confident, with reservations you can name.</li>
+          <li><strong>Low</strong> - "Our confidence in the effect estimate is limited."</li>
+          <li><strong>Very low</strong> - little confidence; the estimate is a placeholder.</li>
+        </ul>
+        <p>What makes the vocabulary usable is that GRADE also names the reasons a body of evidence gets downgraded, so your weight is arguable rather than asserted. The <strong>five downgrading factors</strong> are <strong>risk of bias, inconsistency, indirectness, imprecision and publication bias</strong>. In a memo that becomes one clause: "moderate rather than high, because the studies are indirect - two of the four are on corporate procurement rather than higher education." A reader can now argue with your weight, which is exactly what you want. An unarguable confidence level is not a confidence level; it is a mood.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Three versions of the same claim<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Same evidence, three sentences. Only the third one survives a reviewer, and only the third one can be updated when new evidence arrives.</p>
+        <div class="prompt-box bad">
+          <span class="label">Flat and breakable</span>
+          <p>"Institutions, not students, hold the budget for lecture-notes tools, so we should sell to institutions."</p>
+        </div>
+        <div class="prompt-box bad">
+          <span class="label">Mush - reads careful, says nothing</span>
+          <p>"Evidence on budget ownership in higher education is mixed, with some sources suggesting institutional purchasing and others pointing to student willingness to pay. Further research would be beneficial."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Calibrated - all four parts</span>
+          <p>"We believe institutions rather than students hold the budget for lecture-notes tools <strong>(claim)</strong>. We hold this with moderate certainty, not high, because two of our four supporting sources study corporate rather than academic procurement <strong>(weight, with the downgrade named)</strong>. It rests on three tier-1 procurement sources and one sector body, S04, S09, S11 and S17; two smaller vendor-run student surveys disagree and we weight them lower on independence and sample <strong>(basis, with the disagreement visible)</strong>. Three institutional buyers telling us students pay directly would move us off this position <strong>(revision trigger)</strong>."</p>
+        </div>
+        <p>The middle version is the dangerous one, because it feels like rigour. It has a weight with no basis, a disagreement with no weighting, and no revision trigger, so nobody can act on it and nobody can challenge it. "Further research would be beneficial" is the tell.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: UNKNOWNS AND DISCLOSURE ============ -->
+  <section class="section" id="unknowns">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · unknowns and disclosure</span>
+      <h2>Writing the unknown, and saying what you used <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Nine claims survive. One does not, and it never will, because a single vendor-funded preprint with n=48 is not evidence that our engine transfers to lecture audio. That tenth claim is not a hole in the memo. Written properly it is the most credible paragraph in it, and it follows a fixed four-part pattern. Then the part that gets researchers in actual trouble: where you disclose the AI you used, which every body requires and no two bodies agree on.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The honest-unknown pattern<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Mark it unknown.</strong> Plainly, in the body, in the section where the decision is discussed. "We could not establish whether our engine transfers to lecture audio."</li>
+          <li><strong>Price what not knowing costs.</strong> If we are wrong, what does it cost - retraining time, a delayed launch, a refunded pilot? An unknown with no price attached gets treated as a rounding error.</li>
+          <li><strong>Name the test that would settle it, and its cost in days.</strong> "Ten lecture recordings across three subjects, transcribed and scored against our existing benchmark: four days of engineering time." This is the sentence that turns an unknown into a plan.</li>
+          <li><strong>Say what you will not do until then.</strong> The commitment boundary. "We will not put lecture-notes accuracy in marketing material, and we will not quote an accuracy figure to a pilot institution, until that test has run."</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Executives do not punish unknowns. They punish surprises.</strong> A marked, priced unknown with a named test reads as command of the problem. The same gap discovered later, in a paragraph that had implied certainty, reads as something you missed or hid. The four-part pattern costs you a paragraph and buys you the right to be believed on the other nine claims.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Disclosure - everyone requires it, nobody agrees where<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two things are settled. <strong>AI cannot be an author anywhere</strong> - it cannot take responsibility for the accuracy, integrity and originality of the work, and as a non-legal entity it cannot declare conflicts of interest. And <strong>every major body requires you to disclose use</strong>. What they disagree on is the location and the wording, which means "I disclosed it" is not a complete answer. You disclose it where your venue says.</p>
+        <p>One venue goes further than the rest: <strong>Science</strong> states that sources cited in its journal content "may not be authored or coauthored by AI tools". That is a constraint on your bibliography, not just your methods section, and it is worth checking before you cite an AI-generated report.</p>
+      </div>
+    </details>
+
+    <table class="clean">
+      <thead>
+        <tr><th>Venue</th><th>Where the disclosure goes</th><th>What it must say</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>ICMJE</strong></td><td>Both the cover letter and the submitted work</td><td>Writing assistance in acknowledgements; data collection, analysis or figures in methods. Nondisclosure "may require corrective action and may be construed as misconduct"</td></tr>
+        <tr><td><strong>COPE</strong></td><td>Materials and Methods</td><td>How AI was used. AI tools "cannot take responsibility for the submitted work" and cannot assert the presence or absence of conflicts of interest</td></tr>
+        <tr><td><strong>Springer Nature</strong></td><td>Methods</td><td>Documented use. LLMs "do not currently satisfy our authorship criteria"; generative-AI images largely not permitted, narrow exceptions, labelled</td></tr>
+        <tr><td><strong>Science / AAAS</strong></td><td>Cover letter plus methods or acknowledgements</td><td>Full description of use. AI may not be an author, and cited sources "may not be authored or coauthored by AI tools"</td></tr>
+        <tr><td><strong>Elsevier</strong></td><td>A separate published declaration statement</td><td>Prescribed wording. Basic grammar and spell checking needs no declaration; primary research images from AI are not permitted</td></tr>
+        <tr><td><strong>ICC/ESOMAR Code 2025</strong><br>commercial research</td><td>Art 9(b) to the record; Art 7(e) to the client</td><td>Whether AI or synthetic data "played a significant role in sampling, deployment, analysis, or interpretation of the data, and to what extent human oversight was involved"</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Writing the disclosure sentence for commercial work<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>If your output is a client deliverable rather than a journal article, the ICC/ESOMAR Code 2025 is the instrument that binds you, and it asks for two things: disclosure of significant AI involvement across sampling, deployment, analysis and interpretation, and a statement of the extent of human oversight. Article 7(e) makes the client-facing half explicit. Write it once, keep it as a template, and fill in what actually happened.</p>
+        <div class="prompt-box good">
+          <span class="label">Client-facing disclosure</span>
+          <p>"AI tools were used in this study as follows. Literature search and first-pass screening: AI-assisted across 62 candidate sources, with all 22 included sources read and verified by the named researcher. Extraction: AI-assisted into a structured table, with every figure checked against the source page. Analysis and interpretation: human only. Synthetic respondents or synthetic data: none. Human oversight: the named researcher reviewed and is accountable for all included sources, every extracted number, and all claims and confidence levels in this report."</p>
+        </div>
+        <p>Notice that the useful disclosure is stage by stage, because "AI was used in preparing this report" tells a client nothing about which stage to trust. The oversight sentence at the end is the one the Code is really after, and it is also the one that makes you check whether the statement is true before you sign it.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Draft the memo body, live <span class="tag demo">★ 16 min · everyone writes</span></h2>
+    </div>
+    <p class="lede">The lab below is at the top of the ladder: all five levers on, <strong>9 of 10 claims surviving</strong>, 22 sources. Nothing left to toggle. This session's work is writing, and the lab is your source of truth for it - each survivor row shows the tier and the source ids that justify the weight you are about to claim. One calibrated sentence per survivor, then the honest-unknown paragraph for the tenth.</p>
+
+    <div class="steps">
+      <div class="step"><p>Read the nine survivor rows and group them under the four parts of the Cadence decision: budget ownership, consent for recording, procurement timing, engine transfer.</p></div>
+      <div class="step"><p>For each survivor, read its tier and source ids off the row. That is your <strong>basis</strong> clause, and it is the reason this session is assembly rather than invention.</p></div>
+      <div class="step"><p>Assign a weight using the GRADE vocabulary, and name the downgrade where you use one - indirectness and imprecision will do most of the work here.</p></div>
+      <div class="step"><p>Write the four-part sentence: claim, weight with its reason, basis with the disagreement visible, revision trigger. Nine sentences. Where a claim was qualified in b7, keep the split in the sentence.</p></div>
+      <div class="step"><p>Now the tenth. Write the honest-unknown paragraph for engine transfer: mark it, price it, name the test and its days, and state what you will not claim until it runs. Read it back and check that it does not read as an apology.</p></div>
+    </div>
+
+    <div class="rlbox" data-mode="lab" data-levers="question,tiering,extraction,contradiction,replication"></div>
+
+    <div class="callout tip">
+      <strong>What is real here and what is a teaching corpus</strong>
+      The 22 sources are a teaching corpus built for one decision, not a real literature. Everything else is real: each source carries a type, tier, year, sample size and funder, and the audit is a rule engine that reads those attributes and the support or contradict links between them. Claims fail for a reason you can trace to a specific source. The rules and the sentence patterns are the transferable part - the corpus is the sandbox. The GRADE wording and the disclosure requirements in Part 3 are quoted from the bodies themselves.
+    </div>
+
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      Nine calibrated sentences, one honest-unknown paragraph, and a disclosure statement written stage by stage. That is most of the b10 memo body. b9 adds the interview evidence, and b10 assembles the whole thing with its audit trail.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 35-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Take a memo or report you have already sent and mark up its load-bearing paragraphs for the four parts. Count how many have a revision trigger. For most people the answer is zero, and that is the habit this session is trying to change.</li>
+      <li>Find one "the evidence is mixed" sentence in your own writing and rewrite it with the split visible: how many sources on each side, how strong they were, and which way you lean because of it.</li>
+      <li>Write the honest-unknown paragraph for a real gap in your current work, all four parts, including the cost in days of the test that would settle it. Put it in the body of the document, not the appendix.</li>
+      <li>Look up the disclosure rule for the venue or client you actually publish to, and draft your stage-by-stage statement now, while you still remember which stages used AI. Keep it as a template.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session borrows its confidence vocabulary from an evidence-grading standard and its disclosure rules from the publishing and market-research bodies. Every quoted phrase below comes from the body named. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GRADE - four certainty levels and the five downgrading factors</span><span class="note">Part 2 · borrowed as shared confidence vocabulary · full framework in leader session a2</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Disclosure divergence - ICMJE, COPE, Springer Nature, Science, Elsevier</span><span class="note">Part 3 · where each one wants it and what it must say</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">ICC/ESOMAR Code 2025 - Article 9(b) and Article 7(e)</span><span class="note">The two articles that bite on AI in commercial work · full code in a4</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Authorship rules - AI cannot be an author at any venue</span><span class="note">Stated with the reason · the peer-review confidentiality bans are covered in a4</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The audit trail and deciding on fast evidence</span><span class="note">Sentence patterns here · the assembled memo and its trail in b10</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What is the difference between a summary and a synthesis?</p>
+      <button class="qopt" type="button">A · A synthesis is longer and cites more sources</button>
+      <button class="qopt" type="button">B · A summary compresses what sources said; a synthesis states what you now believe and why, so only the synthesis can be audited</button>
+      <button class="qopt" type="button">C · A summary is for executives, a synthesis is for technical readers</button>
+      <p class="qwhy">The distinction is about who does the thinking. A summary hands the reader compressed source material and leaves the judgement to them. A synthesis makes a claim that could be wrong, with its weight and basis attached - which is exactly why a reviewer can test it and a decision-maker can act on it.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Claim, weight, basis and one more. What is the fourth part of a calibrated confidence sentence?</p>
+      <button class="qopt" type="button">A · A recommendation for further research</button>
+      <button class="qopt" type="button">B · A p-value or confidence interval for the claim</button>
+      <button class="qopt" type="button">C · The revision trigger - what would change your mind</button>
+      <p class="qwhy">The revision trigger is the part almost everyone omits, and it is what turns a memo into a working instrument: when the named evidence appears, the reader knows the position has moved without having to re-litigate the whole document. "Further research would be beneficial" is the mush version of the same instinct and commits to nothing.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · You used AI to help screen and extract. Why is "I disclosed it" not a complete answer?</p>
+      <button class="qopt" type="button">A · Because the bodies disagree on where it goes - ICMJE wants cover letter and work, COPE and Springer Nature want Methods, Elsevier wants a separate published declaration - so you disclose where your venue says</button>
+      <button class="qopt" type="button">B · Because disclosure is only required when AI is listed as an author</button>
+      <button class="qopt" type="button">C · Because screening and extraction are exempt; only AI-written text needs disclosing</button>
+      <p class="qwhy">They agree AI cannot be an author and that use must be disclosed, and they diverge on location and wording. Science additionally requires that cited sources not be authored or coauthored by AI tools, and for commercial work the ICC/ESOMAR Code wants the significant-role disclosure plus a statement of the extent of human oversight. Check your venue before you write the sentence.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 8 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Summary vs synthesis</b><span>A summary compresses what sources said. A synthesis states what you now believe and why. Only the second can be audited.</span></div>
+      <div class="cheat-item"><b>The order that works</b><span>Group by decision, not by source · state each claim with its weight · keep disagreement visible · unknowns in the body, not a footnote.</span></div>
+      <div class="cheat-item"><b>The four parts</b><span>Claim · weight · basis · revision trigger. Drop the weight and it is bluster; drop the trigger and it cannot be updated.</span></div>
+      <div class="cheat-item"><b>GRADE vocabulary</b><span>High, moderate, low, very low. High is "very confident the true effect lies close to the estimate"; low is "confidence is limited".</span></div>
+      <div class="cheat-item"><b>Name the downgrade</b><span>Risk of bias · inconsistency · indirectness · imprecision · publication bias. Say which one moved you off high.</span></div>
+      <div class="cheat-item"><b>Honest unknown</b><span>Mark it · price what not knowing costs · name the test and its days · say what you will not claim until it runs.</span></div>
+      <div class="cheat-item"><b>Disclosure divergence</b><span>ICMJE: cover letter and work. COPE and Springer Nature: Methods. Science: cover letter plus methods or acknowledgements. Elsevier: separate declaration.</span></div>
+      <div class="cheat-item"><b>Two hard limits</b><span>AI cannot be an author anywhere. Science also bars cited sources authored or coauthored by AI tools.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 8 of 10 · learn-ai-research-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b7-contradictions-and-stats.html">← Previous: Contradictions and statistics</a> &nbsp;·&nbsp; <a href="b9-qualitative-coding.html">Next: Interviews and coding at scale →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/research-live.js?v=1"></script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 5 · Extraction tables - learn ai research with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-research-with-phoebe</a> / Researcher session 5 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Research with Phoebe · Researcher track · Session 5 of 10</div>
+    <h1>Extraction <span class="accent">tables</span></h1>
+    <p class="sub">You have a screened set. Now you have to get the contents out of it, one row per source, in a form that will still be checkable in three months when somebody challenges a number in your memo. This is the least glamorous session in the track and the one that moves the audit most: turning the extraction table on takes you from 2 of 10 surviving claims to 4 of 10, and every claim that revives is a claim that asserts a number. Tonight: the columns that earn their place, the three everybody skips, and how to extract with AI without laundering its errors into your findings.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Researcher track</span>
+      <span class="chip audience">Analysts · academics · UX &amp; market researchers</span>
+      <span class="chip audience">Rung 3</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where we are</span>
+      <span class="a2" style="flex:5">3-24 · Columns, AI extraction, the skipped three</span>
+      <span class="a3" style="flex:4">24-42 · Build-along: 2 of 10 to 4 of 10</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: THE ROW ============ -->
+  <section class="section" id="the-row">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · one row per source</span>
+      <h2>The columns that earn their place <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">One row per source, no exceptions, including the sources that turned out to disagree with you. A table with a row missing is not a table, it is a shortlist. Twelve columns cover almost every question anybody will ask you: source id, full citation, year, design or type, tier, population, sample size, the measure as the source itself defines it, the number, the location in the source, funder or interest, and a verbatim quote for anything you intend to state as a finding. Each one exists because it catches a specific failure, and once you have seen the failure you stop resenting the column.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 478" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An extraction row unrolled - twelve columns, an example value for each, and the specific error each column catches.">
+        <style>
+          .exH { font: 700 11px Inter, sans-serif; fill: #FFFFFF; }
+          .exK { font: 700 12px Inter, sans-serif; fill: #121826; }
+          .exV { font: 400 11.5px Inter, sans-serif; fill: #1B2F57; }
+          .exX { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .exN { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+        </style>
+
+        <rect x="24" y="24" width="200" height="28" rx="6" fill="#0B1428"/>
+        <text class="exH" x="38" y="43">COLUMN</text>
+        <rect x="232" y="24" width="330" height="28" rx="6" fill="#1B2F57"/>
+        <text class="exH" x="246" y="43">EXAMPLE FROM ONE ROW</text>
+        <rect x="570" y="24" width="286" height="28" rx="6" fill="#34507F"/>
+        <text class="exH" x="584" y="43">THE ERROR IT CATCHES</text>
+
+        <rect x="24" y="60" width="200" height="28" rx="5" fill="#EEF1F7"/>
+        <text class="exK" x="38" y="79">Source id</text>
+        <rect x="232" y="60" width="330" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exV" x="246" y="79">S-07</text>
+        <rect x="570" y="60" width="286" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exX" x="584" y="79">two people citing different rows</text>
+
+        <rect x="24" y="90" width="200" height="28" rx="5" fill="#EEF1F7"/>
+        <text class="exK" x="38" y="109">Full citation</text>
+        <rect x="232" y="90" width="330" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exV" x="246" y="109">Author, venue, year, DOI</text>
+        <rect x="570" y="90" width="286" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exX" x="584" y="109">a source you cannot rebuild later</text>
+
+        <rect x="24" y="120" width="200" height="28" rx="5" fill="#EEF1F7"/>
+        <text class="exK" x="38" y="139">Year</text>
+        <rect x="232" y="120" width="330" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exV" x="246" y="139">2019</text>
+        <rect x="570" y="120" width="286" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exX" x="584" y="139">evidence that aged out of its window</text>
+
+        <rect x="24" y="150" width="200" height="28" rx="5" fill="#EEF1F7"/>
+        <text class="exK" x="38" y="169">Design or type</text>
+        <rect x="232" y="150" width="330" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exV" x="246" y="169">cross-sectional survey</text>
+        <rect x="570" y="150" width="286" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exX" x="584" y="169">a design label doing appraisal work</text>
+
+        <rect x="24" y="180" width="200" height="28" rx="5" fill="#EEF1F7"/>
+        <text class="exK" x="38" y="199">Tier</text>
+        <rect x="232" y="180" width="330" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exV" x="246" y="199">Tier 2 - peer reviewed</text>
+        <rect x="570" y="180" width="286" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exX" x="584" y="199">tier-4-only support hiding in a list</text>
+
+        <rect x="24" y="210" width="200" height="28" rx="5" fill="#EEF1F7"/>
+        <text class="exK" x="38" y="229">Population</text>
+        <rect x="232" y="210" width="330" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exV" x="246" y="229">UK undergraduates, 4 universities</text>
+        <rect x="570" y="210" width="286" height="28" rx="5" fill="#FEF2F2" stroke="#FCA5A5"/>
+        <text class="exX" x="584" y="229">the silent population mismatch</text>
+
+        <rect x="24" y="240" width="200" height="28" rx="5" fill="#EEF1F7"/>
+        <text class="exK" x="38" y="259">Sample size</text>
+        <rect x="232" y="240" width="330" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exV" x="246" y="259">n = 412</text>
+        <rect x="570" y="240" width="286" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exX" x="584" y="259">a big claim on a small sample</text>
+
+        <rect x="24" y="270" width="200" height="28" rx="5" fill="#EEF1F7"/>
+        <text class="exK" x="38" y="289">Measure, as defined</text>
+        <rect x="232" y="270" width="330" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exV" x="246" y="289">"used note tools in a typical week"</text>
+        <rect x="570" y="270" width="286" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exX" x="584" y="289">your definition swapped for theirs</text>
+
+        <rect x="24" y="300" width="200" height="28" rx="5" fill="#EEF1F7"/>
+        <text class="exK" x="38" y="319">The number</text>
+        <rect x="232" y="300" width="330" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exV" x="246" y="319">38%</text>
+        <rect x="570" y="300" width="286" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exX" x="584" y="319">a figure with no provenance</text>
+
+        <rect x="24" y="330" width="200" height="28" rx="5" fill="#F5F8DE" stroke="#5A6B00" stroke-width="1.5"/>
+        <text class="exK" x="38" y="349">Location in source</text>
+        <rect x="232" y="330" width="330" height="28" rx="5" fill="#F5F8DE" stroke="#5A6B00" stroke-width="1.5"/>
+        <text class="exV" x="246" y="349">p.7, Table 3</text>
+        <rect x="570" y="330" width="286" height="28" rx="5" fill="#F5F8DE" stroke="#5A6B00" stroke-width="1.5"/>
+        <text class="exX" x="584" y="349">a number nobody can re-check</text>
+
+        <rect x="24" y="360" width="200" height="28" rx="5" fill="#EEF1F7"/>
+        <text class="exK" x="38" y="379">Funder or interest</text>
+        <rect x="232" y="360" width="330" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exV" x="246" y="379">vendor-funded, disclosed</text>
+        <rect x="570" y="360" width="286" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exX" x="584" y="379">a finding carried by an interest</text>
+
+        <rect x="24" y="390" width="200" height="28" rx="5" fill="#EEF1F7"/>
+        <text class="exK" x="38" y="409">Verbatim quote</text>
+        <rect x="232" y="390" width="330" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exV" x="246" y="409">"38% reported weekly use"</text>
+        <rect x="570" y="390" width="286" height="28" rx="5" fill="#FFFFFF" stroke="#C6CBD8"/>
+        <text class="exX" x="584" y="409">a paraphrase that drifted</text>
+
+        <rect x="24" y="440" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="exN" x="48" y="452">The location column is the one that saves you. A number nobody can re-check drifts with retelling.</text>
+        <rect x="24" y="464" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="exN" x="48" y="476">One row per source, including the ones that disagreed. A missing row is a shortlist, not a table.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the extraction row unrolled, with the failure each column is there to catch</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why the location column is the one that saves you<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every column on that list is useful. One of them is load-bearing. <strong>Location in source</strong> - page, table number, figure number - is what makes a number re-checkable, and re-checkability is the entire difference between evidence and a rumour with a citation attached.</p>
+        <p>Watch what happens without it. You record "38%, Smith 2024". Six weeks later somebody asks whether that is weekly or monthly use. You open the PDF. It is 31 pages. The number appears twice, once in the abstract and once in a subgroup table, and they do not mean the same thing. You are now doing the extraction again under time pressure, in front of the person who asked - and the honest answer, "let me come back to you", costs you the room.</p>
+        <p>Now watch what happens over a longer horizon. A number without a location gets copied from your table into a slide, from the slide into someone else's deck, from that deck into a strategy doc. At each hop it loses a qualifier: the population narrows or widens, "weekly" becomes "regular", the confidence interval evaporates, 38% becomes "nearly 40%" becomes "around half". Nobody lied. Nobody could check. <strong>A number nobody can re-check will drift, and it drifts in the direction the reader wants.</strong></p>
+        <p>The habit is small: when you write the number, write where you got it in the same keystroke. Page and table, every time, including for your own internal data.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The measure column, and the definition swap<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The subtlest column is <strong>measure, as the source defines it</strong>. Not as you would define it. Not as your product team defines it. As it is written in the paper.</p>
+        <p>The Cadence question is full of these. You want to know about "adoption". One source measured "has ever opened the tool", another "used it in a typical week", another "used it for at least three lectures in a term". All three would be reported to you as adoption, and all three are legitimate. Put them in the same column without their definitions and you have built a comparison that means nothing while looking rigorous - which is worse than no comparison at all, because it survives a skim.</p>
+        <p>The rule: <strong>copy the definition, then decide whether the sources are comparable.</strong> Sometimes they are not, and the finding is "three studies measure adoption three different ways, so the range 12% to 38% is not a range". That sentence is more valuable than an average, and you can only write it if the definitions are sitting in your table.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: AI EXTRACTION ============ -->
+  <section class="section" id="ai-extraction">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · extracting with AI</span>
+      <h2>Extracting with AI without laundering its errors <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Extraction is the second of the two steps AI genuinely compresses, and the compression is enormous - a job that took a day takes twenty minutes. The workflow that keeps it honest has three parts and the third is not optional. <strong>Give the tool your column definitions</strong>, so it fills your table rather than inventing its own. <strong>Extract into the table.</strong> Then <strong>verify every number that will appear in the memo against the source itself</strong>. Not a sample. Every number you will state. The verification is where the time saving gets spent, and it is still a massive net win.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Where AI extraction actually goes wrong<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>These are not hallucinations. Every one of the failures below returns a number that <em>is in the paper</em>, which is precisely why they get through review:</p>
+        <ul>
+          <li><strong>Wrong denominator</strong> - 38% of respondents becomes 38% of students, or 38% of institutions. The figure is right; the base has changed underneath it.</li>
+          <li><strong>A subgroup reported as the whole</strong> - the number from the postgraduate column arrives in your row as the study's headline finding.</li>
+          <li><strong>A baseline taken as an outcome</strong> - the pre-intervention measure extracted as the result. Common with anything reported in a before-and-after table.</li>
+          <li><strong>Units silently converted</strong> - months to weeks, per-user to per-seat, percentages to percentage points. No flag, no note, a plausible number.</li>
+          <li><strong>An abstract figure the full text qualifies</strong> - the abstract says the intervention improved recall; page 14 says it did so in one of three conditions and not at follow-up. The tool read the abstract.</li>
+        </ul>
+        <p>Notice the pattern: every failure is a <strong>confident restatement of something true about a different thing</strong>. No verification pass that reads only the extracted table can catch any of them. You have to go back to the source, which is what the location column makes cheap.</p>
+        <div class="prompt-box bad">
+          <span class="label">Vague, and it will comply</span>
+          <p>"Pull out the key findings and statistics from these 24 papers on note-taking tools in higher education, and put them in a table I can use."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Defined columns, quote and location required</span>
+          <p>"Extract these papers into a table with exactly these columns, and leave a cell empty rather than filling it with an inference: source id · full citation · year · study design as the paper labels it · population, including country and institution type · sample size (state the denominator the reported figure uses) · outcome measure copied word for word from the paper · the number · location of that number (page, and table or figure) · funder and any declared competing interest · one verbatim quote, 25 words maximum, containing the number. Do not convert units. Do not round. If the number appears in the abstract and the full text qualifies it, use the full text and say so in the quote column."</p>
+        </div>
+        <div class="prompt-box bad">
+          <span class="label">Accepts approximation</span>
+          <p>"What proportion of students roughly use AI note-taking tools, according to these papers? An approximate figure is fine."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Demands the number as stated</span>
+          <p>"For each paper that reports a proportion of students using note-taking tools, give me the figure exactly as the paper states it - same precision, same units, same denominator, no rounding and no averaging across papers. Include the measure definition and the page. If a paper does not report a proportion, write 'not reported' rather than estimating one."</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Two tool limits that matter at this step<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Elicit's Extract Data workflow</strong> does exactly this job and does it well: you define columns, it fills them across your paper set. The limitation from b4 applies with more force here than anywhere else in the pipeline. <strong>Full-text analysis only happens for open access material</strong> (or where you supply your own subscription plus their browser extension). Otherwise it works from <strong>title and abstract only</strong> - and extraction from an abstract is precisely how you get the last failure in the list above, the confident figure the full text qualifies. Abstracts are written to be quotable. That is the problem.</p>
+        <p><strong>Semantic Scholar's <code>tldr</code> field</strong> is a genuine convenience across 214M papers, and it is <strong>machine-generated</strong>. It must never be quoted as the authors' words, and it must never be the source of a number in your table. Its useful sibling is <code>openAccessPdf</code>, which is the practical bridge to the thing you actually need: the full text, so you can put a page number in the location column.</p>
+        <p>General rule for this whole layer: a tool that summarises is doing a different job from a tool that extracts, and the outputs look identical in a spreadsheet cell. If you cannot tell which one produced a value, treat it as a summary and go and get the number yourself.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE SKIPPED THREE ============ -->
+  <section class="section" id="skipped-three">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the columns people skip</span>
+      <h2>Three columns, three failures they catch <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Funder, date-against-mechanism, and population match. They get dropped because they feel like bureaucracy next to the number, and each one catches a category of error that no amount of care elsewhere will find. The third is the most common silent failure in applied research, and the one most likely to be in something you have already shipped.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Funder and interest: not worthless, not sufficient<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A vendor-funded study is not worthless. Vendors often have the only data that exists, and pretending otherwise gets you a memo with nothing in it. The rule is narrower and more useful: <strong>a vendor-funded finding needs a non-conflicted source alongside it before it carries anything</strong>. On its own it is context. Paired with an independent source pointing the same way, it becomes support - and if the independent source points a different way, you have found the most interesting sentence in your memo.</p>
+        <p>This is also why the column has to say <em>interest</em> and not just <em>funder</em>. An unfunded study by a team who built the tool has an interest. A regulator's guidance has an interest, a legitimate and declared one. Write down who benefits if the finding is true, and the weighting decision makes itself.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Date against the mechanism, not against the calendar<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>"Is 2019 too old?" is an unanswerable question. The answerable version is: <strong>has the mechanism this source describes changed since it was written?</strong></p>
+        <ul>
+          <li>A <strong>2019 procurement study</strong> of how universities buy software may be perfectly current. Committee structures, budget cycles and approval chains move slowly, and a six-year-old finding about a twelve-month procurement cycle is probably still true.</li>
+          <li>A <strong>2019 model-capability study</strong> on transcription accuracy is archaeology. The thing it measured no longer exists in the form it measured it.</li>
+        </ul>
+        <p>Same year, opposite verdicts. This is why your date window needed a stated reason back in b4 - the reason is a claim about which mechanisms are stable, and writing it down lets you defend a nine-year-old source and reject a two-year-old one in the same memo without looking inconsistent.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Population match: the silent one<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This is the failure that gets past everyone, because nothing about it looks wrong. The source is excellent. The design is strong, the sample is large, the number is real, the paper is peer reviewed and current. It is about <strong>a different group of people</strong>, and so it quietly answers a question you did not ask.</p>
+        <p>For the Cadence decision the boundaries are sharp and easy to cross. <strong>Higher education is not K-12</strong> - different consent regime, different budget holder, different device environment, different everything that matters to this product. <strong>Neither of them is corporate learning</strong>, which is where most of the available note-taking evidence actually lives, because that is where the money has been. A superb study of note-taking tools in corporate training tells you something real. It does not tell you what a university procurement committee will do.</p>
+        <p>The check is mechanical and takes ten seconds per row: read your claim, read the population cell, and ask whether they are the same people. When they are not, you have three honest options - drop the source, or keep it and state the transfer explicitly ("evidence is from corporate learning; we assume partial transfer and treat this as weak support"), or go and find the on-population source. What you may not do is let it sit in the support column unmarked, because that is a claim about undergraduates resting on evidence about sales teams.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Demo · build-along</span>
+      <h2>2 of 10 to 4 of 10, live <span class="tag demo">★ 12 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">The lab opens where b3 left you: <strong>sharp question and source tiering on, 2 of 10 claims surviving, 22 sources in play</strong>. Turn on <strong>Extraction table</strong> and two more claims come back - and the interesting part is <em>which</em> two. Read them before and after. Every claim that revives at this rung is a claim that asserts a number, and every one of them was failing on the same rule: the number was there but nothing recorded where it came from.</p>
+
+    <div class="steps">
+      <div class="step"><p>Start at <strong>2 of 10</strong>. Read the four claims that assert a number and note the failure rule on each - "number recorded" is doing all the work.</p></div>
+      <div class="step"><p>Predict which will revive. Two of the four have a source in the set that carries the figure; two do not. Guess before you click.</p></div>
+      <div class="step"><p>Turn on <strong>Extraction table</strong>. You are at <strong>4 of 10</strong>. Check your prediction against the two that came back.</p></div>
+      <div class="step"><p>Now name the triage bucket. These claims failed on <strong>work, not honesty</strong> - nobody had to soften a sentence, somebody had to go and record a page number. Contrast that with the contradiction failures waiting in b7, which are fixed by wording, not by effort.</p></div>
+      <div class="step"><p>Look at the two number-claims still red. One is short of a source in the set; one is the honest unknown that never survives. Write down which is which - you will need the distinction in b10.</p></div>
+    </div>
+
+    <div class="rlbox" data-mode="lab" data-levers="question,tiering"></div>
+
+    <div class="callout tip">
+      <strong>What is real here and what is a teaching corpus</strong>
+      The 22 sources are a teaching corpus built for one decision, not a real literature. Everything else is real: each source carries a type, tier, year, sample size and funder, and the audit is a rule engine reading those attributes in the fixed order from b1. When a claim revives on this rung it is because a specific source in the set carries the number and the extraction row records where. The rules are the transferable part - the corpus is the sandbox.
+    </div>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 262" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The verification loop - extract, locate, quote, re-check, and only then cite, with a failure branch back to extraction.">
+        <style>
+          .vlT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .vlS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .vlB { font: 700 12px Inter, sans-serif; fill: #991B1B; }
+          .vlG { font: 700 12px Inter, sans-serif; fill: #1B2200; }
+          .vlX { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .vlN { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+          .vlW { stroke: #1B2F57; stroke-width: 2.5; fill: none; marker-end: url(#vlHd); }
+          .vlR { stroke: #991B1B; stroke-width: 2.5; fill: none; marker-end: url(#vlHr); }
+        </style>
+        <defs>
+          <marker id="vlHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#1B2F57"/>
+          </marker>
+          <marker id="vlHr" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#991B1B"/>
+          </marker>
+        </defs>
+
+        <rect x="24" y="50" width="152" height="56" rx="8" fill="#0B1428"/>
+        <text class="vlT" x="38" y="76">1 EXTRACT</text>
+        <text class="vlS" x="38" y="94">into your columns</text>
+        <rect x="196" y="50" width="152" height="56" rx="8" fill="#1B2F57"/>
+        <text class="vlT" x="210" y="76">2 LOCATE</text>
+        <text class="vlS" x="210" y="94">page, table, figure</text>
+        <rect x="368" y="50" width="152" height="56" rx="8" fill="#34507F"/>
+        <text class="vlT" x="382" y="76">3 QUOTE</text>
+        <text class="vlS" x="382" y="94">verbatim, one line</text>
+        <rect x="540" y="50" width="152" height="56" rx="8" fill="#1B2F57"/>
+        <text class="vlT" x="554" y="76">4 RE-CHECK</text>
+        <text class="vlS" x="554" y="94">against the source</text>
+        <rect x="712" y="50" width="142" height="56" rx="8" fill="#5A6B00"/>
+        <text class="vlT" x="726" y="76">5 CITE</text>
+        <text class="vlS" x="726" y="94">only now</text>
+
+        <path class="vlW" d="M176,78 L192,78"/>
+        <path class="vlW" d="M348,78 L364,78"/>
+        <path class="vlW" d="M520,78 L536,78"/>
+        <path class="vlW" d="M692,78 L708,78"/>
+        <path class="vlR" d="M616,106 L616,136"/>
+
+        <rect x="196" y="140" width="496" height="44" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2"/>
+        <text class="vlB" x="210" y="160">THE NUMBER DOES NOT MATCH THE SOURCE</text>
+        <text class="vlX" x="210" y="177">go back to step 1 - do not cite it, and do not soften it, fix the row</text>
+        <path class="vlR" d="M192,162 L120,162 L120,112"/>
+
+        <rect x="712" y="140" width="142" height="44" rx="8" fill="#F5F8DE" stroke="#5A6B00" stroke-width="2"/>
+        <text class="vlG" x="726" y="160">IT MATCHES</text>
+        <text class="vlX" x="726" y="177">cite with location</text>
+
+        <rect x="24" y="212" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="vlN" x="48" y="224">Verify every number that will appear in the memo. Not a sample of them. Every one.</text>
+        <rect x="24" y="236" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="vlN" x="48" y="248">The location recorded in step 2 is what makes step 4 cost seconds instead of an afternoon.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - extract, locate, quote, re-check, and only then cite</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 40-50 min total</span></h2>
+    </div>
+    <ul>
+      <li>Build the extraction table for your own current question, one row per screened source, using the twelve columns. Leave cells empty rather than inferring - the empty cells are a map of what you still have to read.</li>
+      <li>Add the three skipped columns to a table you already have: funder or interest, date-against-mechanism, population match. Mark every row where the population is not the population in your claim.</li>
+      <li>Take the last deck you presented and verify every number in it against its source. Time yourself. That number is your argument for doing this at extraction time instead.</li>
+      <li>Find one number in your own published or shipped work with no recorded location. Go and find it, record page and table, and notice whether the number still says what you said it said.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session is mostly craft rather than standard, so the source material is the tooling layer and its documented limits, plus the extraction discipline the evidence-synthesis standards assume you already have. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The extraction row - source, design, tier, population, sample, measure, number, location, funder, quote</span><span class="note">Part 1 · the artifact b7 and b10 both run on</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">AI extraction failure modes - denominators, subgroups, baselines, units, abstract-versus-full-text</span><span class="note">Part 2 · with the two prompt pairs that prevent them</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Elicit Extract Data - column-defined extraction, and the title-and-abstract-only limit for non-open-access material</span><span class="note">Part 2 self-study · full tool stack in leader session a5</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Semantic Scholar - machine-generated tldr, and openAccessPdf as the bridge to full text</span><span class="note">Part 2 self-study · never quote a tldr as the authors' words</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Funder and interest, date against mechanism, population match</span><span class="note">Part 3 · the three columns and the failures they catch</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Why is "location in source" the column that saves you?</p>
+      <button class="qopt" type="button">A · It proves you actually read the paper rather than the abstract</button>
+      <button class="qopt" type="button">B · A number with a page and table can be re-checked in seconds, and a number nobody can re-check drifts with every retelling</button>
+      <button class="qopt" type="button">C · Journals require page-level citation for any quantitative claim</button>
+      <p class="qwhy">Re-checkability is the difference between evidence and a rumour with a citation attached. Without a location, a figure loses a qualifier at every hop - population widens, "weekly" becomes "regular", 38% becomes "nearly half" - and it always drifts toward what the reader wants.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · A strong, current, peer-reviewed study of note-taking tools in corporate training is sitting in the support for a claim about university students. What is wrong?</p>
+      <button class="qopt" type="button">A · Nothing - the design and sample are strong, so it carries the claim</button>
+      <button class="qopt" type="button">B · It is a tier problem, and re-tiering the source fixes it</button>
+      <button class="qopt" type="button">C · Population mismatch - excellent evidence about a different group quietly answering a question you did not ask</button>
+      <p class="qwhy">This is the most common silent failure in applied research, because nothing about it looks wrong. Higher education is not K-12 and neither is corporate learning. Drop it, or keep it and state the transfer explicitly as weak support - what you cannot do is leave it in the support column unmarked.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Where does AI extraction typically go wrong?</p>
+      <button class="qopt" type="button">A · It returns numbers that are genuinely in the paper but attached to the wrong thing - wrong denominator, a subgroup as the whole, a baseline as an outcome, units converted, an abstract figure the full text qualifies</button>
+      <button class="qopt" type="button">B · It invents numbers that do not appear anywhere in the source</button>
+      <button class="qopt" type="button">C · It refuses to extract from tables and figures</button>
+      <p class="qwhy">These are not hallucinations, which is exactly why they survive review - every value is real and checkable, just about something else. No pass that reads only your table can catch them. You have to return to the source, which is what the location column makes cheap. Note that Elicit works from title and abstract only for non-open-access material, so the abstract-versus-full-text failure is the likeliest of the five.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>One row per source</b><span>Including the sources that disagreed with you. A table with a row missing is a shortlist, not a table.</span></div>
+      <div class="cheat-item"><b>The twelve columns</b><span>Id · citation · year · design · tier · population · sample size · measure as defined · number · location · funder or interest · verbatim quote.</span></div>
+      <div class="cheat-item"><b>Location is load-bearing</b><span>Page, table, figure - written in the same keystroke as the number. A number nobody can re-check drifts with every retelling.</span></div>
+      <div class="cheat-item"><b>Measure, as they define it</b><span>Copy the definition first, then decide whether sources are comparable. Sometimes "12% to 38%" is not a range.</span></div>
+      <div class="cheat-item"><b>Five AI extraction failures</b><span>Wrong denominator · subgroup as the whole · baseline as outcome · units silently converted · abstract figure the full text qualifies.</span></div>
+      <div class="cheat-item"><b>Tool limits</b><span>Elicit Extract Data works from title and abstract only unless open access. Semantic Scholar's tldr is machine-generated - never quote it as the authors.</span></div>
+      <div class="cheat-item"><b>The skipped three</b><span>Funder needs a non-conflicted pair · date against the mechanism, not the calendar · population match, the silent failure.</span></div>
+      <div class="cheat-item"><b>This rung</b><span>2 of 10 to 4 of 10. Every claim that revives asserts a number. Failure bucket: work, not honesty.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 5 of 10 · learn-ai-research-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b4-screening-at-scale.html">← Previous: Screening at scale</a> &nbsp;·&nbsp; <a href="b6-evidence-lab.html">Next: The evidence lab →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/research-live.js?v=1"></script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

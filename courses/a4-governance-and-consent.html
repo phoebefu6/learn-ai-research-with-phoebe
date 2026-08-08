@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 4 · Consent, confidentiality, governance - learn ai research with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-research-with-phoebe</a> / Leader session 4 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Research with Phoebe · Leader track · Session 4 of 6</div>
+    <h1>Consent, confidentiality, <span class="accent">governance</span></h1>
+    <p class="sub">a3 was about being wrong. Tonight is about being liable. Four rails hold an AI-assisted research function up: whose data you put into a tool, whose confidential material you are handling, whether you said you used AI and where, and who is answerable for the output. Every rail has a real source with a real date behind it, and where the guidance simply does not exist yet we say so rather than inventing a rule. Bring the tools your team actually uses.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Leader track</span>
+      <span class="chip audience">Research · insights · strategy leads</span>
+      <span class="chip audience">The rails</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Four rails</span>
+      <span class="a2" style="flex:4">3-20 · Participant data + confidentiality</span>
+      <span class="a3" style="flex:4">20-38 · Disclosure + the industry layer</span>
+      <span class="a4" style="flex:1">38-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: PARTICIPANT DATA ============ -->
+  <section class="section" id="participant-data">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · rail one</span>
+      <h2>Participant material in a third-party tool <span class="tag concept">11 min live</span></h2>
+    </div>
+    <p class="lede">This is the rail your team crosses most often and notices least: an interview transcript, an open-text survey field, a customer call recording, pasted into a tool to be summarised. The question is not whether the tool is good. It is whether that material was yours to send.</p>
+
+    <div class="callout tip">
+      <strong>Not legal advice</strong>
+      This session teaches what the named instruments say, so you can ask your legal and privacy colleagues the right questions with the right citations. It is not legal advice, and it does not substitute for advice on your own facts, contracts or jurisdictions.
+    </div>
+
+    <p><strong>GDPR Article 89(1)</strong> is the research-safeguards provision, and the exact wording carries a condition people drop. Processing for scientific research purposes shall be subject to appropriate safeguards, and those safeguards <strong>"may include pseudonymisation provided that those purposes can be fulfilled in that manner"</strong>. Two things follow. Pseudonymisation is named as an example of a safeguard, not as a licence. And it is conditional on the research purpose still being achievable that way, which is a judgement someone has to record.</p>
+
+    <p>Now the point that does the most work in a real team. <strong>Pseudonymisation is not anonymisation.</strong> Article 4(5) defines it as processing such that the data can no longer be attributed to a person without additional information. <strong>Recital 26</strong> then closes the door: pseudonymised data <strong>"which could be attributed to a natural person by the use of additional information should be considered to be information on an identifiable natural person"</strong>.</p>
+
+    <div class="callout win">
+      <strong>★ The sentence to say out loud in your next team meeting</strong>
+      Stripping the names out of an interview transcript before pasting it into a third-party tool <strong>does not take it outside GDPR</strong>. It is still personal data, it is still a processing operation, and the tool is still a recipient. "I removed the names" is a good instinct and it is not a legal basis.
+    </div>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A four-gate decision path for whether an interview transcript may be placed into a third-party AI tool, with the instrument behind each gate.">
+        <style>
+          .dpQ { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .dpW { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .9; }
+          .dpT { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .dpH { font: 700 12.5px Inter, sans-serif; fill: #121826; }
+          .dpR { font: 700 12.5px Inter, sans-serif; fill: #991B1B; }
+          .dpO { font: 700 12.5px Inter, sans-serif; fill: #1B2200; }
+          .dpN { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+          .dpA { stroke: #34507F; stroke-width: 2; fill: none; marker-end: url(#dpHd); }
+        </style>
+        <defs>
+          <marker id="dpHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#34507F"/>
+          </marker>
+        </defs>
+        <text class="dpH" x="24" y="34">MAY THIS TRANSCRIPT GO INTO THIS TOOL?</text>
+
+        <rect x="24" y="56" width="300" height="62" rx="8" fill="#0B1428"/>
+        <text class="dpQ" x="42" y="80">1 · IS IT PERSONAL DATA?</text>
+        <text class="dpW" x="42" y="98">a transcript almost always is</text>
+        <path class="dpA" d="M328,87 L354,87"/>
+        <rect x="360" y="56" width="496" height="62" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="dpT" x="378" y="80">Removing the names does not make it anonymous.</text>
+        <text class="dpT" x="378" y="98">Art 4(5) plus Recital 26: still an identifiable person.</text>
+
+        <rect x="24" y="130" width="300" height="62" rx="8" fill="#1B2F57"/>
+        <text class="dpQ" x="42" y="154">2 · LAWFUL BASIS AND CONSENT?</text>
+        <text class="dpW" x="42" y="172">read the consent you actually took</text>
+        <path class="dpA" d="M328,161 L354,161"/>
+        <rect x="360" y="130" width="496" height="62" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="dpT" x="378" y="154">Art 89(1): safeguards may include pseudonymisation,</text>
+        <text class="dpT" x="378" y="172">provided the purpose can be fulfilled in that manner.</text>
+
+        <rect x="24" y="204" width="300" height="62" rx="8" fill="#34507F"/>
+        <text class="dpQ" x="42" y="228">3 · COULD YOU DO IT WITHOUT IDS?</text>
+        <text class="dpW" x="42" y="246">Recital 156 feasibility duty</text>
+        <path class="dpA" d="M328,235 L354,235"/>
+        <rect x="360" y="204" width="496" height="62" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="dpT" x="378" y="228">PDPA Second Schedule: no-consent use needs a purpose</text>
+        <text class="dpT" x="378" y="246">unachievable without identifiable data, plus public benefit.</text>
+
+        <rect x="24" y="278" width="300" height="62" rx="8" fill="#1B2F57"/>
+        <text class="dpQ" x="42" y="302">4 · WHERE DOES THE DATA GO?</text>
+        <text class="dpW" x="42" y="320">vendor terms, retention, training</text>
+        <path class="dpA" d="M328,309 L354,309"/>
+        <rect x="360" y="278" width="496" height="62" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="dpT" x="378" y="302">NIH: AI tools have no guarantee of where data are being</text>
+        <text class="dpT" x="378" y="320">sent, saved, viewed, or used in the future.</text>
+
+        <rect x="24" y="356" width="406" height="52" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2"/>
+        <text class="dpR" x="42" y="378">NO AT ANY GATE</text>
+        <text class="dpT" x="42" y="396">it stays inside your own environment</text>
+
+        <rect x="450" y="356" width="406" height="52" rx="8" fill="#F5F8DE" stroke="#5A6B00" stroke-width="2"/>
+        <text class="dpO" x="468" y="378">ALL FOUR CLEAR</text>
+        <text class="dpN" x="468" y="396">proceed, and write the decision down</text>
+
+        <rect x="24" y="424" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="dpN" x="48" y="436">Four gates, in order. The written record is the artifact - a decision nobody logged did not happen.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the four gates, and the instrument behind each one</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The three recitals a research leader should know by number<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Recital 33</strong> - broad consent. It recognises that research purposes may not be fully specifiable at collection, and allows consent to <strong>"certain areas of scientific research"</strong>. Useful, and not unlimited: "areas" is still a scope, so a consent taken for one area does not travel to another.</li>
+          <li><strong>Recital 156</strong> - the feasibility duty. It points at checking whether the research purpose <strong>can be met without identification</strong>. This is the gate most AI workflows fail without noticing, because pasting the raw transcript is simply easier than de-identifying first. If the summary you need could have been produced from de-identified text, the recital expects you to have asked.</li>
+          <li><strong>Recital 159</strong> - scope. "Scientific research purposes" is read <strong>broadly, including privately funded research</strong>. That cuts both ways for a commercial insights team: you may be inside the research framing, which means you are inside its safeguards too, not exempt from them.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Singapore PDPA: the research exception, and the route teams actually use<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The <strong>PDPA 2012 Second Schedule</strong> research exception is narrower than most people assume. Use of personal data without consent for research requires all of the following:</p>
+        <ul>
+          <li>the purpose <strong>cannot reasonably be accomplished</strong> without individually identifiable data;</li>
+          <li>there is a <strong>clear public benefit</strong>;</li>
+          <li>the results <strong>will not be used to make decisions affecting the individual</strong>;</li>
+          <li>and the published results <strong>do not identify the individual</strong>.</li>
+        </ul>
+        <p><strong>Disclosure</strong> without consent adds a further condition: that it is <strong>impracticable to seek consent</strong>.</p>
+        <p>Read the third condition against a commercial reality. If your research output will drive an offer, a price, a segment assignment or a retention action aimed at that person, you are outside the research exception on its own terms. Which is why the route commercial insights teams actually rely on is usually the narrower <strong>First Schedule Part 5 Business Improvement Purposes</strong>, with its own conditions. Naming the right route in your documentation is half of surviving a review.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where the guidance simply does not exist yet<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>An honest gap, recorded on purpose rather than filled. In building this course we did not find US institutional review board guidance addressing generative AI tools specifically. That absence is worth knowing for two reasons.</p>
+        <p>First, do not let anyone tell you the ethics review question is settled by existing IRB practice, because we could not verify guidance that addresses it. Second, and more usefully: an absence of specific guidance is not permission. The general duties - consent scope, confidentiality, data minimisation, participant expectations - apply whether or not anyone has published an AI-specific page about them. Where the map is blank, you navigate by the principles and you write down what you decided and why.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: CONFIDENTIALITY ============ -->
+  <section class="section" id="confidentiality">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · rail two</span>
+      <h2>Confidentiality, and the reason that generalises <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">The clearest institutional rules on AI and confidential material come from peer review, and they are worth reading even if nobody on your team will ever review a grant application. The reasoning is not about grants. It is about what happens when somebody else's confidential document leaves your building.</p>
+
+    <p><strong>NIH NOT-OD-23-149</strong>, dated <strong>2023-06-23</strong>, prohibits NIH scientific peer reviewers from using natural language processors, large language models or other generative AI technologies <strong>for analysing and formulating peer review critiques</strong>. It states that uploading application content <strong>"violates the NIH peer review confidentiality and integrity requirements"</strong>. And it gives a reason that transfers to any confidential material at all:</p>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>NIH, on why the ban exists:</strong> "AI tools have no guarantee of where data are being sent, saved, viewed, or used in the future."</p>
+      <p>Nothing in that sentence is specific to grant review. Replace "application" with "client's pricing model", "an unpublished trial protocol", "an employee interview transcript" or "a partner's roadmap under NDA", and the sentence holds unchanged. This is the most portable line in the whole session.</p>
+    </div>
+
+    <p><strong>NSF</strong>, dated <strong>2023-12-14</strong>, splits the duty in a way worth copying. Reviewers are <strong>prohibited</strong> from uploading any content from proposals, review information or related records to non-approved generative AI tools. Proposers, by contrast, are merely <strong>encouraged</strong> to disclose their own use. Note the asymmetry: a hard prohibition on other people's confidential material, a softer expectation on your own work. That is a sensible shape for a corporate policy too.</p>
+
+    <p>The publishers land in the same place. <strong>ICMJE</strong> and <strong>Elsevier</strong> both bar reviewers from uploading manuscripts where confidentiality cannot be assured. <strong>Science</strong> takes the narrowest permissive line: AI may be used only to revise the reviewer's <em>own</em> writing, it must be declared, and there must be no training on the inputs. Notice that Science's three conditions are effectively a procurement checklist - whose text, declared, and does the vendor train on it.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The corporate parallel, said plainly<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>A client's confidential material is somebody's manuscript.</strong> The peer-review rules exist because a reviewer holds material that was given to them in confidence, for one narrow purpose, by someone who has no relationship with the reviewer's tool vendor. That describes almost every commercial research engagement.</p>
+        <p>So the policy your team needs is not new, it is transposed:</p>
+        <ul>
+          <li><strong>Other people's confidential material:</strong> prohibited in non-approved tools. Not discouraged. Prohibited, with an approved list that names the tools and the tiers.</li>
+          <li><strong>Your own draft writing:</strong> permitted with the Science conditions - your text, declared where required, no training on inputs.</li>
+          <li><strong>The vendor question that decides both:</strong> where does the data go, how long is it kept, and is it used for training. If the answer is not in a contract, treat it as unanswered.</li>
+        </ul>
+        <p>And one thing to watch for that a5 covers in detail: some AI features in reference and research tools are routers. Paperpile's "Ask AI" sends your full-text PDF onward to a general assistant, so the confidentiality question moves downstream to a vendor you did not evaluate. Your PDFs leave by design, not by accident.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: DISCLOSURE ============ -->
+  <section class="section" id="disclosure">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · rail three</span>
+      <h2>Disclosure, and the fact that the bodies disagree about where <span class="tag concept">10 min live</span></h2>
+    </div>
+    <p class="lede">On the headline question the five major bodies agree completely: AI cannot be an author, because it cannot take responsibility. On the practical question - where in the document you disclose - they disagree, and that disagreement is the thing your team's standard operating procedure has to resolve.</p>
+
+    <table class="clean">
+      <thead>
+        <tr><th>Body</th><th>Can AI be an author?</th><th>Where you disclose</th><th>AI-generated images</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>ICMJE</strong></td>
+          <td>No - chatbots cannot be responsible for accuracy, integrity and originality</td>
+          <td>"In both the cover letter and the submitted work": writing assistance to acknowledgements, data collection, analysis or figures to methods</td>
+          <td>Covered by the same disclosure duty</td>
+        </tr>
+        <tr>
+          <td><strong>COPE</strong></td>
+          <td>No - AI tools cannot take responsibility, and as non-legal entities cannot assert conflicts of interest</td>
+          <td><strong>Materials and Methods</strong></td>
+          <td>Not separately specified here</td>
+        </tr>
+        <tr>
+          <td><strong>Springer Nature</strong></td>
+          <td>No - LLMs "do not currently satisfy our authorship criteria"</td>
+          <td>Document in <strong>Methods</strong></td>
+          <td>Generative-AI images largely <strong>not permitted</strong>, narrow labelled exceptions</td>
+        </tr>
+        <tr>
+          <td><strong>Science / AAAS</strong></td>
+          <td>No - and cited sources may not be authored or coauthored by AI tools either</td>
+          <td>Cover letter, plus methods or acknowledgements</td>
+          <td>Need explicit editor permission</td>
+        </tr>
+        <tr>
+          <td><strong>Elsevier</strong></td>
+          <td>No</td>
+          <td>A separate published <strong>AI declaration statement</strong> with prescribed wording</td>
+          <td>Primary research images from AI: not permitted</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Two quotations to keep, because they are the ones that carry consequences. <strong>ICMJE:</strong> <strong>"nondisclosure of AI use may require corrective action and may be construed as misconduct"</strong>. That is not a style preference. And <strong>COPE</strong> explains the underlying logic in a way that is genuinely useful outside publishing - AI tools <strong>"cannot take responsibility for the submitted work... As non-legal entities, they cannot assert the presence or absence of conflicts of interest"</strong>.</p>
+
+    <div class="callout win">
+      <strong>★ The leader takeaway</strong>
+      One habit will not satisfy all five. ICMJE wants it in two places, COPE wants Materials and Methods, Springer Nature wants Methods, Science wants the cover letter as well, and Elsevier wants a separate statement with prescribed wording. So your team's SOP cannot say "always disclose AI use" and stop there. <strong>It must name the venue</strong>, and it must be checked at submission rather than remembered at drafting.
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Disclosure is necessary and it is not sufficient.</strong> Guo, Dong and Hao, <em>Frontiers in Cell and Developmental Biology</em> 11:1339390, was retracted on <strong>2024-02-16</strong> (retraction notice DOI <strong>10.3389/fcell.2024.1386861</strong>) over AI-generated figures. The critical detail: <strong>the AI use was disclosed</strong>. It still failed, because nobody checked the output. Declaring that you used a tool tells the reader what to scrutinise; it does not do the scrutinising.</p>
+      <p>Pair it with Glynn, <strong>arXiv:2411.15218</strong>: <strong>768</strong> documents with suspected undeclared AI use, of which only <strong>4.3%</strong> were altered post-publication. Detection is not correction. If your governance model assumes that problems get caught and then fixed, that 4.3% is the number to argue with.</p>
+    </div>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Writing the disclosure clause into your own SOP<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You are not publishing in <em>Science</em>, so translate rather than copy. A disclosure clause that works for a commercial insights function has four parts, and each is borrowed from a body above:</p>
+        <ul>
+          <li><strong>What was used</strong> - the tool, the version if it matters, and the stage: search, screening, extraction, drafting, figures. The stage distinction is ICMJE's, and it is the useful one, because writing help and analysis help are different risks.</li>
+          <li><strong>Where it is recorded</strong> - name the section, per output type. Board paper, client report, published white paper, and journal submission may each have a different location. Decide once.</li>
+          <li><strong>Who verified the output</strong> - COPE's logic: because the tool cannot take responsibility, a named person must. Put the name in the document.</li>
+          <li><strong>The images rule</strong> - Springer Nature and Elsevier both restrict generative images in primary research. For a commercial report the equivalent line is that no chart, diagram or data visual may be generated rather than computed from the underlying numbers.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 4: THE INDUSTRY LAYER ============ -->
+  <section class="section" id="industry">
+    <div class="section-kicker">
+      <span class="klabel">Part 4 · rail four</span>
+      <h2>The industry layer, and who is answerable <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">If your team does commercial research, the codes that bind you are not the journal ones. The ICC/ESOMAR Code was updated on 2025-06-18 and it is unusually specific about AI. This is the layer to bring to your next client conversation, because several of these are duties you owe the client and the participant, not just yourself.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>ICC/ESOMAR Code 2025: the five articles that bite<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Article 9(b) - disclose the role.</strong> Researchers must disclose whether AI, synthetic data or other emerging techniques and technologies <strong>"played a significant role in sampling, deployment, analysis, or interpretation of the data, and to what extent human oversight was involved"</strong>. Read the list of four stages. Most teams would only think to mention analysis.</li>
+          <li><strong>Article 7(e) - tell the client.</strong> The client must be told when AI or synthetic data and personas are used, and <strong>the extent of human oversight must be stated</strong>. Oversight is not implied by your professionalism; it is a disclosed quantity.</li>
+          <li><strong>Article 4(a)(ii) - tell the participant, at the start.</strong> Use of a synthetic persona for data collection must be clearly notified to the data subject <strong>at the beginning of the research</strong>. Not in a debrief afterwards.</li>
+          <li><strong>Article 7(f) - keep it contained.</strong> Research data used with AI <strong>"must remain confidential... Access... strictly limited to a secure and controlled environment"</strong>. This is the article that decides whether a consumer tool tier is usable at all.</li>
+          <li><strong>Article 6(c) - re-identification by inference.</strong> Guard against it. This is the one AI changes most, because a model that reads across your open-text fields can reconstruct an identity that no single field revealed.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Accountability, and marking what came from a human<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Fundamental Principle 5</strong> is the sentence that closes every argument about tooling. Researchers hold overall responsibility and oversight <strong>"irrespective of the method, technique and technology applied"</strong>. There is no configuration of tools that moves accountability off your desk, and no vendor claim that does it either. That is the fourth rail, and it is why the other three are yours to enforce.</p>
+        <p>Then the <strong>Insights Association Code (September 2025)</strong> adds the provenance duty in one clean line: AI-generated data <strong>"must be clearly distinguished from data directly derived from human research participants"</strong>. Combine it with a3's Bisbee finding and you get a concrete operating rule: synthetic material must be labelled at the row level, not mentioned in a footnote, because a reader who cannot tell which rows were human cannot judge the driver analysis at all.</p>
+      </div>
+    </details>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The four governance rails - participant data, confidentiality, disclosure and accountability - each with the one question it answers and the instrument behind it.">
+        <style>
+          .frT { font: 700 12.5px Inter, sans-serif; fill: #121826; }
+          .frH { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .frQ { font: 600 12px Inter, sans-serif; fill: #0B1428; }
+          .frK { font: 700 10.5px Inter, sans-serif; fill: #69718A; }
+          .frS { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .frN { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+        </style>
+        <text class="frT" x="24" y="34">THE FOUR RAILS, AND THE ONE QUESTION EACH ANSWERS</text>
+
+        <rect x="24" y="56" width="196" height="40" rx="8" fill="#0B1428"/>
+        <text class="frH" x="38" y="81">PARTICIPANT DATA</text>
+        <rect x="24" y="96" width="196" height="140" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="frQ" x="38" y="122">Is this person still</text>
+        <text class="frQ" x="38" y="140">identifiable, and</text>
+        <text class="frQ" x="38" y="158">did they agree?</text>
+        <text class="frK" x="38" y="190">INSTRUMENTS</text>
+        <text class="frS" x="38" y="208">GDPR Art 89, Rec 26</text>
+        <text class="frS" x="38" y="226">PDPA 2nd Schedule</text>
+
+        <rect x="236" y="56" width="196" height="40" rx="8" fill="#1B2F57"/>
+        <text class="frH" x="250" y="81">CONFIDENTIALITY</text>
+        <rect x="236" y="96" width="196" height="140" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="frQ" x="250" y="122">Whose material is</text>
+        <text class="frQ" x="250" y="140">this, and where</text>
+        <text class="frQ" x="250" y="158">does it go?</text>
+        <text class="frK" x="250" y="190">INSTRUMENTS</text>
+        <text class="frS" x="250" y="208">NIH NOT-OD-23-149</text>
+        <text class="frS" x="250" y="226">NSF, ICMJE, Elsevier</text>
+
+        <rect x="448" y="56" width="196" height="40" rx="8" fill="#34507F"/>
+        <text class="frH" x="462" y="81">DISCLOSURE</text>
+        <rect x="448" y="96" width="196" height="140" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="frQ" x="462" y="122">Did you say you</text>
+        <text class="frQ" x="462" y="140">used it, in the</text>
+        <text class="frQ" x="462" y="158">place they ask?</text>
+        <text class="frK" x="462" y="190">INSTRUMENTS</text>
+        <text class="frS" x="462" y="208">ICMJE, COPE, Springer</text>
+        <text class="frS" x="462" y="226">Science, Elsevier</text>
+
+        <rect x="660" y="56" width="196" height="40" rx="8" fill="#5A6B00"/>
+        <text class="frH" x="674" y="81">ACCOUNTABILITY</text>
+        <rect x="660" y="96" width="196" height="140" rx="8" fill="#F5F8DE" stroke="#5A6B00" stroke-width="1.5"/>
+        <text class="frQ" x="674" y="122">Which named human</text>
+        <text class="frQ" x="674" y="140">is answerable for</text>
+        <text class="frQ" x="674" y="158">this output?</text>
+        <text class="frK" x="674" y="190">INSTRUMENTS</text>
+        <text class="frS" x="674" y="208">ESOMAR Principle 5</text>
+        <text class="frS" x="674" y="226">ICC/ESOMAR Art 9(b)</text>
+
+        <rect x="24" y="254" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="frN" x="48" y="266">One habit will not clear all four. Name the rail, name the instrument, name the person who signs it off.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - four rails, four questions, and the instruments behind each</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run the four-gate path from Part 1 on one real piece of participant material your team handled last month. Write down where it stopped, or write down why all four cleared. Either output is a governance record you did not have before.</li>
+      <li>Read the consent wording your team actually used on its most recent study. Does it cover processing by a third-party tool, and does it name a scope in the Recital 33 sense? Bring the exact sentence to your legal or privacy colleague rather than a paraphrase.</li>
+      <li>Write the disclosure clause. Four parts: what was used, where it is recorded per output type, who verified it by name, and the images rule. Then pick the one output type your team produces most and fix the venue.</li>
+      <li>Audit your tool list against ICC/ESOMAR Article 7(f): which tiers can genuinely be described as a secure and controlled environment with strictly limited access? Anything that cannot is a consumer tool wearing a work badge.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Named instruments, quoted only where the wording is verified, with gaps recorded as gaps. Nothing on this page is legal advice - it is the citation set that lets you ask your legal and privacy colleagues a precise question. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR research safeguards - Art 89(1), Art 4(5), Recitals 26, 33, 156, 159</span><span class="note">Part 1 · pseudonymisation is not anonymisation</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Singapore PDPA 2012 - Second Schedule research exception; First Schedule Part 5</span><span class="note">Part 1 · the four conditions, and the route commercial teams use</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Peer-review confidentiality - NIH NOT-OD-23-149, NSF 2023-12-14, ICMJE, Elsevier, Science</span><span class="note">Part 2 · the reason that transfers to any confidential material</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Authorship and disclosure - ICMJE, COPE, Springer Nature, Science, Elsevier</span><span class="note">Part 3 · agreement on authorship, divergence on venue</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Industry codes - ICC/ESOMAR Code 2025, Insights Association Code Sept 2025</span><span class="note">Part 4 · the AI articles · sampling standards return in a6 and b9</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Your analyst removes all names from an interview transcript, then pastes it into a third-party tool. Under GDPR, what is the position?</p>
+      <button class="qopt" type="button">A · It is now anonymous data, so GDPR no longer applies to it</button>
+      <button class="qopt" type="button">B · It is pseudonymised, not anonymised - Recital 26 treats data attributable to a person via additional information as information on an identifiable person</button>
+      <button class="qopt" type="button">C · It depends only on whether the tool vendor is based in the EU</button>
+      <p class="qwhy">Article 4(5) plus Recital 26 settle it: pseudonymised data that could be attributed to a person using additional information is still personal data. Art 89(1) names pseudonymisation as a possible safeguard, and only where the research purpose can still be fulfilled that way. Removing names is good practice, not a legal basis.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Your team wants one rule for disclosing AI use across all its outputs. What does the published guidance tell you?</p>
+      <button class="qopt" type="button">A · One rule is fine, since all five bodies require disclosure in Methods</button>
+      <button class="qopt" type="button">B · Disclosure is optional as long as a human verified the output</button>
+      <button class="qopt" type="button">C · The bodies agree AI cannot be an author but disagree on the location, so the SOP has to name the venue for each output type</button>
+      <p class="qwhy">ICMJE wants both the cover letter and the submitted work, COPE wants Materials and Methods, Springer Nature wants Methods, Science adds the cover letter, and Elsevier wants a separate declaration with prescribed wording. And ICMJE warns that nondisclosure may require corrective action and may be construed as misconduct, so vagueness is not a safe default.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Why does the NIH peer-review reasoning matter to a commercial insights team that never touches grant review?</p>
+      <button class="qopt" type="button">A · Because its stated reason - AI tools have no guarantee of where data are sent, saved, viewed or used in future - applies to any confidential material, including a client's</button>
+      <button class="qopt" type="button">B · Because NIH rules are legally binding on commercial research firms</button>
+      <button class="qopt" type="button">C · Because it establishes that AI cannot be listed as an author</button>
+      <p class="qwhy">The rule is about grants; the reason is about data egress, and it transfers to a client's pricing model, an unpublished protocol or a partner roadmap under NDA. A client's confidential material is somebody's manuscript. NSF's shape is worth copying too: prohibited for other people's material, encouraged disclosure for your own.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Four rails</b><span>Participant data · confidentiality · disclosure · accountability. One question each, one named instrument each, one named person at the end.</span></div>
+      <div class="cheat-item"><b>The GDPR line</b><span>Pseudonymisation is not anonymisation. Art 4(5) plus Recital 26. Stripping names does not take a transcript outside GDPR.</span></div>
+      <div class="cheat-item"><b>Art 89(1) as written</b><span>Safeguards "may include pseudonymisation provided that those purposes can be fulfilled in that manner". Conditional, and someone must record the judgement.</span></div>
+      <div class="cheat-item"><b>Three recitals</b><span>33 broad consent to certain areas · 156 feasibility duty to check whether the purpose needs identification · 159 research read broadly, including privately funded.</span></div>
+      <div class="cheat-item"><b>PDPA Second Schedule</b><span>Not achievable without identifiable data · clear public benefit · no decisions affecting the individual · results do not identify. Disclosure adds: consent impracticable.</span></div>
+      <div class="cheat-item"><b>The portable NIH line</b><span>"AI tools have no guarantee of where data are being sent, saved, viewed, or used in the future." A client's confidential material is somebody's manuscript.</span></div>
+      <div class="cheat-item"><b>Disclosure venue</b><span>ICMJE both places · COPE Materials and Methods · Springer Methods · Science cover letter too · Elsevier a separate declaration. Your SOP must name it.</span></div>
+      <div class="cheat-item"><b>Disclosure is not enough</b><span>Front Cell Dev Biol 11:1339390 retracted 2024-02-16: AI use was disclosed, nobody checked the output. Glynn: 768 cases, 4.3% corrected.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 4 of 6 · learn-ai-research-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a3-where-ai-fails.html">← Previous: Where AI fails research</a> &nbsp;·&nbsp; <a href="a5-the-research-stack.html">Next: Standing up the research stack →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

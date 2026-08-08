@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 7 · Contradictions and statistics - learn ai research with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-research-with-phoebe</a> / Researcher session 7 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Research with Phoebe · Researcher track · Session 7 of 10</div>
+    <h1>Contradictions and <span class="accent">statistics</span></h1>
+    <p class="sub">This is the heaviest numbers session in the track, and the one that moves the audit furthest: rungs 4 and 5, from 4 of 10 surviving claims to 9. Two habits do all the work. First, you go looking for the source that disagrees, on purpose, before a reviewer does it for you. Second, you stop reading a p-value as a verdict and start reading effect size, interval, replication and publication bias as one picture. Nothing here requires you to run statistics. It requires you to interrogate the ones you are handed.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Researcher track</span>
+      <span class="chip audience">Analysts · academics · UX &amp; market researchers</span>
+      <span class="chip audience">Rungs 4 and 5</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-2 · Where we are</span>
+      <span class="a2" style="flex:5">2-24 · Contradiction, replication, reading numbers</span>
+      <span class="a3" style="flex:4">24-42 · Build-along: rungs 4 and 5</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: CONTRADICTION ============ -->
+  <section class="section" id="contradiction">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the challenge step</span>
+      <h2>Going looking for the source that disagrees <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Your extraction table from b5 is a record of what you found. It is not yet a record of what is out there, because you searched for your claim and the search obliged. The contradiction check is the deliberate opposite move: spend ten minutes trying to break each load-bearing claim, and write down what happened. It is the single biggest jump in the whole ladder, worth three claims on its own, and the reason is unglamorous. Most claims that fail this rule are not wrong. They are stated flat where the evidence only supports a qualified sentence.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The contradiction workflow: search the opposite claim, check citations, ask for the case against, record the handling, then choose between a flat claim that breaks and a qualified claim that holds.">
+        <style>
+          .cwT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .cwS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .cwH { font: 700 12.5px Inter, sans-serif; fill: #121826; }
+          .cwX { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .cwR { font: 700 12.5px Inter, sans-serif; fill: #991B1B; }
+          .cwN { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+          .cwW { stroke: #1B2F57; stroke-width: 2.5; fill: none; marker-end: url(#cwHd); }
+        </style>
+        <defs>
+          <marker id="cwHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#1B2F57"/>
+          </marker>
+        </defs>
+
+        <rect x="24" y="40" width="184" height="52" rx="8" fill="#0B1428"/>
+        <text class="cwT" x="36" y="62">1 SEARCH THE OPPOSITE</text>
+        <text class="cwS" x="36" y="80">state the negation</text>
+        <rect x="240" y="40" width="184" height="52" rx="8" fill="#1B2F57"/>
+        <text class="cwT" x="252" y="62">2 CHECK CITATIONS</text>
+        <text class="cwS" x="252" y="80">supporting vs contrasting</text>
+        <rect x="456" y="40" width="184" height="52" rx="8" fill="#34507F"/>
+        <text class="cwT" x="468" y="62">3 THE CASE AGAINST</text>
+        <text class="cwS" x="468" y="80">ask it to attack the claim</text>
+        <rect x="672" y="40" width="184" height="52" rx="8" fill="#1B2F57"/>
+        <text class="cwT" x="684" y="62">4 RECORD HANDLING</text>
+        <text class="cwS" x="684" y="80">one line per claim</text>
+
+        <path class="cwW" d="M210,66 L236,66"/>
+        <path class="cwW" d="M426,66 L452,66"/>
+        <path class="cwW" d="M642,66 L668,66"/>
+        <path class="cwW" d="M764,92 L764,128"/>
+
+        <rect x="24" y="134" width="832" height="44" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="cwH" x="40" y="153">WHAT YOU USUALLY FIND: THE LITERATURE IS SPLIT</text>
+        <text class="cwX" x="40" y="170">Not that you were wrong. That your sentence was shaped too confidently for the evidence.</text>
+
+        <path class="cwW" d="M226,178 L226,206"/>
+        <path class="cwW" d="M650,178 L650,206"/>
+
+        <rect x="24" y="210" width="404" height="66" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2"/>
+        <text class="cwR" x="40" y="232">FLAT CLAIM - BREAKS IN REVIEW</text>
+        <text class="cwX" x="40" y="250">"Institutions hold the budget."</text>
+        <text class="cwX" x="40" y="267">One contrasting study is enough to undo the whole sentence.</text>
+
+        <rect x="452" y="210" width="404" height="66" rx="10" fill="#F5F8DE" stroke="#5A6B00" stroke-width="2"/>
+        <text class="cwH" x="468" y="232">QUALIFIED CLAIM - HOLDS</text>
+        <text class="cwX" x="468" y="250">"The literature is split, and the stronger studies point</text>
+        <text class="cwX" x="468" y="267">to institutions." More defensible, and more useful.</text>
+
+        <rect x="24" y="294" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="cwN" x="48" y="306">A qualified claim is not a weaker claim. It survives review and still tells the decider where to lean.</text>
+        <rect x="24" y="318" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="cwN" x="48" y="330">Absence of contrasting citations proves little: about 0.8% of all citations are classed contrasting.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - from searching for the opposite to a claim a reviewer cannot flip</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Four ways to hunt for disagreement<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Do all four on any claim the decision actually rests on. They fail differently, which is the point.</p>
+        <ul>
+          <li><strong>Search for the opposite claim explicitly.</strong> Write the negation of your sentence and search for that. "Students, not institutions, buy lecture-notes tools" is a different query with a different result set, and it is the query a sceptical reader will run.</li>
+          <li><strong>Check whether the finding has ever been contradicted.</strong> Scite classifies citations as supporting, contrasting or mentioning, so you can see how a paper has been cited rather than only how often. Read the distribution before you read the result: across its corpus roughly <strong>92.6% of citations are mentioning, 6.5% supporting and 0.8% contrasting</strong>. So a paper with no contrasting citations tells you almost nothing - that is the base rate, not a clean bill of health. A paper that <em>does</em> carry contrasting citations is the informative case, and you go read them.</li>
+          <li><strong>Ask the model for the strongest case against.</strong> Not "are there counterarguments" but "argue that this claim is wrong, name the study designs that would undermine it, and rank my sources by how much weight they can bear."</li>
+          <li><strong>Record how you handled each contradiction.</strong> One line per claim: what disagreed, how strong it was, and what you did about it. This line is what turns "I considered the counter-evidence" from an assertion into an audit trail.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The qualifying move, written out<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The move everyone resists because it feels like hedging. It is the opposite: it is the version that carries information about the shape of the evidence.</p>
+        <div class="prompt-box bad">
+          <span class="label">Flat, and one source away from collapsing</span>
+          <p>"Institutions, not students, hold the budget for lecture-notes tools."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Qualified, weighted, and harder to break</span>
+          <p>"The literature is split. Two student-survey sources report student-paid adoption; three procurement studies and one sector body report institutional budget holding. The institutional sources are larger and independently funded, so we plan for institutional procurement and treat student-paid as a secondary channel."</p>
+        </div>
+        <p>Notice what the second version gives a decision-maker that the first cannot: the size of the disagreement, which side the stronger studies fall on, and an explicit consequence. A hedge removes information. A qualifier adds it. If your qualified sentence feels vaguer than your flat one, you have hedged rather than qualified - go back and put the weighting in.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: REPLICATION ============ -->
+  <section class="section" id="replication">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · rung 5</span>
+      <h2>Replication, with the real numbers <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Rule 7 of the audit asks whether a claim holds up twice. People treat that as pedantry until they see the numbers from the large replication projects, which are not marginal. Across five well-run efforts the pattern repeats: roughly half to two thirds of findings replicate in the same direction, and the effects that do replicate come back materially smaller than the originals. Two operating consequences follow, and they are the whole of this session's second habit.</p>
+
+    <table class="clean">
+      <thead>
+        <tr><th>Project</th><th>Scope</th><th>Replicated</th><th>Effect size on replication</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Open Science Collaboration 2015</strong><br><em>Science</em> 349(6251):aac4716</td><td>100 studies</td><td>97% of originals statistically significant vs <strong>36%</strong> of replications; 68% retained significance when meta-analytically combined</td><td>About <strong>half</strong> the original magnitude; 47% of original effect sizes fell inside the replication's 95% CI</td></tr>
+        <tr><td><strong>Camerer et al. 2016</strong><br><em>Science</em> 351(6280):1433-6</td><td>18 economics experiments</td><td><strong>11 (61%)</strong> in the same direction</td><td>About <strong>66%</strong> of original</td></tr>
+        <tr><td><strong>Camerer et al. 2018</strong><br><em>Nature Human Behaviour</em> 2:637-644</td><td>21 studies from <em>Nature</em> and <em>Science</em></td><td><strong>13 (62%)</strong></td><td>About <strong>50%</strong> of original</td></tr>
+        <tr><td><strong>Many Labs 1</strong><br>Klein et al. 2014</td><td>13 effects across 36 samples, N=6,344</td><td><strong>10 of 13</strong></td><td>Almost no variation attributable to sample or lab setting</td></tr>
+        <tr><td><strong>Many Labs 2</strong><br>Klein et al. 2018, <em>AMPPS</em> 1(4):443-490</td><td>28 findings, 125 samples, 15,305 participants, 36 countries</td><td><strong>15 (54%)</strong> significant in the original direction</td><td>Median comparable Cohen's d <strong>0.60 originals vs 0.15 replications</strong></td></tr>
+      </tbody>
+    </table>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The two operating rules that fall out of this table<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>A single study is a hypothesis.</strong> Not a fact with a citation attached. If a claim your decision depends on rests on one study, that is a position you can take, but you take it consciously and you write it down as such. The Many Labs 1 finding sharpens this: the variation was not coming from which lab ran it or which sample they used, so "it was a different context" is a weaker excuse than it sounds.</li>
+          <li><strong>Effect sizes shrink on replication, so plan for the smaller number.</strong> Half the original magnitude in the Open Science Collaboration, about two thirds in the 2016 economics set, about half again in the 2018 set, and a median comparable d falling from 0.60 to 0.15 in Many Labs 2. If you build a business case on the published effect, you have built it on the optimistic end of the range. Model the replication-sized effect and see whether the decision still holds.</li>
+        </ul>
+        <p>Neither rule requires you to dismiss single studies. It requires you to price them. "One study of 48 suggests X; we treat this as untested" is a legitimate sentence in a memo. "X is true (Smith 2024)" is not, if Smith 2024 is alone.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>How to check replication in ten minutes<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You are not running a replication. You are answering three questions about the evidence you already have.</p>
+        <ul>
+          <li><strong>Is this one study or a body?</strong> Look for a systematic review, a meta-analysis, or a second independent team reporting the same direction. One team reporting it three times is still one team.</li>
+          <li><strong>Who paid, and who ran it?</strong> A vendor-funded preprint is not disqualified, but it needs an independent counterpart before it can carry a decision. This is exactly the failure mode of the tenth claim in the lab.</li>
+          <li><strong>How big was it?</strong> Record the sample size in the extraction row. A small sample plus a large published effect is precisely the combination the replication projects found shrinking.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The sentence that saves you later is the one you write now.</strong> When a claim rests on a single small study, the correct output is not a softer adjective. It is a marked unknown with a price and a test: what it would cost us to be wrong, and what evidence would settle it. That is the pattern b8 builds into prose and b10 ships in the memo.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: READING NUMBERS ============ -->
+  <section class="section" id="reading-numbers">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · statistical literacy for synthesists</span>
+      <h2>Reading numbers properly <span class="tag concept">9 min live</span></h2>
+    </div>
+    <p class="lede">You will be handed p-values, intervals and forest plots by models, vendors and colleagues, and asked to decide. The skill is not computation. It is knowing which question each number answers, and which question it cannot. Start with the distinction that fixes the most memos: statistical significance tells you about the presence of an effect, and effect size tells you whether the effect matters.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Effect size versus significance, and confidence intervals<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Sullivan and Feinn (<em>J Grad Med Educ</em> 2012;4(3):279-282) make the point with a worked example worth memorising. The <strong>Physicians' Health Study</strong> ran on more than <strong>22,000 subjects</strong>. Its result was significant at <strong>P &lt; .00001</strong>. Its <strong>r² was .001</strong> - the intervention accounted for about a tenth of one percent of the variation in outcome. Statistically overwhelming, substantively tiny. Nothing was wrong with the study; the error is only in the reader who stops at the p-value.</p>
+        <p>For effect size, Cohen's conventions are the common vocabulary: <strong>d = 0.2 small, 0.5 medium, 0.8 large</strong>. Treat them as conventions rather than laws, and always report the size alongside the verdict.</p>
+        <p>Confidence intervals are the better default, and the Cochrane Handbook is explicit about how to use them: report the interval together with the exact P value, and authors should <strong>not</strong> describe results as "statistically significant" or unduly rely on thresholds. In practice: read the whole interval, and ask whether the decision would be different at each end of it. If your decision flips somewhere inside the interval, the study has not settled your question no matter what its p-value says.</p>
+      </div>
+    </details>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Effect size versus p-value using the Physicians' Health Study: P below .00001 fills the bar while r squared of .001 is a sliver.">
+        <style>
+          .esT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .esS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .94; }
+          .esH { font: 700 12.5px Inter, sans-serif; fill: #121826; }
+          .esX { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .esK { font: 700 12px Inter, sans-serif; fill: #1B2200; }
+          .esN { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+        </style>
+
+        <rect x="24" y="24" width="826" height="44" rx="8" fill="#0B1428"/>
+        <text class="esT" x="40" y="45">PHYSICIANS' HEALTH STUDY - MORE THAN 22,000 SUBJECTS</text>
+        <text class="esS" x="40" y="61">One study, two numbers, two completely different messages</text>
+
+        <rect x="24" y="88" width="200" height="44" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="esH" x="38" y="108">SIGNIFICANCE</text>
+        <text class="esX" x="38" y="124">P &lt; .00001</text>
+        <rect x="240" y="88" width="610" height="44" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <rect x="240" y="88" width="598" height="44" rx="8" fill="#1B2F57"/>
+        <text class="esT" x="256" y="108">OVERWHELMING</text>
+        <text class="esS" x="256" y="124">An effect this consistent would almost never arise by chance</text>
+
+        <rect x="24" y="148" width="200" height="44" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="esH" x="38" y="168">EFFECT SIZE</text>
+        <text class="esX" x="38" y="184">r² = .001</text>
+        <rect x="240" y="148" width="610" height="44" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <rect x="240" y="148" width="6" height="44" rx="2" fill="#5A6B00"/>
+        <text class="esH" x="262" y="168">A TENTH OF ONE PERCENT OF THE VARIATION</text>
+        <text class="esX" x="262" y="184">The sliver is drawn 6px wide so you can see it; true width is under 1px</text>
+
+        <text class="esK" x="24" y="222">COHEN'S CONVENTIONS FOR d - report the size, never only the verdict</text>
+
+        <rect x="24" y="234" width="268" height="48" rx="8" fill="#EEF1F7" stroke="#A7B6D0" stroke-width="1.5"/>
+        <text class="esH" x="40" y="254">d = 0.2 SMALL</text>
+        <text class="esX" x="40" y="271">detectable, rarely decision-changing</text>
+        <rect x="306" y="234" width="268" height="48" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="esH" x="322" y="254">d = 0.5 MEDIUM</text>
+        <text class="esX" x="322" y="271">visible to a practitioner</text>
+        <rect x="588" y="234" width="262" height="48" rx="8" fill="#F5F8DE" stroke="#5A6B00" stroke-width="1.5"/>
+        <text class="esH" x="604" y="254">d = 0.8 LARGE</text>
+        <text class="esX" x="604" y="271">worth building a plan on</text>
+
+        <rect x="24" y="300" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="esN" x="48" y="312">A p-value answers "is there an effect". Effect size answers "does it matter". Never one without the other.</text>
+        <rect x="24" y="324" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="esN" x="48" y="336">Report the confidence interval with the exact P value, and test your decision at both interval ends.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - statistically overwhelming, substantively tiny, in one study</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Publication bias, p-hacking and HARKing<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Publication bias.</strong> The Cochrane Handbook defines a funnel plot as "a simple scatter plot of intervention effect estimates from individual studies against a measure of each study's size or precision". The temptation is to read asymmetry as proof that small negative studies went missing. Do not. <strong>Asymmetry is not diagnostic</strong> - it has several possible causes, Egger's test has low power, and the rule of thumb is to use asymmetry tests only when there are <strong>at least 10 studies</strong>. So when a synthesis with six studies tells you the funnel looks fine, the honest reading is that nobody could tell.</p>
+        <p><strong>P-hacking</strong> (Head et al., <em>PLOS Biology</em> 2015;13(3):e1002106) is the practice of trying analyses until one crosses the threshold. The behaviour list is what you look for in a methods section: <strong>interim peeking</strong> at results and continuing to collect, <strong>selective outcome reporting</strong>, <strong>post-hoc outlier rules</strong>, and <strong>adding or dropping covariates</strong> until the result appears. The detection method is elegant and worth knowing: compare how many reported p-values fall in the <strong>0.045 to 0.05</strong> bin against the <strong>0.04 to 0.045</strong> bin, because a pile-up just under the threshold is hard to explain innocently.</p>
+        <p><strong>HARKing</strong> (Kerr, <em>PSPR</em> 1998;2(3):196-217) is presenting a post-hoc hypothesis as if it had been specified in advance. It is the reason pre-registration exists, and the reason "we found that..." and "we predicted and found that..." are very different sentences. When a paper's hypothesis fits its data suspiciously well and there is no pre-registration, note it in your extraction row rather than in your head.</p>
+        <p><strong>The ASA's 2016 statement</strong> gives you the sentence to score every threshold claim against: "Scientific conclusions and business or policy decisions should not be based only on whether a p-value passes a specific threshold." And the one that clears up the most confusion: "P-values do not measure the probability that the studied hypothesis is true."</p>
+      </div>
+    </details>
+
+    <table class="clean">
+      <thead>
+        <tr><th>Check</th><th>What it asks</th><th>What it catches</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Effect size</strong></td><td>How big is it, in Cohen's terms or in the study's own units?</td><td>The significant-but-trivial result: P &lt; .00001 with r² = .001</td></tr>
+        <tr><td><strong>Confidence interval</strong></td><td>Would my decision change at either end of the interval?</td><td>Precision dressed up as certainty; reliance on thresholds</td></tr>
+        <tr><td><strong>Sample and population</strong></td><td>How many, and were they the people I am deciding about?</td><td>Small-n findings, and results imported from the wrong population</td></tr>
+        <tr><td><strong>Replication</strong></td><td>Has an independent team found this in the same direction?</td><td>The single study treated as settled; the shrinking effect</td></tr>
+        <tr><td><strong>Publication bias</strong></td><td>Are there at least 10 studies before anyone reads asymmetry?</td><td>Funnel plots over-interpreted; missing small negative studies</td></tr>
+        <tr><td><strong>P-hacking signals</strong></td><td>Peeking, selective outcomes, post-hoc outliers, covariate churn?</td><td>Results that exist because the analysis was run until they did</td></tr>
+        <tr><td><strong>HARKing</strong></td><td>Was the hypothesis pre-registered, or fitted afterwards?</td><td>Exploratory findings presented as confirmed predictions</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Asking a model to run the checks on a paper<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>These prompts work because they ask for structure and for absence, not for a verdict. Verify what comes back against the paper itself - an extracted number is a claim like any other.</p>
+        <div class="prompt-box good">
+          <span class="label">Numbers pass</span>
+          <p>"For this paper, give me a table with: reported effect size and its units, the confidence interval, the exact p-value, the sample size, the population studied, the funder, and whether the study was pre-registered. Put 'not reported' where it is not reported, and quote the page or section for each cell."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Design-critique pass</span>
+          <p>"Read the methods section only. List any of the following you can see evidence of: interim analyses with continued collection, outcomes reported that were not pre-specified, outlier rules introduced after the data, covariates added or dropped between models, or a hypothesis that appears fitted to the result. Quote the sentence for each. If you see none, say so explicitly."</p>
+        </div>
+        <p>The "not reported" cells are the useful part. A missing interval or a missing funder is information about how much weight the source can bear, and it belongs in your extraction table rather than in a footnote you never write.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Rungs 4 and 5, live <span class="tag demo">★ 16 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">This is the session that owns the two biggest jumps in the ladder. The lab below starts where b5 left you: sharp question, source tiering and extraction table all on, <strong>4 of 10 claims surviving</strong>, 22 sources in play. Turn on the contradiction check and you go to 7. Add the replication check and you go to 9. Then read the one that still fails, because the audit is right about it and will stay right about it all the way to b10.</p>
+
+    <div class="steps">
+      <div class="step"><p>Start at <strong>4 of 10</strong>. Read the failure rules on the six failing rows and sort them: which are waiting on a qualifier, and which are waiting on evidence that may not exist?</p></div>
+      <div class="step"><p>Turn on <strong>Contradiction check</strong>: <strong>7 of 10</strong>. Three claims come back at once, the biggest single jump in the ladder, and not one of them needed a new source.</p></div>
+      <div class="step"><p>Read those three survivors as sentences. Each one moved from flat to qualified. That is the whole mechanism of rung 4.</p></div>
+      <div class="step"><p>Add <strong>Replication check</strong>: <strong>9 of 10</strong>. Two more claims survive because a second independent source pointed the same way, and the sources stay at 22 - this rung costs judgement, not reading.</p></div>
+      <div class="step"><p>Read the claim that still fails: <em>checked, and it does not replicate</em>. Our meeting-notes engine transferring to lecture audio rests on a single vendor-funded preprint with <strong>n=48</strong> and nothing replicating it. Do not fix it. b8 teaches you to write it.</p></div>
+    </div>
+
+    <div class="rlbox" data-mode="lab" data-levers="question,tiering,extraction"></div>
+
+    <div class="callout tip">
+      <strong>What is real here and what is a teaching corpus</strong>
+      The 22 sources are a teaching corpus built for one decision, not a real literature. Everything else is real: each source carries a type, tier, year, sample size and funder, and the audit is a rule engine that reads those attributes and the support or contradict links between them. Claims fail for a reason you can trace to a specific source. The rules are the transferable part - the corpus is the sandbox. The statistics in Parts 2 and 3 are from the published record and cited on the page.
+    </div>
+
+    <div class="callout win">
+      <strong>★ The habit to take away</strong>
+      Before any claim ships, ask two questions in this order: who disagrees, and has anyone found this twice? Ten minutes each. Between them they are worth five of tonight's nine surviving claims, and they cost no extra reading at all.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 35-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Take the three load-bearing claims from your own current question and run the contradiction hunt on each: search the negation, check how the key paper has been cited, ask a model for the strongest case against, and write your one-line handling record. Keep the four lines.</li>
+      <li>Rewrite one flat claim you have already shipped as a qualified claim with the weighting visible. Then read both aloud and note which one a sceptic could flip in a sentence.</li>
+      <li>Find a study your work depends on and answer three questions in writing: one study or a body, who funded and ran it, and how big was the sample. If it is one small study, draft the "we treat this as untested" sentence now.</li>
+      <li>Run the checks table over one paper end to end. Record every "not reported" cell, and use the 10-study rule on any publication-bias claim the paper makes.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session works from the published replication record and the standing statistical guidance. Every figure on this page comes from the sources below and is cited where it appears. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Replication projects - Open Science Collaboration 2015, Camerer 2016 and 2018, Many Labs 1 and 2</span><span class="note">Part 2 · full figures, and the two operating rules that follow</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Effect size versus significance - Sullivan and Feinn 2012, Cohen's conventions</span><span class="note">Part 3 · the Physicians' Health Study worked example in full</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Cochrane Handbook - confidence intervals and publication bias</span><span class="note">The reporting instruction and the funnel-plot caveats · not the meta-analytic computation</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">ASA 2016 statement on p-values</span><span class="note">Two of the six principles quoted and used to score claims · full set in leader session a6</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Citation classification and how a finding has been cited</span><span class="note">Supporting, contrasting and mentioning, with the corpus distribution · tool detail in a5</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">1 · In the Open Science Collaboration's 2015 replication of 100 studies, 97% of the original findings were statistically significant. What share of the replications were?</p>
+      <button class="qopt" type="button">A · 36% - and the replication effects were about half the original magnitude</button>
+      <button class="qopt" type="button">B · 68% - the same figure that held up under meta-analytic combination</button>
+      <button class="qopt" type="button">C · 91% - replication mostly confirms published work</button>
+      <p class="qwhy">36% of replications reached statistical significance against 97% of originals, and the replication effects came back at roughly half the original magnitude. 68% is a different figure from the same paper: the share retaining significance when the original and replication were combined meta-analytically. The operating rule is to plan for the smaller number.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · A synthesis of six studies reports a symmetrical funnel plot and concludes there is no publication bias. What is the correct response?</p>
+      <button class="qopt" type="button">A · Accept it - a symmetrical funnel plot is the standard test for publication bias</button>
+      <button class="qopt" type="button">B · Note that asymmetry tests need at least 10 studies, so with six nobody could tell either way</button>
+      <button class="qopt" type="button">C · Reject the synthesis - fewer than 10 studies cannot support any conclusion</button>
+      <p class="qwhy">The Cochrane rule of thumb is to use funnel-plot asymmetry tests only with at least 10 studies. Below that, a symmetrical plot is uninformative rather than reassuring. Asymmetry is also not diagnostic in the first place, and Egger's test has low power, so the finding is "unknown", not "clean" - and not grounds to throw out the whole synthesis.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">3 · A vendor deck says "the result was significant at p &lt; 0.05, so the product works". Which ASA principle answers it most directly?</p>
+      <button class="qopt" type="button">A · A p-value measures the probability that the studied hypothesis is true</button>
+      <button class="qopt" type="button">B · P-values should always be reported alongside a Bayesian posterior</button>
+      <button class="qopt" type="button">C · Scientific conclusions and business or policy decisions should not be based only on whether a p-value passes a specific threshold</button>
+      <p class="qwhy">That is the ASA principle to score threshold claims against. Option A is the misreading the ASA explicitly corrects: p-values do not measure the probability that the studied hypothesis is true. Ask instead for the effect size, the confidence interval, the sample and whether anyone has found it twice.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 7 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The contradiction hunt</b><span>Search the negation · check how the paper has been cited · ask for the strongest case against · record how you handled it.</span></div>
+      <div class="cheat-item"><b>Citation classes</b><span>Supporting, contrasting, mentioning. Corpus distribution is about 92.6% / 6.5% / 0.8%, so no contrasting citations tells you almost nothing.</span></div>
+      <div class="cheat-item"><b>The qualifying move</b><span>"The literature is split, and the stronger studies point this way." More defensible than a flat claim, and more useful to the decider.</span></div>
+      <div class="cheat-item"><b>Replication reality</b><span>OSC 2015: 36% vs 97%. Camerer 2016: 61%. Camerer 2018: 62%. Many Labs 1: 10 of 13. Many Labs 2: 54%.</span></div>
+      <div class="cheat-item"><b>Two operating rules</b><span>A single study is a hypothesis. Effect sizes shrink on replication, so model the smaller number before you commit.</span></div>
+      <div class="cheat-item"><b>Size beats threshold</b><span>Physicians' Health Study: 22,000+ subjects, P &lt; .00001, r² = .001. Cohen's d: 0.2 small, 0.5 medium, 0.8 large.</span></div>
+      <div class="cheat-item"><b>Numbers hygiene</b><span>Report the CI with the exact P value, do not lean on "statistically significant", and use asymmetry tests only with 10+ studies.</span></div>
+      <div class="cheat-item"><b>Method smells</b><span>P-hacking: peeking, selective outcomes, post-hoc outliers, covariate churn. HARKing: a post-hoc hypothesis presented as a priori.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 7 of 10 · learn-ai-research-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b6-evidence-lab.html">← Previous: The evidence lab</a> &nbsp;·&nbsp; <a href="b8-synthesis.html">Next: Synthesis you can defend →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/research-live.js?v=1"></script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 6 · The evidence lab - learn ai research with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-research-with-phoebe</a> / Researcher session 6 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Research with Phoebe · Researcher track · Session 6 of 10</div>
+    <h1>The evidence lab: <span class="accent">audit it before they do</span></h1>
+    <p class="sub">You have the question from b2, the tiered search from b3, the screening log from b4 and the extraction table from b5. Tonight you find out what all of that bought you. We run the full hostile-reviewer audit on all ten Cadence claims, one rule at a time, and you learn the distinction that makes research fast: which failures are fatal, which are a morning's work, and which are simply a sentence you were not brave enough to write. Then we price the most reflexive move in the field - reading more - and find it costs a claim.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Researcher track</span>
+      <span class="chip audience">Analysts · academics · UX &amp; market researchers</span>
+      <span class="chip audience">Signature session</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where we are</span>
+      <span class="a2" style="flex:4">3-17 · The rules and their ancestry</span>
+      <span class="a3" style="flex:5">17-41 · Build-along: audit, triage, break it</span>
+      <span class="a4" style="flex:1">41-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where this sits in the track</h2>
+    </div>
+    <p class="lede">Everything before this session produced inputs. This session produces a verdict, and it is the one you should run <em>before</em> writing the memo rather than after someone else has read it. The audit is deliberately unkind: it assumes a reader who is looking for the weakest claim, because that reader exists in every board pack, every viva, every client review and every peer review you will ever be part of.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Live evidence lab - toggle levers, watch claims survive or die</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The seven audit rules with their real-world ancestry, a triage habit that sorts every red row into fatal / work / honesty in seconds, the confidence sentence to write when a claim is thin, and the strongest available answer to "can we just look at more sources".
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE RULES AND THEIR ANCESTRY ============ -->
+  <section class="section" id="ancestry">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · where the rules come from</span>
+      <h2>None of this is invented <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">The audit is a compression of practices that evidence-synthesis communities spent decades formalising. Knowing the lineage matters for two reasons: it tells you what to read when a rule bites you, and it lets you defend the rule to someone who thinks you are being fussy. Each rule below traces to a standard, and each standard exists because people got burned.</p>
+
+    <table class="clean">
+      <thead>
+        <tr><th>Audit rule</th><th>Where it comes from</th><th>What it is protecting you from</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Decision-scoped claim</strong></td><td>Structured question formats used across evidence synthesis - population, comparison, outcome, context spelled out before searching</td><td>Research that cannot come back negative, and therefore cannot inform a decision</td></tr>
+        <tr><td><strong>Support exists in your set</strong></td><td>Reporting standards that require the search to be documented - databases, dates, strategy - so a reader can see what was and was not looked at</td><td>Assertion dressed as finding; a claim whose evidence you assumed rather than gathered</td></tr>
+        <tr><td><strong>Support is good enough</strong></td><td>Study-design hierarchies and risk-of-bias assessment: a randomised trial and a vendor blog are not interchangeable inputs</td><td>Promotional material carrying a decision, and single-case anecdote treated as pattern</td></tr>
+        <tr><td><strong>Nothing retracted</strong></td><td>Screening and deduplication stages in review protocols, plus retraction-watch practice</td><td>Citing work that the record has already withdrawn - a credibility loss you cannot argue your way out of</td></tr>
+        <tr><td><strong>Numbers are recorded</strong></td><td>Data-extraction forms: one row per study, with sample, measure, effect and location in the source</td><td>Figures that drift, lose their denominators, or turn out to be from a different population</td></tr>
+        <tr><td><strong>Disagreement handled</strong></td><td>Systematic-review practice of seeking all eligible evidence, not just confirming evidence, and reporting heterogeneity</td><td>A flat claim over a split literature - the single easiest thing for a reviewer to break</td></tr>
+        <tr><td><strong>It holds up twice</strong></td><td>Certainty grading, which downgrades confidence for imprecision and small single studies, and the replication literature that motivated it</td><td>Building a strategy on one small study that no one has been able to reproduce</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The triage habit: fatal, work, honesty<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A red row is not a verdict on you. It is a routing instruction. Sort every failure into one of three buckets and the whole audit takes minutes instead of an afternoon:</p>
+        <ul>
+          <li><strong>Fatal (rewrite the claim or abandon it):</strong> not decision-scoped, no support inside your set, tier-4-only support. No amount of careful wording fixes these - the claim itself or the evidence base has to change.</li>
+          <li><strong>Work (go and do a specific task):</strong> unrecorded number - extract it properly; retracted source - screen and remove; missing population match - find a source in the right population or narrow the claim to the one you have.</li>
+          <li><strong>Honesty (write the sentence you were avoiding):</strong> unhandled contradiction becomes a qualified claim; thin evidence becomes a stated hypothesis. Both are more defensible than the flat version, and both usually make you more useful to the decision-maker, not less.</li>
+        </ul>
+        <p>The order to work in: fatal first, because those may change what you need to gather; then work; then honesty last, when the evidence has stopped moving.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The confidence sentence<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Most researchers have two settings: flat assertion and mush. The useful middle is a sentence with four parts - the claim, the weight, the basis, and what would change it:</p>
+        <div class="prompt-box bad">
+          <span class="label">Flat, and breakable</span>
+          <p>"Institutions hold the budget for note-taking tools, so we should sell top-down."</p>
+        </div>
+        <div class="prompt-box bad">
+          <span class="label">Mush - technically safe, useless</span>
+          <p>"There are indications that budget ownership may vary, and further research could be beneficial to clarify the picture."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Calibrated</span>
+          <p>"Institutions most likely hold the budget - moderate confidence, based on national IT-spend statistics and twelve buyer interviews with published methods, against one student survey pointing the other way. We would revise this if a per-seat student-paid competitor showed institutional-scale revenue."</p>
+        </div>
+        <p>The last clause is the professional tell. Naming what would change your mind proves you have a position rather than a preference, and it gives your reader something to watch for instead of something to argue about.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Which claims can never be rescued<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>One of tonight's ten claims - that the meeting-notes engine transfers to lecture audio without retraining - fails at rule 7 and stays failed even with the replication check on. That is deliberate, and it is the most realistic thing in the lab. The support is a single vendor-funded preprint with a sample of 48 and nothing independent behind it. Three tempting wrong moves:</p>
+        <ul>
+          <li><strong>Soften the language and ship it anyway.</strong> "Early evidence suggests our engine transfers well" - which is how an untested assumption enters a roadmap wearing research clothes.</li>
+          <li><strong>Add supporting sources until it looks settled.</strong> Any pile of vendor material you assemble here supports the claim you already prefer. That is not evidence, it is decoration.</li>
+          <li><strong>Drop the claim silently.</strong> Also wrong: the decision genuinely depends on it. Removing it hides a risk rather than resolving it.</li>
+        </ul>
+        <p>The correct output is a fourth option: <strong>mark it unknown, quantify what not knowing costs, and specify the test.</strong> "Untested - one vendor-funded preprint, n=48. A two-week internal benchmark on 20 real lecture recordings would settle it, and until it does we should not price on transfer working." That sentence is worth more to a board than any of the ten survivors.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: SOURCE TIERS ============ -->
+  <section class="section" id="tiers">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the tier table you can actually apply</span>
+      <h2>Four tiers, no arguments <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Rule 3 needs a shared tier system or it becomes a taste fight. The version below is deliberately crude enough that two colleagues will classify a source the same way in under ten seconds, which matters far more than theoretical elegance. It is what the lab's corpus is tagged with.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four source tiers, from peer-reviewed synthesis and regulator text down to vendor blogs and forum posts, with what each can carry.">
+        <style>
+          .tiT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .tiH { font: 700 12.5px Inter, sans-serif; fill: #121826; }
+          .tiX { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .tiN { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+        </style>
+        <rect x="24" y="24" width="120" height="52" rx="8" fill="#0B1428"/>
+        <text class="tiT" x="38" y="46">TIER 1</text>
+        <text class="tiT" x="38" y="64" style="font-weight:400;opacity:.9">strongest</text>
+        <rect x="158" y="24" width="330" height="52" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="tiH" x="172" y="46">Peer-reviewed synthesis, RCTs, statute</text>
+        <text class="tiX" x="172" y="64">meta-analyses, randomised trials, regulator text itself</text>
+        <rect x="502" y="24" width="348" height="52" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="tiX" x="516" y="46">Can carry a decision on its own. Still read the</text>
+        <text class="tiX" x="516" y="64">methods - tier 1 is not a synonym for correct</text>
+
+        <rect x="24" y="88" width="120" height="52" rx="8" fill="#1B2F57"/>
+        <text class="tiT" x="38" y="110">TIER 2</text>
+        <text class="tiT" x="38" y="128" style="font-weight:400;opacity:.9">solid</text>
+        <rect x="158" y="88" width="330" height="52" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="tiH" x="172" y="110">Peer-reviewed empirical, official statistics</text>
+        <text class="tiX" x="172" y="128">cohort studies, documented surveys, sector guidance</text>
+        <rect x="502" y="88" width="348" height="52" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="tiX" x="516" y="110">Fine as primary support. Check sample, date</text>
+        <text class="tiX" x="516" y="128">and whether the population is yours</text>
+
+        <rect x="24" y="152" width="120" height="52" rx="8" fill="#34507F"/>
+        <text class="tiT" x="38" y="174">TIER 3</text>
+        <text class="tiT" x="38" y="192" style="font-weight:400;opacity:.9">contextual</text>
+        <rect x="158" y="152" width="330" height="52" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="tiH" x="172" y="174">Analyst reports, trade press, preprints</text>
+        <text class="tiX" x="172" y="192">useful for market shape, timing and vocabulary</text>
+        <rect x="502" y="152" width="348" height="52" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="tiX" x="516" y="174">Supporting role only. Never the sole basis</text>
+        <text class="tiX" x="516" y="192">for a number you will be held to</text>
+
+        <rect x="24" y="216" width="120" height="52" rx="8" fill="#991B1B"/>
+        <text class="tiT" x="38" y="238">TIER 4</text>
+        <text class="tiT" x="38" y="256" style="font-weight:400;opacity:.9">signal only</text>
+        <rect x="158" y="216" width="330" height="52" rx="8" fill="#FEF2F7" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="tiH" x="172" y="238">Vendor blogs, press releases, forums</text>
+        <text class="tiX" x="172" y="256">what someone wants you to believe, and why</text>
+        <rect x="502" y="216" width="348" height="52" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="tiX" x="516" y="238">Evidence of positioning, not of fact. A claim</text>
+        <text class="tiX" x="516" y="256">resting only on tier 4 fails the audit outright</text>
+
+        <rect x="24" y="286" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="tiN" x="48" y="298">Tag every source at capture, not at writing time. Retro-tagging is where wishful thinking enters.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the four tiers, and what each is allowed to carry</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Funder, date, population - the three checks people skip<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Tier alone is not enough. Three attributes decide whether a technically-good source is good <em>for your claim</em>:</p>
+        <ul>
+          <li><strong>Funder and interest.</strong> A vendor-funded study is not worthless, but it belongs in a different mental column - and it needs a non-conflicted source alongside it before it carries anything.</li>
+          <li><strong>Date, against the thing that changes.</strong> A 2019 study of software procurement may still be fine; a 2019 study of model capability is archaeology. Ask what has changed in the mechanism, not just how many years passed.</li>
+          <li><strong>Population match.</strong> The most common silent failure in applied research: excellent evidence about a different group. Higher education is not K-12, and corporate L&amp;D is neither. If the population differs, either narrow your claim or say you are extrapolating.</li>
+        </ul>
+        <p>Add all three as columns in the b5 extraction table if they are not there yet. They cost seconds at capture and save the memo later.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Full audit, then triage every red row <span class="tag demo">★ 13 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">Start with all five levers ON - the state your work should be in by now - and read the two failures first. Then switch levers OFF one at a time and watch which claims collapse. Working backwards like this is the fastest way to feel what each practice is actually buying you, and it is a much better teacher than climbing.</p>
+
+    <div class="steps">
+      <div class="step"><p>Five levers on: <strong>9 of 10</strong>. Read the survivor rows too - each one names the tier and the source ids carrying it. That is what a defensible claim looks like.</p></div>
+      <div class="step"><p>Turn <strong>Contradiction check</strong> off. Three claims die at once. Note the wording of each failure: the disagreement existed the whole time.</p></div>
+      <div class="step"><p>Turn it back on, then turn <strong>Extraction table</strong> off. Different claims die - the ones carrying numbers. Say which bucket that failure is in (work, not honesty).</p></div>
+      <div class="step"><p>Turn <strong>Source tiering</strong> off. Watch the source count fall from 22 to 9 and most of the memo evaporate. This is the rung people skip.</p></div>
+      <div class="step"><p>Finally turn <strong>Sharp question</strong> off. Three claims become unfalsifiable slogans. Notice they read like the executive summary of a bad report.</p></div>
+    </div>
+
+    <div class="rlbox" data-mode="lab" data-levers="question,tiering,extraction,contradiction,replication"></div>
+
+    <div class="callout tip">
+      <strong>What is real here and what is a teaching corpus</strong>
+      The 22 sources are a teaching corpus built for one decision - they are plausible, not real publications. The audit is genuinely a rule engine: each source carries a type, tier, year, sample size and funder, and every verdict is derived from those attributes plus what the source supports or contradicts. The transferable part is the rules and the triage, not the corpus.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Pricing "can we look at more sources" <span class="tag demo">★ 9 min · explore</span></h2>
+    </div>
+    <p class="lede">The ladder computed live - <strong>0 → 1 → 2 → 4 → 7 → 9</strong> - and then the anti-lever. From the best state, adding 40 more hits takes your reading pile from 22 to 62 and your surviving claims from 9 to 8. The cause is specific and worth memorising: one of the 40 is retracted, it lands in the support for a claim that was clean, and the audit catches what unscreened breadth imported.</p>
+
+    <div class="steps">
+      <div class="step"><p>Look at where the ladder's big jumps are: contradiction (+3) and replication (+2) beat everything the gathering levers gave you.</p></div>
+      <div class="step"><p>In the lab above, turn <strong>Add 40 sources</strong> on from the 9-of-10 state. Read the new failure row and name the mechanism.</p></div>
+      <div class="step"><p>Now turn <strong>Source tiering</strong> off while the 40 are still in. Watch how much worse untiered breadth is than untiered narrowness.</p></div>
+      <div class="step"><p>Write the sentence you will use next time someone asks for a wider sweep. It should mention inclusion rules, not effort.</p></div>
+    </div>
+
+    <div class="rlbox" data-mode="ladder"></div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The reviewer who ends your credibility is rarely reading closely.</strong> They are scanning for one thing they recognise: a number without a denominator, a citation they know was withdrawn, a flat claim on a topic they know is contested. Every one of those is a screening or extraction failure, not an intelligence failure - which is the good news, because screening and extraction are exactly the parts of research you can now do at speed. Use the speed on the discipline, not instead of it.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 35-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run the backwards drill on your own current question: assume you did everything right, then remove one practice at a time and write down which of your claims would collapse. That list is your risk register.</li>
+      <li>Take your b5 extraction table and add the three skipped columns - funder, date-against-mechanism, population match. Re-check every claim that depends on a row where any of the three is uncomfortable.</li>
+      <li>Write one calibrated confidence sentence, with all four parts, for the claim your decision leans on hardest. Include what would change your mind.</li>
+      <li>Find one claim of yours that should be marked unknown. Write the unknown version, including the test that would settle it and what not knowing costs. Bring it to b8 - it belongs in the synthesis, not in a drawer.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session teaches the working core of evidence-synthesis practice as a working researcher applies it - reporting discipline, study-design hierarchy, risk of bias, certainty grading - compressed into an audit you can run in minutes. The normative documents stay with their bodies and are linked in the track's source map. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The seven audit rules and their standards lineage</span><span class="note">Part 1 · applied live in both demos</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The four-tier source system, plus funder, date and population checks</span><span class="note">Part 2 · the tagging the lab corpus uses</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Triage (fatal / work / honesty) and the calibrated confidence sentence</span><span class="note">Part 1 · reused in b8 synthesis and b10 memo</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Reporting standards, risk-of-bias assessment and certainty grading</span><span class="note">Named as ancestry here · applied in b3, b5 and b7</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Screening, deduplication and retraction discipline</span><span class="note">Demonstrated by the anti-lever · full treatment in b4</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · A claim's only support is a vendor blog and a forum thread. Which triage bucket?</p>
+      <button class="qopt" type="button">A · Honesty - qualify it as early evidence and move on</button>
+      <button class="qopt" type="button">B · Work - go and record the numbers properly</button>
+      <button class="qopt" type="button">C · Fatal - the claim or the evidence base has to change</button>
+      <p class="qwhy">Tier-4-only support is one of the three fatal failures. Wording cannot rescue it: promotional material is evidence of what someone wants you to believe, so you either find independent evidence or you stop making the claim.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · Which part of the calibrated confidence sentence do people most often leave out?</p>
+      <button class="qopt" type="button">A · The weight - "moderate confidence"</button>
+      <button class="qopt" type="button">B · What would change your mind</button>
+      <button class="qopt" type="button">C · The basis - which sources it rests on</button>
+      <p class="qwhy">Naming the disconfirming evidence you would accept is what separates a position from a preference. It also gives the decision-maker something concrete to monitor, which is often the most actionable line in the whole memo.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · One claim fails rule 7 and no replication exists. What is the correct output?</p>
+      <button class="qopt" type="button">A · Mark it unknown, say what not knowing costs, and specify the test that would settle it</button>
+      <button class="qopt" type="button">B · Soften the wording to "early evidence suggests" and keep it</button>
+      <button class="qopt" type="button">C · Remove it from the memo so the audit comes out clean</button>
+      <p class="qwhy">Softening smuggles an untested assumption into a roadmap; deleting hides a risk the decision actually depends on. The unknown, priced and paired with a test, is frequently the most valuable sentence you will write.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 6 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Seven rules, in order</b><span>Scoped → support exists → support good enough → nothing retracted → number recorded → disagreement handled → holds up twice.</span></div>
+      <div class="cheat-item"><b>Triage</b><span>Fatal (rewrite/abandon) · Work (extract, screen, match population) · Honesty (qualify, or state as hypothesis). Fatal first.</span></div>
+      <div class="cheat-item"><b>Fatal three</b><span>Not decision-scoped · no support in your set · tier-4 support only.</span></div>
+      <div class="cheat-item"><b>Four tiers</b><span>1 peer-reviewed synthesis/RCT/statute · 2 empirical + official stats · 3 analyst/trade/preprint · 4 vendor/press/forum. Tag at capture.</span></div>
+      <div class="cheat-item"><b>Three skipped checks</b><span>Funder and interest · date against what actually changes · population match. Most silent failures live here.</span></div>
+      <div class="cheat-item"><b>Confidence sentence</b><span>Claim + weight + basis + what would change my mind. The last part is the professional tell.</span></div>
+      <div class="cheat-item"><b>The honest unknown</b><span>No replication anywhere? Mark unknown, price it, name the test. Do not soften, do not delete.</span></div>
+      <div class="cheat-item"><b>The 40-source answer</b><span>62 read, 8 surviving. Volume helps only after tiering and inclusion rules. Answer with rules, not effort.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 6 of 10 · learn-ai-research-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b5-extraction-tables.html">← Previous: Extraction tables</a> &nbsp;·&nbsp; <a href="b7-contradictions-and-stats.html">Next: Contradictions and statistics →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/research-live.js?v=1"></script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

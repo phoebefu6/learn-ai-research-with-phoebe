@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 5 · Standing up the research stack - learn ai research with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-research-with-phoebe</a> / Leader session 5 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Research with Phoebe · Leader track · Session 5 of 6</div>
+    <h1>Standing up the <span class="accent">research stack</span></h1>
+    <p class="sub">Somebody is going to put a tool contract in front of you this quarter, and the deck will have a percentage on it. This session is how to read that deck. We build the stack from the bottom up, because every layer inherits the coverage of the one below it, and we say each tool's limit as loudly as its feature - because the limit is what decides whether your team's memo survives a client's data team. Every number here was checked against the vendor's own pages on 2026-08-08. Where a vendor would not let us verify, we say so and stop.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Leader track</span>
+      <span class="chip audience">Research · insights · strategy leads</span>
+      <span class="chip audience">Buy, build or skip</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-16 · The ground-truth layer</span>
+      <span class="a3" style="flex:5">16-38 · The layers above it, and their limits</span>
+      <span class="a4" style="flex:2">38-45 · What to insist on</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why we buy the bottom of the stack first</h2>
+    </div>
+    <p class="lede">The running decision is still the same one: <strong>should Cadence, an AI meeting-notes product, build a lecture-notes product for higher education next year?</strong> By now your team has an evidence standard (a2), a catalogue of where AI fails (a3) and governance rails (a4). Tonight they need instruments. A research stack has four layers, and they are not equally interesting to buy: the top two have the nicest demos and the bottom one decides whether any of it is defensible. So we start at the bottom, then work up, and at every stop we ask the only two questions that matter in procurement - what does it actually cover, and what will it not tell me that I would need to know.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A four-layer map of the stack, the real coverage numbers for the three free ground-truth sources, the specific limit that matters for each search tool your team will ask for, and five things to insist on in writing before any of it gets a purchase order.
+    </div>
+    <div class="callout tip">
+      <strong>How to read the numbers on this page</strong>
+      Everything here comes from the vendor's or the provider's own documentation, checked on 2026-08-08. Two of them we could not check at all: Consensus blocked a direct fetch, so treat its details as search-index sourced, and SciSpace blocked verification entirely, so this page says nothing about SciSpace beyond that sentence. A gap is a finding. Filling it with a plausible guess is exactly the habit a3 was about.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: GROUND TRUTH ============ -->
+  <section class="section" id="ground-truth">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the bottom layer</span>
+      <h2>Ground truth, and why it has to come first <span class="tag concept">10 min live</span></h2>
+    </div>
+    <p class="lede">Every clever thing higher in the stack is reading from a corpus, and it can only be as complete, as current and as honest as that corpus is. Three sources make up the layer almost everyone actually uses, all three are free to start, and all three have a documented limit your team should be able to recite. <strong>OpenAlex</strong> is the widest open index: 323,171,764 works and 123,255,918 authors, licensed CC0, which is why so many tools sit on top of it. It also documents a metered credit model - $1 a day free with an API key, $0.01 a day without one, search at $0.001 per query, PDF download at $0.01 per item - and an unauthenticated search still returned successfully when we tested it, so the metering is not hard-enforced today. Treat it as the forward contract anyway: it tells you where the cost of scale is going to land.</p>
+    <p><strong>Crossref</strong> holds 185,277,841 records, needs no sign-up, and has the one feature on this page with a direct integrity consequence: it carries retraction and post-publication update information. That makes Crossref the place your team checks whether a citation has been withdrawn, which is not an optional nicety when a partner is about to quote your memo. It also has a courtesy rule worth knowing before someone builds a script: adding a <code>mailto</code> to your requests moves you into the polite pool and triples your rate limit, 3 per second instead of 1.</p>
+    <p><strong>Semantic Scholar</strong> covers 214M papers, 2.49B citations and 79M authors, and it is where the counter-intuitive rate limit lives. Unauthenticated access is documented as "rate-limited to 1000 requests per second shared among all unauthenticated users", while an API key's introductory limit is 1 request per second. Read that twice: the key buys you stability, not throughput. And one field needs a rule wrapped around it before your team touches it - <code>tldr</code> is machine-generated. It is useful for triage and it must never be quoted as the authors' words.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 292" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The research stack as four layers, from ground truth up to synthesis, with the guarantee each layer must provide.">
+        <style>
+          .stkN { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .stkH { font: 700 12.5px Inter, sans-serif; fill: #121826; }
+          .stkX { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .stkK { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+        </style>
+
+        <rect x="24" y="24" width="34" height="40" rx="7" fill="#0B1428"/>
+        <text class="stkN" x="35" y="49">4</text>
+        <rect x="70" y="24" width="250" height="40" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="stkH" x="84" y="49">Synthesis + qualitative</text>
+        <rect x="334" y="24" width="516" height="40" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="stkX" x="348" y="49">Must guarantee: a human wrote the codes and the confidence</text>
+
+        <rect x="24" y="76" width="34" height="40" rx="7" fill="#1B2F57"/>
+        <text class="stkN" x="35" y="101">3</text>
+        <rect x="70" y="76" width="250" height="40" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="stkH" x="84" y="101">Extraction</text>
+        <rect x="334" y="76" width="516" height="40" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="stkX" x="348" y="101">Must guarantee: number, sample and page, traceable to a source</text>
+
+        <rect x="24" y="128" width="34" height="40" rx="7" fill="#34507F"/>
+        <text class="stkN" x="35" y="153">2</text>
+        <rect x="70" y="128" width="250" height="40" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="stkH" x="84" y="153">Search + screening</text>
+        <rect x="334" y="128" width="516" height="40" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="stkX" x="348" y="153">Must guarantee: full text or abstract only, stated per source</text>
+
+        <rect x="24" y="180" width="34" height="40" rx="7" fill="#5A6B00"/>
+        <text class="stkN" x="35" y="205">1</text>
+        <rect x="70" y="180" width="250" height="40" rx="7" fill="#F5F8DE" stroke="#5A6B00" stroke-width="1.5"/>
+        <text class="stkH" x="84" y="205">Ground truth</text>
+        <rect x="334" y="180" width="516" height="40" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="stkX" x="348" y="205">Must guarantee: identifiers, coverage, and retraction status</text>
+
+        <rect x="24" y="242" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="stkK" x="48" y="254">Each layer inherits the coverage of the layer below it. Buy the bottom before you buy the top.</text>
+        <rect x="24" y="266" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="stkK" x="48" y="278">Layer 1 is free: OpenAlex, Crossref and Semantic Scholar. Layer 2 upward is where money starts.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the four layers, and the guarantee each one owes you</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The three sentences your team should be able to say from memory<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Not the totals. The consequences:</p>
+        <ul>
+          <li><strong>OpenAlex is the widest and the most reusable</strong> - CC0 licensing is why it sits under so many products. Its metered credit model is documented, so plan for scale to cost something even though an unauthenticated search was not blocked at test time.</li>
+          <li><strong>Crossref is where you check for withdrawal</strong> - it carries retraction and post-publication updates. If a claim in a client memo is load-bearing, its source gets a Crossref check before the memo ships. Add a <code>mailto</code> and you are in the polite pool at 3 requests per second rather than 1.</li>
+          <li><strong>Semantic Scholar's key buys stability, not speed</strong> - unauthenticated is documented as 1000 requests per second shared across everyone unauthenticated, an introductory key is 1 per second. And <code>tldr</code> is machine-generated: fine for triage, never a quote.</li>
+        </ul>
+        <p>The reason to hold these in your head as a leader is procurement. When a vendor tells you their corpus is enormous, the follow-up is not "how enormous" - it is "which of these three is under it, when was it last refreshed, and do you pass through retraction status".</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Machine-generated summaries and the quoting rule<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Semantic Scholar's <code>tldr</code> is the cleanest example of a field that is genuinely useful and genuinely dangerous in the same breath. It is a one-line machine-generated summary of a paper, and it is very good at helping you decide whether to open the PDF. What it is not is a sentence the authors wrote, or a sentence any human checked against the paper's actual limits.</p>
+        <p>The rule to write into your team's standard is short: <strong>generated text can inform a screening decision and can never appear inside quotation marks attributed to a source.</strong> If a sentence is going to carry weight in a memo, somebody opened the source and read the passage it came from. Semantic Scholar's <code>openAccessPdf</code> field is the practical bridge for that - it is how you get from triage to actually reading.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: SEARCH AND SCREENING ============ -->
+  <section class="section" id="search-layer">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the layer with the demos</span>
+      <h2>Search and screening, limits stated as loudly as features <span class="tag concept">12 min live</span></h2>
+    </div>
+    <p class="lede">This is the layer your team will ask for by name, and it is the layer where a good demo hides the thing you needed to know. <strong>Elicit</strong> is the most complete of them: five workflows (Research Agent, Research Reports, Systematic Literature Review, Find Papers and Chat with Papers, Extract Data), a deduped corpus of roughly 138M papers built from Semantic Scholar, OpenAlex and PubMed, Pro at $49 a month screening up to 5,000 papers, and an API at 100 requests per minute per IP. Now the limit that decides defensibility, and it belongs in the same breath as the corpus number: <strong>full-text analysis happens only for open-access material, or for material you hold a subscription to plus their browser extension. Otherwise it is working from the title and abstract.</strong> Everything downstream of that is a claim about an abstract wearing the clothes of a claim about a study.</p>
+    <p>Elicit is also, usefully, the live example of the accuracy-number problem. Across its own pages it states extraction accuracy as both 96% and 99.4%, and screening accuracy as 99.5% and also 97/99%. None of those is obviously wrong. The point is that a number without a methodology attached is not citable, and a vendor that publishes two different numbers for the same capability has told you that neither one came with one.</p>
+
+    <table class="clean">
+      <thead>
+        <tr><th>Tool</th><th>What it does</th><th>Corpus</th><th>The limit that matters</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Elicit</strong></td><td>Five workflows: research agent, reports, systematic literature review, find and chat with papers, extract data. Pro $49/mo screens up to 5,000 papers; API 100 requests per minute per IP</td><td>~138M papers, deduped from Semantic Scholar, OpenAlex and PubMed</td><td>Full text only for open access, or your own subscription plus their browser extension. Otherwise title and abstract only. Its own accuracy claims are inconsistent across its own pages</td></tr>
+        <tr><td><strong>Consensus</strong></td><td>The Consensus Meter buckets conclusions into agree, disagree and inconclusive</td><td>Not verified here; the site blocked a direct fetch, so treat details as search-index sourced</td><td>The Meter analyses the top 20 papers for a query. That is a sample of the top of one ranking, not a synthesis of a literature</td></tr>
+        <tr><td><strong>Scite</strong></td><td>Classifies citations as supporting, contrasting or mentioning. Method is peer-reviewed: Nicholson et al., <em>Quantitative Science Studies</em> 2(3):882, 2021</td><td>Citation statements across the published record</td><td>Reported distribution is about 92.6% mentioning, 6.5% supporting, 0.8% contrasting. So the absence of contrasting citations is nearly uninformative. Classifier precision and recall are unverified</td></tr>
+        <tr><td><strong>Undermind</strong></td><td>A convergence estimator: it fits the decay of the discovery curve to judge whether a search has become comprehensive. Genuinely distinctive</td><td>arXiv only, 2.3M papers, GPT-4 era whitepaper (Jan 2024)</td><td>Single-repository coverage, and a circular evaluation - it grades Google Scholar results "using the same relevance classification subroutine that Undermind employs"</td></tr>
+        <tr><td><strong>SciSpace</strong></td><td>Not assessed</td><td>Not verified</td><td>The site blocked verification. This page says nothing further about it</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Reading Undermind's whitepaper as a leadership exercise<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Undermind is worth ten minutes of your attention even if you never buy it, because it is the rare vendor doing something methodologically interesting and the rare vendor whose benchmark you can dismantle without any specialist knowledge.</p>
+        <p><strong>The interesting part:</strong> the convergence estimator. Rather than telling you it found good papers, it fits the decay of its own discovery curve - new relevant results per unit of search effort - and uses that decay to estimate how comprehensive the search has become. That is a real answer to the question every literature search ends on, which is "have I looked enough". Nobody else on this page attempts it.</p>
+        <p><strong>The part to hand to a sceptical colleague:</strong> the comparison to Google Scholar is graded by Undermind's own relevance classifier, on both sides. A benchmark where the product under test also acts as the judge cannot separate "we find more relevant results" from "we find more results that we consider relevant". And the coverage is arXiv only, 2.3M papers - so for a higher-education market question with regulatory and pedagogical literature in it, the corpus is the wrong shape regardless of how good the estimator is.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What the top-20 window and the contrasting-citation rate do to your memos<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two limits on this layer produce the same failure in practice, which is a claim written flat when it should have been qualified.</p>
+        <p><strong>Consensus's Meter reads the top 20 papers for your query.</strong> If your query happens to sit on top of a settled ranking, that reads like consensus. If the disagreeing literature is at rank 25 because it is older, smaller or from a different field's vocabulary, the Meter cannot see it and will not tell you it cannot. The Meter is a fast orientation instrument, and it is not the contradiction check from a2 and b7.</p>
+        <p><strong>Scite's distribution is the sharper trap.</strong> About 92.6% of classified citation statements are merely mentioning, 6.5% supporting, 0.8% contrasting. So a paper with zero contrasting citations is the overwhelmingly normal case, and reading that zero as "uncontested" is reading noise as signal. Where Scite genuinely helps is the other direction: if contrasting citations do show up, that is a strong and specific pointer to the argument you need to go read.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The abstract-only limit is how a defensible-looking memo goes soft.</strong> Picture the Cadence question: someone screens 900 papers on lecture capture and note-taking outcomes in Elicit, and the extraction table fills in beautifully. Most of that literature is paywalled, so most of those rows were built from titles and abstracts. Abstracts state findings; they very rarely state the sample's country, the comparison condition, the funder, or the caveat the authors put in their limitations section. Every one of those omissions is a hole a reviewer can put a finger through - and none of them show up as an error in the tool. This is why b5 insists that any number carrying weight gets confirmed against the full text, and why "we screened 900 papers" is a statement about effort rather than about evidence.</p>
+    </div>
+  </section>
+
+  <!-- ============ PART 3: THE OTHER LAYERS ============ -->
+  <section class="section" id="other-layers">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the layers nobody puts in the business case</span>
+      <h2>Reference managers, qualitative tools, notebooks <span class="tag concept">10 min live</span></h2>
+    </div>
+    <p class="lede">The remaining layers rarely get their own line in a budget, which is precisely why their risks go unexamined. Reference managers are where your PDFs live, so they are a data-egress question, not an accuracy question. Qualitative tools apply codes to what humans said, and not one of them publishes a coding accuracy figure. Notebooks feel airtight because they are pointed at your own sources, and the guarantee people believe in is stronger than the one the provider actually gives.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Reference managers: the risk is egress, not accuracy<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>All three of the common managers have an AI story, and all three of them move the question somewhere other than accuracy:</p>
+        <ul>
+          <li><strong>Zotero</strong> has no first-party AI feature at all. Every AI capability is a community plugin, and Zotero's own warning is the sentence to read aloud in a governance meeting: "plugins have full access to your Zotero and your computer." So the decision is not about a model's quality, it is about who you are letting inside.</li>
+          <li><strong>Paperpile's</strong> official "Ask AI" is a router. It sends your full-text PDF out to ChatGPT, Claude, Gemini, Copilot or NotebookLM. Two consequences: accuracy is now a property of whichever model you picked, not of Paperpile, and your PDFs leave the tool by design rather than by accident.</li>
+          <li><strong>Mendeley</strong> references an "Ask AI" capability with no documented detail we could verify. That is a gap, and for a procurement decision an undocumented feature is a feature you cannot sign off.</li>
+        </ul>
+        <p><strong>None of the three publishes any accuracy claim.</strong> Which means the honest framing for your team is: this layer is a confidentiality and plugin-trust decision. Route it through the a4 governance rails - where does the document go, who is a sub-processor, and does any of it touch participant material.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Qualitative tools: everyone auto-codes, nobody publishes coding accuracy<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three tools your insights team will name, with what each one actually documents:</p>
+        <ul>
+          <li><strong>Dovetail</strong> - Magic Highlight auto-applies <em>your</em> existing tag structure, plus Magic Cluster, Magic Summary and Ask Dovetail. The chat is "Powered by the latest release of Claude". Transcription runs through Amazon Transcribe and AssemblyAI. It states customer data is not used for training. Its AI documentation carries no accuracy figure and no instruction to verify output.</li>
+          <li><strong>Looppanel</strong> - claims "95%+ accurate transcripts", scoped to English. Other pages on the same site say 90% and 93%+, so the claim is inconsistent with itself. 96 further languages are supported, but translation and non-English AI notes are Enterprise-only, which is a budget question disguised as a feature list.</li>
+          <li><strong>Marvin</strong> - cited answers and PII blur, which are genuinely good governance features. No accuracy claim, no language list.</li>
+        </ul>
+        <p>The cross-cutting finding is the one to take to your team, and it is stronger than any individual gap: <strong>all three auto-apply codes to human speech, and not one of them publishes a coding or theme-assignment accuracy figure.</strong> Transcription accuracy is not coding accuracy. A 95% accurate transcript tells you the words are right; it tells you nothing about whether the theme the tool attached to those words is the theme a trained researcher would have attached. b9 builds the check for this with inter-rater agreement, which is the only honest answer available.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>NotebookLM: real limits, and a guarantee that is not there<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>NotebookLM, now being renamed Gemini Notebook, is the most trusted tool in this whole session, largely on a belief that is not in the documentation.</p>
+        <p><strong>The verified limits</strong> are 500,000 words per source or 200MB, and on the base tier 100 notebooks holding 50 sources each (Plus 100, Pro 300, Ultra 500 to 600 sources). Google's own wording is the weaker "answers questions based on the information provided in your uploaded sources", and on very short sources it "references the entire document without a cited individual text".</p>
+        <p><strong>The gap worth teaching</strong> is what is absent: Google's FAQ contains no guarantee that the model never uses knowledge beyond your sources, and no statement about hallucination risk. The popular framing - it cannot go beyond what you gave it - is stronger than anything Google actually says. That does not make the tool bad. It makes "grounded in my sources" a design intent rather than a contractual property, so a sentence pulled out of a notebook still needs the citation opened before it carries weight in a memo.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 4: WHAT TO INSIST ON ============ -->
+  <section class="section" id="insist">
+    <div class="section-kicker">
+      <span class="klabel">Part 4 · before the purchase order</span>
+      <h2>Five things to insist on in writing <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">You do not need to become an expert on any of these products. You need five answers, in writing, from anyone selling you one. <strong>A documented corpus with an update cadence</strong> - which databases, and when was it last refreshed. <strong>An exportable audit trail</strong> - can I get the search record, the screening decisions and the extraction rows out, per claim, in a form a client's data team can read. <strong>A stated position on training and data residency</strong> - do my uploads train your models, where do they sit, which sub-processors see them. <strong>Full-text versus abstract-only clarity</strong> - for material we do not hold a subscription to, what did you actually read. <strong>An accuracy number with a methodology</strong> - the sample, the task, and who labelled the ground truth. If a vendor can answer four of the five, that is often a reasonable buy with a documented limit. If they cannot answer the fifth one, you have not been given a number; you have been given a decoration.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 252" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A buy, build or skip frame over four procurement gates: corpus and cadence, audit trail, data position, and full text clarity.">
+        <style>
+          .bbsT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .bbsS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .bbsH { font: 700 12px Inter, sans-serif; fill: #121826; }
+          .bbsX { font: 400 11px Inter, sans-serif; fill: #69718A; }
+          .bbsK { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+        </style>
+
+        <rect x="24" y="24" width="268" height="56" rx="9" fill="#0B1428"/>
+        <text class="bbsT" x="40" y="48">BUY</text>
+        <text class="bbsS" x="40" y="68">when limits are documented</text>
+
+        <rect x="306" y="24" width="268" height="56" rx="9" fill="#1B2F57"/>
+        <text class="bbsT" x="322" y="48">BUILD</text>
+        <text class="bbsS" x="322" y="68">only on the free ground truth</text>
+
+        <rect x="588" y="24" width="268" height="56" rx="9" fill="#34507F"/>
+        <text class="bbsT" x="604" y="48">SKIP</text>
+        <text class="bbsS" x="604" y="68">when no method backs a claim</text>
+
+        <rect x="24" y="104" width="196" height="60" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="bbsH" x="38" y="128">Gate 1 · corpus</text>
+        <text class="bbsX" x="38" y="148">which sources, dated</text>
+
+        <rect x="234" y="104" width="196" height="60" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="bbsH" x="248" y="128">Gate 2 · audit trail</text>
+        <text class="bbsX" x="248" y="148">exportable per claim</text>
+
+        <rect x="444" y="104" width="196" height="60" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="bbsH" x="458" y="128">Gate 3 · our data</text>
+        <text class="bbsX" x="458" y="148">training, residency</text>
+
+        <rect x="654" y="104" width="196" height="60" rx="8" fill="#F5F8DE" stroke="#5A6B00" stroke-width="1.5"/>
+        <text class="bbsH" x="668" y="128">Gate 4 · full text?</text>
+        <text class="bbsX" x="668" y="148">or abstract only</text>
+
+        <rect x="24" y="188" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="bbsK" x="48" y="200">Gate 5 is the tiebreaker: an accuracy number with no methodology is marketing, not evidence.</text>
+        <rect x="24" y="212" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="bbsK" x="48" y="224">Four of five gates plus a written limit is a fine buy. A demo instead of an answer is a skip.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - buy, build or skip, and the four gates every vendor answer has to clear</figcaption>
+    </figure>
+
+    <p>The difference between getting marketing copy back and getting a testable answer is almost entirely in how you ask. Send the first version of this and you will receive a case study. Send the second and you will receive either a document you can hold someone to, or a silence that is itself the answer.</p>
+
+    <div class="prompt-box bad">
+      <span class="label">Gets you a case study</span>
+      <p>"Which AI literature review tool is the most accurate? We want the best one for our research team."</p>
+    </div>
+    <div class="prompt-box good">
+      <span class="label">Gets you a testable answer</span>
+      <p>"We screen roughly 800 papers a quarter, mostly paywalled education and clinical literature, and our memos have to survive a client's data team. Please answer in writing: (1) which databases your corpus is built from, and when it was last refreshed; (2) when we do not hold a subscription, does extraction read the full text or the title and abstract, and how is that flagged per source; (3) for every accuracy figure on your site, the methodology behind it - the task, the sample size, and who labelled the ground truth; (4) exactly what we can export as an audit trail, per claim, and in what format; (5) whether our uploads are used to train your models, where they are stored, and which sub-processors can access them. If any answer is 'not documented', say so."</p>
+    </div>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where build actually makes sense<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Build is usually the wrong instinct in this space, with one exception that is genuinely worth a week of an engineer's time: <strong>the ground-truth layer</strong>. OpenAlex is CC0, Crossref needs no sign-up, and Semantic Scholar's key is free. A small internal utility that takes a list of DOIs and returns coverage, publication year and retraction status is a few hundred lines, and it does the one job no vendor on this page will do for you as a first-class feature - it tells you whether the sources under a live memo have been withdrawn since you cited them.</p>
+        <p>Everything above layer 1 is a build you will regret. Screening interfaces, extraction UIs and qualitative coding workspaces are large products with real design cost, and they change monthly. Buy those, with the limit written down, and keep your engineering effort on the check that protects your credibility.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Take whatever research tool your team already pays for and answer the five gates from Part 4 using only the vendor's public documentation. Note which gate you cannot answer. That gap is your next procurement conversation.</li>
+      <li>Pick three load-bearing citations from a memo your team shipped in the last quarter and check each one in Crossref for retraction or post-publication updates. This takes about ten minutes and it is the cheapest credibility insurance on this page.</li>
+      <li>Find one accuracy percentage on any vendor's site and try to locate its methodology - the task, the sample, and who labelled the ground truth. Write down what you found. Most of the time the answer is nothing, and that is the lesson.</li>
+      <li>Ask whoever runs your qualitative work how the auto-applied codes get checked today. If the answer is that they get reviewed informally, you have found the b9 gap, and it is a bigger risk than any transcript error rate.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Every figure on this page was taken from the provider's own documentation on 2026-08-08, and where a provider blocked verification the gap is reproduced as a gap rather than filled. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Ground-truth layer - OpenAlex, Crossref, Semantic Scholar coverage, licensing, rate limits</span><span class="note">Part 1 · applied as search practice in b3 and retraction screening in b4</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Search and screening tools - Elicit, Consensus, Scite, Undermind, and the SciSpace gap</span><span class="note">Part 2 · the abstract-only limit returns as an extraction rule in b5</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Reference-manager AI - Zotero plugin warning, Paperpile's router, Mendeley's undocumented feature</span><span class="note">Part 3 · the confidentiality rails themselves were set in a4</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Qualitative tools - Dovetail, Looppanel, Marvin, and the missing coding accuracy figures</span><span class="note">Part 3 · inter-rater agreement and saturation get their full treatment in b9</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">NotebookLM / Gemini Notebook - source and notebook limits, and the guarantee Google does not give</span><span class="note">Part 3 · the grounding question is picked up again in b8 synthesis</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">1 · Your analyst screened 900 paywalled papers in Elicit and the extraction table looks complete. What is the first thing to check?</p>
+      <button class="qopt" type="button">A · Whether the analysis had the full text, or only the title and abstract</button>
+      <button class="qopt" type="button">B · Whether the papers are highly cited enough to carry a decision</button>
+      <button class="qopt" type="button">C · Nothing - a 138M-paper deduped corpus covers the literature</button>
+      <p class="qwhy">Elicit reads full text only for open-access material, or for material you hold a subscription to plus their browser extension. Otherwise it works from title and abstract. Abstracts state findings but rarely the population, comparison, funder or limitations, so every one of those omissions travels silently into your table.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · Where do you check whether a citation has been withdrawn, and what does adding a <code>mailto</code> to your requests do?</p>
+      <button class="qopt" type="button">A · Semantic Scholar's <code>tldr</code> field, and a <code>mailto</code> expands the corpus you can reach</button>
+      <button class="qopt" type="button">B · Crossref, which carries retraction and post-publication update information, and a <code>mailto</code> moves you into the polite pool with triple the rate limit, 3 per second instead of 1</button>
+      <button class="qopt" type="button">C · OpenAlex, and a <code>mailto</code> removes the metered credit model</button>
+      <p class="qwhy">Crossref holds 185,277,841 records, needs no sign-up, and carries retraction and post-publication updates - which is what makes it the withdrawal check before a memo ships. The polite pool is a courtesy convention with a real payoff: 3 requests per second rather than 1.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Scite shows zero contrasting citations for a study you want to build a recommendation on. What does that tell you?</p>
+      <button class="qopt" type="button">A · The finding is uncontested, so the claim can be stated flat</button>
+      <button class="qopt" type="button">B · Almost nothing - only about 0.8% of classified citations are contrasting, so absence is nearly uninformative</button>
+      <button class="qopt" type="button">C · The classifier failed, and the tool should not be used</button>
+      <p class="qwhy">The reported corpus distribution is roughly 92.6% mentioning, 6.5% supporting and 0.8% contrasting. Zero contrasting citations is the overwhelmingly normal case, so reading it as agreement is reading noise as signal. Scite earns its keep in the other direction: when contrasting citations do appear, they point you straight at the argument to go read.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Four layers</b><span>Ground truth → search and screening → extraction → synthesis and qualitative. Each layer inherits the coverage of the one below it, so buy the bottom first.</span></div>
+      <div class="cheat-item"><b>Ground truth is free</b><span>OpenAlex 323,171,764 works and 123,255,918 authors, CC0, with a documented metered credit model. Crossref 185,277,841 records, no sign-up. Semantic Scholar 214M papers, 2.49B citations, 79M authors.</span></div>
+      <div class="cheat-item"><b>Crossref is the withdrawal check</b><span>It carries retraction and post-publication update information. Add a <code>mailto</code> for the polite pool: 3 requests per second instead of 1.</span></div>
+      <div class="cheat-item"><b>The key buys stability</b><span>Semantic Scholar unauthenticated is documented at 1000 requests per second shared among all unauthenticated users; a key's introductory limit is 1 per second. And <code>tldr</code> is machine-generated - never quote it as the authors.</span></div>
+      <div class="cheat-item"><b>Elicit's real limit</b><span>~138M deduped papers, Pro $49/mo up to 5,000 papers, API 100 requests per minute per IP - but full text only for open access or your own subscription plus their extension. Otherwise title and abstract only.</span></div>
+      <div class="cheat-item"><b>Two windows to distrust</b><span>Consensus's Meter reads the top 20 papers for a query. Scite's corpus is about 92.6% mentioning, 6.5% supporting, 0.8% contrasting - so no contrasting citations means almost nothing.</span></div>
+      <div class="cheat-item"><b>Layers nobody budgets</b><span>Reference managers are a data-egress question (Zotero: plugins have full access to your computer; Paperpile routes your PDFs to an external model). Qualitative tools auto-code human speech and none publishes a coding accuracy figure.</span></div>
+      <div class="cheat-item"><b>Five gates before signing</b><span>Documented corpus with a refresh date · exportable audit trail per claim · stated position on training and residency · full text versus abstract only · an accuracy number with a methodology.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 5 of 6 · learn-ai-research-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a4-governance-and-consent.html">← Previous: Consent, confidentiality, governance</a> &nbsp;·&nbsp; <a href="a6-deciding-on-evidence.html">Next: Deciding on fast evidence →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

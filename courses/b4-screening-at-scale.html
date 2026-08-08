@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 4 · Screening at scale - learn ai research with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-research-with-phoebe</a> / Researcher session 4 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Research with Phoebe · Researcher track · Session 4 of 10</div>
+    <h1>Screening <span class="accent">at scale</span></h1>
+    <p class="sub">b3 gave you a search that finds the good sources on purpose. Tonight the pile arrives and you have to decide what gets in - which is the step everybody skips, because reading feels like progress and excluding feels like loss. This session owns the hardest lesson in the track: more sources is not more evidence. You will write inclusion rules before you look, borrow PRISMA's screening log without its ceremony, run a retraction check that costs almost nothing, and then turn the anti-lever on from a clean audit and watch 40 extra sources cost you a claim.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Researcher track</span>
+      <span class="chip audience">Analysts · academics · UX &amp; market researchers</span>
+      <span class="chip audience">The anti-lever explained</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where we are</span>
+      <span class="a2" style="flex:5">3-22 · Rules, PRISMA, retraction checks</span>
+      <span class="a3" style="flex:4">22-42 · The anti-lever, in full</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: RULES FIRST ============ -->
+  <section class="section" id="rules-first">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · rules before you look</span>
+      <h2>Inclusion rules written before you look <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">A rule set is one short page you write while the pile is still theoretical. It says who counts, when counts, what kind of source counts, in what language, and what has to be measured for a source to be usable at all. Write it first and screening becomes clerical work you can hand off, log and defend. Write it afterwards and you have done retroactive rule-making, which is a polite name for choosing the rules that keep the sources that agree with you. Nobody does this deliberately. Everybody does it accidentally, because by the time you look, you already have an answer in your head and every borderline call quietly bends toward it.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 478" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The PRISMA 2020 three-band flow - Identification, Screening, Included - with the counts a real screening log keeps at each step.">
+        <style>
+          .prB { font: 700 11px Inter, sans-serif; fill: #FFFFFF; }
+          .prBs { font: 400 10.5px Inter, sans-serif; fill: #FFFFFF; opacity: .9; }
+          .prH { font: 700 12px Inter, sans-serif; fill: #121826; }
+          .prX { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .prN { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+          .prW { stroke: #34507F; stroke-width: 2.5; fill: none; marker-end: url(#prHd); }
+        </style>
+        <defs>
+          <marker id="prHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#34507F"/>
+          </marker>
+        </defs>
+
+        <rect x="24" y="40" width="116" height="88" rx="8" fill="#0B1428"/>
+        <text class="prB" x="36" y="76">IDENTIFICATION</text>
+        <text class="prBs" x="36" y="94">what you found</text>
+        <rect x="160" y="50" width="280" height="44" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="prH" x="174" y="70">Records identified</text>
+        <text class="prX" x="174" y="87">databases + hand search, n = 1,204</text>
+        <rect x="468" y="50" width="386" height="44" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="prH" x="482" y="70">Duplicates removed before screening</text>
+        <text class="prX" x="482" y="87">n = 216 - always the first move, never the last</text>
+
+        <rect x="24" y="136" width="116" height="164" rx="8" fill="#1B2F57"/>
+        <text class="prB" x="36" y="204">SCREENING</text>
+        <text class="prBs" x="36" y="222">rules applied</text>
+        <text class="prBs" x="36" y="238">twice, in order</text>
+        <rect x="160" y="146" width="280" height="44" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="prH" x="174" y="166">Records screened</text>
+        <text class="prX" x="174" y="183">title and abstract, n = 988</text>
+        <rect x="468" y="146" width="386" height="44" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="prH" x="482" y="166">Excluded on the stated rules, n = 902</text>
+        <text class="prX" x="482" y="183">one recorded reason per exclusion, no exceptions</text>
+
+        <rect x="160" y="204" width="280" height="44" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="prH" x="174" y="224">Reports sought for retrieval</text>
+        <text class="prX" x="174" y="241">n = 86</text>
+        <rect x="468" y="204" width="386" height="44" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="prH" x="482" y="224">Not retrieved, n = 11</text>
+        <text class="prX" x="482" y="241">paywalled or no full text found - say so, do not hide it</text>
+
+        <rect x="160" y="262" width="280" height="44" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="prH" x="174" y="282">Reports assessed for eligibility</text>
+        <text class="prX" x="174" y="299">full text, n = 75 - a box inside Screening</text>
+        <rect x="468" y="262" width="386" height="44" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="prH" x="482" y="282">Excluded with reasons, n = 51</text>
+        <text class="prX" x="482" y="299">off population 22 · off window 14 · no measure 15</text>
+
+        <rect x="24" y="316" width="116" height="64" rx="8" fill="#5A6B00"/>
+        <text class="prB" x="36" y="346">INCLUDED</text>
+        <text class="prBs" x="36" y="364">what you cite</text>
+        <rect x="160" y="326" width="280" height="44" rx="7" fill="#F5F8DE" stroke="#5A6B00" stroke-width="2"/>
+        <text class="prH" x="174" y="346">Studies included</text>
+        <text class="prX" x="174" y="363">n = 24 - this is your evidence base</text>
+        <rect x="468" y="326" width="386" height="44" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="prH" x="482" y="346">Three bands, not four</text>
+        <text class="prX" x="482" y="363">the 2009 Eligibility band was removed in PRISMA 2020</text>
+
+        <path class="prW" d="M300,94 L300,142"/>
+        <path class="prW" d="M300,190 L300,200"/>
+        <path class="prW" d="M300,248 L300,258"/>
+        <path class="prW" d="M300,306 L300,322"/>
+        <path class="prW" d="M440,72 L464,72"/>
+        <path class="prW" d="M440,168 L464,168"/>
+        <path class="prW" d="M440,226 L464,226"/>
+        <path class="prW" d="M440,284 L464,284"/>
+
+        <rect x="24" y="404" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="prN" x="48" y="416">Every count on the left has a matching count on the right. That is the whole discipline.</text>
+        <rect x="24" y="430" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="prN" x="48" y="442">1,204 found, 24 cited. The 1,180 you dropped are the part a reviewer will ask about.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the three PRISMA 2020 bands and the counts a real screening log keeps</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What a rule set actually contains<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Six lines, written before the first search result loads. For the Cadence question they read something like this:</p>
+        <ul>
+          <li><strong>Population</strong> - higher education students and institutions. Not K-12, not corporate learning, not general consumers. Name what is out as well as what is in.</li>
+          <li><strong>Date window, with a stated reason</strong> - 2021 onward, because the procurement and consent landscape we care about post-dates remote-teaching normalisation. The reason matters more than the year: a window with no rationale is a preference.</li>
+          <li><strong>Study or source type</strong> - peer-reviewed studies, regulator or ministry guidance, and institutional procurement documents. Vendor material may be read for context and marked as such, never as support.</li>
+          <li><strong>Language</strong> - English plus our two target markets. Write it down even when it is obvious, because it is a real limitation of your evidence base and you will need it in the write-up.</li>
+          <li><strong>Outcome or measure required</strong> - the source has to report something about adoption, budget authority, consent practice or transcription performance. A source with an opinion and no measure does not clear the bar.</li>
+          <li><strong>Exclusions</strong> - the mirror of the above, stated positively so a second person could apply them: no K-12-only samples, nothing before 2021, no vendor material as support, no source without a measure.</li>
+        </ul>
+        <p>Now the test. Once written, the rule set is allowed to change - but only in one direction: you may make it <em>stricter</em>, and you record the change and the date. Loosening a rule after you have seen the pile is how an excluded source becomes an included one because you liked its conclusion.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>PRISMA 2020, borrowed without the ceremony<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>PRISMA 2020 (Page MJ et al., <em>BMJ</em> 2021;372:n71) is a <strong>reporting</strong> guideline, not a quality-appraisal tool - it tells you what to disclose, not whether a study is any good. Its checklist has <strong>seven sections with 27 items</strong>, some with sub-items: Title (1), Abstract (2), Introduction (3-4), Methods (5-15), Results (16-22), Discussion (23), Other information (24-27). New in the 2020 revision: certainty assessment, data and code availability, and a separate abstract checklist.</p>
+        <p>The part worth stealing for commercial work is the flow diagram, and the detail people get wrong is its shape. <strong>It has three bands, not four:</strong></p>
+        <ul>
+          <li><strong>Identification</strong> - what you found, and what you removed as duplicates before screening anything.</li>
+          <li><strong>Screening</strong> - records screened on title and abstract, records excluded, reports sought for retrieval, reports not retrieved, and <strong>reports assessed for eligibility</strong> with the exclusions and their reasons. The 2009 diagram had a separate "Eligibility" band; in 2020 it was removed and the eligibility assessment became a box inside Screening.</li>
+          <li><strong>Included</strong> - the studies that made it, which is the set your claims are allowed to rest on.</li>
+        </ul>
+        <p>There are four template variants (new versus updated review, databases-only versus with other sources). You do not need the templates, the checklist or the word "PRISMA" anywhere near a client deck. You need the log: a sheet with found, deduped, screened, excluded-with-reason, retrieved, assessed, included, and a total that adds up. Ten minutes of bookkeeping that turns "we looked at a lot of sources" into a number somebody else could reproduce.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: MECHANICS ============ -->
+  <section class="section" id="mechanics">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the mechanics</span>
+      <h2>Screening a big pile without reading all of it <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Three passes, always in this order. <strong>Dedupe first</strong> - the same study arriving from three databases is one study, and if you screen before you dedupe you will make the same judgement three times and sometimes make it differently. <strong>Then title and abstract</strong>, against the rules, fast, with a recorded reason on every exclusion. <strong>Then full text</strong> for the survivors only, which is where you find out that a third of the abstracts promised something the paper does not deliver. The pass structure is what makes the volume tractable: you never read 988 papers, you read 988 abstracts and 75 papers.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>AI-assisted triage that stays auditable<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Screening is genuinely a good use of a model - it is repetitive, rule-shaped and enormous. It stops being a good use the moment the tool is deciding what the rules are, or dropping things silently. Four conditions keep it defensible:</p>
+        <ul>
+          <li><strong>The tool applies your rules, not its judgement.</strong> Paste the rule set in. "Is this relevant?" is not a rule.</li>
+          <li><strong>A reason per exclusion, in the tool's output.</strong> If it cannot say which rule a record failed, you cannot log it and you cannot defend it.</li>
+          <li><strong>Sample-check its decisions against your own.</strong> Screen 40 records yourself, blind, and compare. Disagreements are usually a rule you wrote ambiguously, which is useful either way.</li>
+          <li><strong>Nothing gets dropped silently.</strong> Excluded is a status with a reason attached, never an absence from a list.</li>
+        </ul>
+        <div class="prompt-box bad">
+          <span class="label">Silent dropping</span>
+          <p>"Here are 400 abstracts on AI note-taking in education. Filter out the irrelevant ones and give me the papers worth reading."</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Auditable triage</span>
+          <p>"Apply these inclusion rules exactly as written, and do not add criteria of your own: [paste the six rules]. For all 400 records return a row each with: record id, INCLUDE / EXCLUDE / UNCLEAR, and for every EXCLUDE the single rule number it failed. Use UNCLEAR whenever the abstract does not contain enough information to apply a rule - do not guess, and do not omit any record from the output. Return the counts for each of the three statuses at the end."</p>
+        </div>
+        <p>The <strong>UNCLEAR</strong> bucket is the part that earns its keep. It is where the abstract is silent about population or measure - and those are exactly the records a confident filter would have quietly binned. You read those yourself.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The limitation that bites hardest at this exact stage<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Elicit aggregates Semantic Scholar, OpenAlex and PubMed, deduped to roughly 138M papers, and has a workflow built for this job (Systematic Literature Review, plus Extract Data for what we do in b5). The Pro tier screens up to 5,000 papers. The limitation to know before you trust a screening decision: <strong>full-text analysis only happens for open access material</strong> (or where you supply your own subscription plus their browser extension). Otherwise it works from <strong>title and abstract only</strong>.</p>
+        <p>Notice where that lands. Title-and-abstract screening is exactly the pass where "we could not tell from the abstract" is the correct answer a third of the time - and a tool without the full text cannot ever resolve it, so it has to guess or defer. Deferring is fine. Guessing looks identical in the output.</p>
+        <p>Second thing worth knowing, and it is a general lesson rather than a complaint about one vendor: <strong>Elicit's own published accuracy figures are inconsistent across its own pages</strong> - 96% and 99.4% for extraction, 99.5% and 97/99% for screening. Any of those numbers might be right. None of them arrives with a methodology, a corpus or a definition of what counted as correct, and they do not agree with each other. That is not a reason to avoid the tool. It is a reason your confidence in it should come from your own sample-check on your own pile, which takes twenty minutes and produces a number you can actually cite.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: RETRACTION ============ -->
+  <section class="section" id="retraction">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · integrity checks</span>
+      <h2>Retraction checking, and why there is no excuse <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">A retracted paper does not disappear. It keeps its DOI, keeps sitting in Google Scholar, keeps being cited, and reads exactly like a valid paper - which means it will walk into your extraction table on the strength of a good abstract. The check that catches it is close to free. <strong>Crossref</strong> holds 185,277,841 records, needs no sign-up, and carries retraction and post-publication update information: hand it a DOI and it will tell you whether the record has been withdrawn or corrected. Adding a <code>mailto</code> to your request moves you into the polite pool and <strong>triples your rate limit from 1 request per second to 3</strong>. At that rate a 200-source library is checked in under two minutes.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The check, and where it goes in the workflow<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Run it twice: once when a source clears full-text screening, and once again the week you ship. Retractions land months and years after publication, so a library that was clean in March is not automatically clean in August, and the memo carries the date you checked.</p>
+        <ul>
+          <li><strong>Collect the DOIs</strong> for everything in your included set. A source with no DOI is not exempt, it is harder - check the journal's own page for a notice.</li>
+          <li><strong>Query Crossref per DOI</strong> and read the update information: retractions, corrections, expressions of concern. All three change how much weight a source can carry, not just retraction.</li>
+          <li><strong>Record the check</strong> in your log with the date. "Retraction-checked 2026-08-08 via Crossref" is one line and it answers a question a reviewer would otherwise have to ask.</li>
+          <li><strong>Re-check before you ship</strong>, and re-check anything a claim depends on heavily. The load-bearing sources deserve the extra minute.</li>
+        </ul>
+        <p>Then say the quiet part out loud: because this check costs minutes and needs no account, <strong>not having done it is a choice</strong>. It is the single easiest thing in this entire track to be caught not doing.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Guo X, Dong L, Hao D, <em>Front Cell Dev Biol</em> 11:1339390 was retracted on 2024-02-16</strong> (retraction notice DOI 10.3389/fcell.2024.1386861) over AI-generated figures. The detail that makes this the right case for this session: <strong>the AI use was disclosed.</strong> The authors followed the rule. It still failed, because disclosure is not review and nobody checked what the tool produced before it went into the paper. Declaring that you used a tool tells a reader where to look; it does not tell them the output is correct.</p>
+      <p>And the reason a retraction check is not the same as being safe: <strong>Glynn (arXiv:2411.15218) found 768 documents with suspected undeclared AI use, of which only 4.3% were altered post-publication.</strong> Detection is not correction. The overwhelming majority of flagged material stayed exactly as published - so the record you are about to cite may be quietly wrong while carrying no notice at all. Your retraction check catches the cases the system has acted on. Source tiering, population checks and the contradiction hunt are what cover the rest.</p>
+    </div>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Demo · the anti-lever</span>
+      <h2>Forty more sources, one fewer claim <span class="tag demo">★ 14 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">This is the session that owns the anti-lever, so we run it properly rather than as a party trick. The lab opens with five levers on and the audit at its best: <strong>9 of 10 claims surviving, 22 sources read</strong>. Then you add 40 sources in bulk - the reflexive move, the one that feels like diligence - and watch the pile go to <strong>62</strong> while surviving claims drop to <strong>8</strong>. One of the 40 is retracted, and it lands in the support for a claim that was previously clean. Nearly three times the reading, one claim worse off, and a memo that is now easier to break.</p>
+
+    <div class="steps">
+      <div class="step"><p>Start where b1 left you: five levers on, <strong>9 of 10</strong> surviving, 22 sources. Note which claim is the honest unknown and leave it alone - it is not what changes here.</p></div>
+      <div class="step"><p>Before clicking, <strong>predict</strong>. Write down whether 40 more sources will help, do nothing, or hurt. Most people say small gain.</p></div>
+      <div class="step"><p>Press <strong>Add 40 sources</strong>. Sources read jumps to 62; surviving claims fall to 8. Find the claim that died and read its failure rule - it now rests partly on a retracted source.</p></div>
+      <div class="step"><p>Now the harder half. Leave the 40 in and turn <strong>Source tiering</strong> off. Feel the difference: untiered breadth is worse than untiered narrowness, because every extra unscreened hit is another chance to import something retracted, duplicated, promotional or off-population.</p></div>
+      <div class="step"><p>Turn tiering back on, take the 40 back out, and say the rule in your own words to the person next to you: breadth is a multiplier on your screening discipline, not a substitute for it.</p></div>
+    </div>
+
+    <div class="rlbox" data-mode="lab" data-levers="question,tiering,extraction,contradiction,replication"></div>
+
+    <div class="callout tip">
+      <strong>What is real here and what is a teaching corpus</strong>
+      The 22 sources - and the 40 bulk hits - are a teaching corpus built for one decision, not a real literature. Everything else is real: each source carries a type, tier, year, sample size and funder, and the audit is a rule engine that reads those attributes in the fixed order you learned in b1. The claim that dies when you add 40 sources dies because a specific retracted record enters its support, and you can trace it. The rules are the transferable part - the corpus is the sandbox.
+    </div>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two funnels compared - unscreened breadth versus rules-first screening - on the same pile of 62 sources.">
+        <style>
+          .fnT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .fnS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .fnK { font: 700 12px Inter, sans-serif; fill: #121826; }
+          .fnO { font: 700 13px Inter, sans-serif; fill: #991B1B; }
+          .fnG { font: 700 13px Inter, sans-serif; fill: #1B2200; }
+          .fnX { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .fnN { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+        </style>
+
+        <text class="fnK" x="80" y="32">UNSCREENED BREADTH</text>
+        <text class="fnK" x="460" y="32">RULES-FIRST SCREENING</text>
+
+        <rect x="80" y="44" width="340" height="44" rx="7" fill="#34507F"/>
+        <text class="fnT" x="94" y="64">62 sources in the pile</text>
+        <text class="fnS" x="94" y="81">40 added in bulk, every one of them tier 4</text>
+        <rect x="125" y="96" width="250" height="44" rx="7" fill="#1B2F57"/>
+        <text class="fnT" x="139" y="116">No dedupe, no rules</text>
+        <text class="fnS" x="139" y="133">nothing logged as excluded</text>
+        <rect x="165" y="148" width="170" height="44" rx="7" fill="#0B1428"/>
+        <text class="fnT" x="179" y="168">Everything lands</text>
+        <text class="fnS" x="179" y="185">straight in the table</text>
+        <rect x="80" y="206" width="340" height="70" rx="9" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2"/>
+        <text class="fnO" x="94" y="230">8 of 10 claims survive</text>
+        <text class="fnX" x="94" y="250">one retracted source enters a clean claim,</text>
+        <text class="fnX" x="94" y="267">and you have no record of what you dropped</text>
+
+        <rect x="460" y="44" width="340" height="44" rx="7" fill="#34507F"/>
+        <text class="fnT" x="474" y="64">62 sources in the pile</text>
+        <text class="fnS" x="474" y="81">same pile, but the rules were written first</text>
+        <rect x="505" y="96" width="250" height="44" rx="7" fill="#1B2F57"/>
+        <text class="fnT" x="519" y="116">Dedupe, then screen</text>
+        <text class="fnS" x="519" y="133">title and abstract, on rules</text>
+        <rect x="545" y="148" width="170" height="44" rx="7" fill="#5A6B00"/>
+        <text class="fnT" x="559" y="168">24 reach full text</text>
+        <text class="fnS" x="559" y="185">each drop has a reason</text>
+        <rect x="460" y="206" width="340" height="70" rx="9" fill="#F5F8DE" stroke="#5A6B00" stroke-width="2"/>
+        <text class="fnG" x="474" y="230">9 of 10 claims survive</text>
+        <text class="fnX" x="474" y="250">the retracted record never gets in, and you</text>
+        <text class="fnX" x="474" y="267">can show why each of the other 38 was cut</text>
+
+        <rect x="80" y="302" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="fnN" x="104" y="314">Identical reading load. The only difference is whether rules existed before the pile did.</text>
+        <rect x="80" y="326" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="fnN" x="104" y="338">Volume is a multiplier on your screening discipline. Multiply zero and you get zero.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the same 62 sources through two funnels, and what each one lets through</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 35-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Write the six-line rule set for a question you are working on right now, before you search again. Include a reason for the date window. Then search, and count how many borderline calls the rules made for you.</li>
+      <li>Build the log: found, deduped, screened, excluded-with-reason, retrieved, assessed, included. Make the numbers add up. If you cannot reconstruct them for a piece of work you already shipped, that is the finding.</li>
+      <li>Take the reference list of your last deck or report and retraction-check every DOI through Crossref. Record the date you checked. Tell us next session if you found anything.</li>
+      <li>Run the anti-lever from a clean 9 of 10, then turn Source tiering off with the 40 still in. Write two sentences a manager would accept explaining why "let's look at more sources" was the wrong instruction.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session teaches the working core of screening discipline: the reporting guideline whose flow diagram is worth borrowing, the ground-truth service that makes retraction checks trivial, and the documented integrity cases that explain why both matter. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">PRISMA 2020 - seven sections, 27 items, three-band flow diagram</span><span class="note">Part 1 · taught as a log to borrow, not a checklist to file</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Screening mechanics - inclusion rules first, dedupe, two-pass screening</span><span class="note">Parts 1-2 · the artifact you carry into b5</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Crossref - 185M records, no sign-up, retraction and update information</span><span class="note">Part 3 · including the mailto polite pool, 1/s to 3/s</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Elicit at the screening stage - title-and-abstract-only limit, inconsistent vendor accuracy figures</span><span class="note">Part 2 self-study · full tool stack in leader session a5</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Integrity evidence - the Guo retraction over AI-generated figures, Glynn on undeclared AI use</span><span class="note">Part 3 · disclosure is not review, detection is not correction</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · What are the three bands of the PRISMA 2020 flow diagram?</p>
+      <button class="qopt" type="button">A · Identification, Eligibility, Included - eligibility is its own band</button>
+      <button class="qopt" type="button">B · Search, Appraisal, Synthesis</button>
+      <button class="qopt" type="button">C · Identification, Screening, Included - eligibility is a box inside Screening</button>
+      <p class="qwhy">The 2009 diagram had a separate Eligibility band; PRISMA 2020 removed it, and "reports assessed for eligibility" now sits inside Screening. Three bands, and remember PRISMA is a reporting guideline - it tells you what to disclose, not whether a study is any good.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · From a clean 9 of 10, adding 40 unscreened sources drops the audit to 8. What actually happened?</p>
+      <button class="qopt" type="button">A · The audit penalises long reference lists, so every claim weakened slightly</button>
+      <button class="qopt" type="button">B · One of the 40 is retracted and lands in the support for a claim that was previously clean</button>
+      <button class="qopt" type="button">C · The extra sources diluted the average tier, dropping the weakest claim below the bar</button>
+      <p class="qwhy">The 40 bulk hits are all tier 4 and one of them is retracted. The audit does not care how much you read, only what your claims rest on - so an unscreened pile is a delivery mechanism for retracted, duplicated, promotional and off-population material. Breadth becomes useful only after tiering and screening exist.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Why is skipping a retraction check hard to defend?</p>
+      <button class="qopt" type="button">A · Crossref carries retraction and update information, needs no sign-up, and a mailto triples your rate limit - the check costs minutes</button>
+      <button class="qopt" type="button">B · Retracted papers are removed from databases, so anything still findable is safe</button>
+      <button class="qopt" type="button">C · Journals notify everyone who has cited a paper when it is retracted</button>
+      <p class="qwhy">Retracted work keeps its DOI and keeps being findable and cited - nobody tells you. The check is close to free, which is exactly why not doing it reads as a choice. Note the limit too: Glynn found only 4.3% of 768 documents with suspected undeclared AI use were altered post-publication, so detection is not correction.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Rules before the pile</b><span>Population · date window with a reason · source type · language · measure required · exclusions. Written before you look, or they are not rules.</span></div>
+      <div class="cheat-item"><b>One-way changes</b><span>A rule set may be made stricter, dated and recorded. Loosening one after seeing the pile is how a source gets in for liking your answer.</span></div>
+      <div class="cheat-item"><b>PRISMA 2020</b><span>Reporting guideline, 7 sections, 27 items. Flow has three bands: Identification, Screening, Included. Eligibility is a box inside Screening.</span></div>
+      <div class="cheat-item"><b>Three passes, in order</b><span>Dedupe, then title and abstract against the rules, then full text for survivors. Every exclusion carries one recorded reason.</span></div>
+      <div class="cheat-item"><b>Auditable AI triage</b><span>Your rules, a reason per exclusion, an UNCLEAR bucket, nothing dropped silently, and a 40-record sample-check against your own calls.</span></div>
+      <div class="cheat-item"><b>Retraction check</b><span>Crossref, 185M records, no sign-up, retraction and update data. Add a mailto: 1/s becomes 3/s. Run it on entry and again before you ship.</span></div>
+      <div class="cheat-item"><b>Two integrity facts</b><span>Guo et al. retracted 2024-02-16 over AI figures - the use was disclosed. Glynn: only 4.3% of 768 suspect documents were ever altered.</span></div>
+      <div class="cheat-item"><b>The anti-lever</b><span>+40 unscreened sources: 62 read, 8 of 10 surviving. Volume is a multiplier on screening discipline, never a substitute for it.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 4 of 10 · learn-ai-research-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b3-search-and-source-tiering.html">← Previous: Search strategy and source tiers</a> &nbsp;·&nbsp; <a href="b5-extraction-tables.html">Next: Extraction tables →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/research-live.js?v=1"></script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 1 · What AI changes in the pipeline - learn ai research with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-research-with-phoebe</a> / Leader session 1 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Research with Phoebe · Leader track · Session 1 of 6</div>
+    <h1>What AI <span class="accent">changes</span> in the pipeline</h1>
+    <p class="sub">Your team just came back with a literature review in a day. The question you are about to ask matters more than you think. "How did you do that so fast?" gets you a story about tooling. "What would a hostile reader break first?" gets you the thing you actually need before you sign a decision. This track is about running a research function where speed went up and defensibility did not go down - and the honest news is that only two of the six pipeline stages got faster. The other four are where your judgement now lives.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Leader track</span>
+      <span class="chip audience">Research · insights · strategy leads</span>
+      <span class="chip audience">No tools required</span>
+      <span class="chip time">Start here</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-16 · What compresses, what does not</span>
+      <span class="a3" style="flex:4">16-36 · The three leader decisions</span>
+      <span class="a4" style="flex:1">36-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 0 ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>How the leader track works</h2>
+    </div>
+    <p class="lede">Six sessions, one running decision: <strong>should Cadence, an AI meeting-notes product, build a lecture-notes product for higher education next year?</strong> It has the shape of most real questions that land on a research leader's desk - part market, part evidence, part regulation, part genuinely unknown - and it is small enough to actually finish. Tonight is the map: which parts of the pipeline AI compressed, which it did not touch, and the three decisions you have to make about your own team this quarter. <strong>a2</strong> is the evidence standard you publish so everyone means the same thing by "strong evidence". <strong>a3</strong> is the failure catalogue, with the documented numbers behind each failure. <strong>a4</strong> is consent and governance for participant material and for disclosure. <strong>a5</strong> is the stack - what each tool can and cannot do, and where your data goes. <strong>a6</strong> is deciding on fast evidence: confidence language, the audit trail, and saying "we do not know yet" without losing the room.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A one-page picture of which pipeline stages compressed and which did not, the question that replaces "how fast was it", the shape of the audit your team's claims will have to pass, and three decisions you can put in writing this week: what may be delegated to AI, what evidence standard is shared, and what gets recorded so a decision is still defensible in six months.
+    </div>
+    <div class="callout tip">
+      <strong>What this course does not cover, by design</strong>
+      Catching <em>fabricated</em> citations - the confident reference to a paper that does not exist - belongs to the sibling AI + Law course, which builds a whole lab around it. This course owns the harder and quieter question: does a <em>real</em> source actually support the sentence your team wrote on top of it?
+    </div>
+  </section>
+
+  <!-- ============ PART 1 ============ -->
+  <section class="section" id="what-compresses">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the honest map</span>
+      <h2>Which stages compress, and which do not <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Research runs in six stages: frame the question, gather sources, screen them against rules, extract what each one says, challenge the result, then synthesise it with confidence language the evidence can bear. AI compressed two of those six dramatically. <strong>Gather</strong> and <strong>extract</strong> went from days to minutes, and that gain is real - do not let anyone talk you out of it. The other four moved not at all. Framing a question so it could be wrong, writing screening rules before you look, going hunting for what disagrees, and calibrating how confident the write-up is allowed to sound: all still human, all still slow, and all still the places a review comes apart. The trap is that the two fast stages are the visible ones, so a compressed pipeline <em>looks</em> like a finished one.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The six research stages, showing gather and extract compressed by AI while question, screen, challenge and synthesise are unchanged.">
+        <style>
+          .plN { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .plH { font: 700 12.5px Inter, sans-serif; fill: #121826; }
+          .plS { font: 700 11.5px Inter, sans-serif; fill: #FFFFFF; }
+          .plU { font: 700 11.5px Inter, sans-serif; fill: #1B2F57; }
+          .plX { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .plC { font: 600 11px Inter, sans-serif; fill: #69718A; letter-spacing: .6px; }
+          .plK { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+        </style>
+
+        <text class="plC" x="70" y="40">STAGE</text>
+        <text class="plC" x="294" y="40">WHAT AI DID TO IT</text>
+        <text class="plC" x="478" y="40">WHERE THE WORK ACTUALLY IS</text>
+
+        <rect x="24" y="52" width="34" height="36" rx="7" fill="#0B1428"/>
+        <text class="plN" x="35" y="75">1</text>
+        <rect x="70" y="52" width="210" height="36" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="plH" x="84" y="75">QUESTION</text>
+        <rect x="294" y="52" width="170" height="36" rx="7" fill="#FFFFFF" stroke="#A7B6D0" stroke-width="1.5"/>
+        <text class="plU" x="308" y="75">UNCHANGED</text>
+        <rect x="478" y="52" width="372" height="36" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="plX" x="492" y="75">Framing a decision as claims that could be false</text>
+
+        <rect x="24" y="96" width="34" height="36" rx="7" fill="#5A6B00"/>
+        <text class="plN" x="35" y="119">2</text>
+        <rect x="70" y="96" width="210" height="36" rx="7" fill="#F5F8DE" stroke="#5A6B00" stroke-width="1.5"/>
+        <text class="plH" x="84" y="119">GATHER</text>
+        <rect x="294" y="96" width="170" height="36" rx="7" fill="#5A6B00"/>
+        <text class="plS" x="308" y="119">COMPRESSED</text>
+        <rect x="478" y="96" width="372" height="36" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="plX" x="492" y="119">Minutes not days - but what did it never see?</text>
+
+        <rect x="24" y="140" width="34" height="36" rx="7" fill="#1B2F57"/>
+        <text class="plN" x="35" y="163">3</text>
+        <rect x="70" y="140" width="210" height="36" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="plH" x="84" y="163">SCREEN</text>
+        <rect x="294" y="140" width="170" height="36" rx="7" fill="#FFFFFF" stroke="#A7B6D0" stroke-width="1.5"/>
+        <text class="plU" x="308" y="163">UNCHANGED</text>
+        <rect x="478" y="140" width="372" height="36" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="plX" x="492" y="163">Inclusion rules written before anyone looked</text>
+
+        <rect x="24" y="184" width="34" height="36" rx="7" fill="#5A6B00"/>
+        <text class="plN" x="35" y="207">4</text>
+        <rect x="70" y="184" width="210" height="36" rx="7" fill="#F5F8DE" stroke="#5A6B00" stroke-width="1.5"/>
+        <text class="plH" x="84" y="207">EXTRACT</text>
+        <rect x="294" y="184" width="170" height="36" rx="7" fill="#5A6B00"/>
+        <text class="plS" x="308" y="207">COMPRESSED</text>
+        <rect x="478" y="184" width="372" height="36" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="plX" x="492" y="207">Structured rows fast - each one still unverified</text>
+
+        <rect x="24" y="228" width="34" height="36" rx="7" fill="#34507F"/>
+        <text class="plN" x="35" y="251">5</text>
+        <rect x="70" y="228" width="210" height="36" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="plH" x="84" y="251">CHALLENGE</text>
+        <rect x="294" y="228" width="170" height="36" rx="7" fill="#FFFFFF" stroke="#A7B6D0" stroke-width="1.5"/>
+        <text class="plU" x="308" y="251">UNCHANGED</text>
+        <rect x="478" y="228" width="372" height="36" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="plX" x="492" y="251">Going looking for the source that disagrees</text>
+
+        <rect x="24" y="272" width="34" height="36" rx="7" fill="#0B1428"/>
+        <text class="plN" x="35" y="295">6</text>
+        <rect x="70" y="272" width="210" height="36" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="plH" x="84" y="295">SYNTHESISE</text>
+        <rect x="294" y="272" width="170" height="36" rx="7" fill="#FFFFFF" stroke="#A7B6D0" stroke-width="1.5"/>
+        <text class="plU" x="308" y="295">UNCHANGED</text>
+        <rect x="478" y="272" width="372" height="36" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="plX" x="492" y="295">Confidence language the evidence can bear</text>
+
+        <rect x="24" y="330" width="14" height="14" rx="3" fill="#D9E85C"/>
+        <text class="plK" x="48" y="342">Chelli 2024 measured recall of the real references at 11.9% GPT-3.5, 13.7% GPT-4, 0% Bard.</text>
+        <rect x="24" y="354" width="14" height="14" rx="3" fill="#D9E85C"/>
+        <text class="plK" x="48" y="366">Bramer 2017: one database recalls 34-86% of studies. Four combined reach 98.3%.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - two stages compressed, four untouched, and the leader's work sits in the four</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The recall problem, in two sets of numbers<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Set fabrication aside completely for a moment - assume every reference your team brings back is a real paper. There is still a coverage problem, and it is measured:</p>
+        <ul>
+          <li><strong>Chelli et al., <em>JMIR</em> 2024;26:e53164</strong> tested how much of a real systematic review's reference list the tools could find. Recall was <strong>11.9% for GPT-3.5, 13.7% for GPT-4, and 0% for Bard</strong>. Read that as a leader: even when the tool is not making things up, it is surfacing a small fraction of the literature that a proper search would have found - and it will present that fraction in complete, confident prose.</li>
+          <li><strong>Bramer et al., <em>Systematic Reviews</em> 2017;6:245</strong> looked at 58 systematic reviews and measured single-database recall: <strong>Embase 85.9%, MEDLINE 78.8%, Web of Science 68.1%, Google Scholar 34.4%</strong>. All four combined reached <strong>98.3%</strong>. Their conclusion was that a proper search should use at least those four as a minimum.</li>
+        </ul>
+        <p>Put the two together and you have the leader's version of the point: <strong>coverage is a design decision, not a property of the tool you happened to open</strong>. If nobody on your team can tell you which sources were searched and which were not, the recall number for that project is unknown - and unknown recall is not the same as good recall.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What the compression is genuinely worth<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This is not a session about distrusting the tools. Gather and extract were the two most tedious stages in the pipeline and they are now cheap. That matters in three specific ways:</p>
+        <ul>
+          <li><strong>More questions get asked.</strong> Work that was never worth a two-week review now gets one. That is a real expansion of what your function can cover.</li>
+          <li><strong>Extraction becomes repeatable.</strong> Pulling sample, measure and number into a table used to be the job nobody wanted. Cheap extraction means you can insist on the table, every time, which is the single biggest defensibility upgrade available to most teams.</li>
+          <li><strong>Time moves to challenge.</strong> The hours you no longer spend gathering can be spent hunting for disagreement - the stage that pays most and gets cut first.</li>
+        </ul>
+        <p>The failure mode is not using the tools. It is <strong>banking the saving as speed instead of spending it on the four stages that did not compress</strong>. That choice is a management choice, not a researcher choice, which is why it lands on this page.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the four hard stages stayed hard<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Each of the four resists compression for a different structural reason, and knowing which is which stops you from waiting for a tool that is not coming:</p>
+        <ul>
+          <li><strong>Question.</strong> Only you know what decision is being made, when, and what would change it. A model handed a vague brief will answer the vague brief beautifully. "Is education an opportunity?" cannot fail; "institutions, not students, hold the budget" can.</li>
+          <li><strong>Screen.</strong> Inclusion rules are a commitment made <em>before</em> you see the results. Anything written afterwards is a rationalisation of what you already found, no matter how principled it sounds.</li>
+          <li><strong>Challenge.</strong> Finding the source that disagrees requires wanting to find it. A system optimised to be helpful is not the right instrument for that, and asking it to attack its own answer helps only if someone checks the attack.</li>
+          <li><strong>Synthesise.</strong> Confidence language is an accountability statement. "The evidence suggests" versus "one study of 48 suggests" is the difference between a defensible memo and a retraction, and no tool can pick that for you because no tool carries the consequence.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2 ============ -->
+  <section class="section" id="finished-in-a-day">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the question that replaces speed</span>
+      <h2>Why "we finished the review in a day" is not by itself good news <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">A day is a fact about the process, not about the evidence. It tells you the two compressible stages compressed, which you already knew. It tells you nothing about whether the question could have come back negative, which sources were never searched, whether a number was checked against its page, or whether anyone went looking for the study that disagrees. So replace the question. Ask: <strong>what would a hostile reader break first?</strong> Not a rude reader - a competent one who wants to find the single softest claim, because that is what a board member, a client's data team, a supervisor, a peer reviewer or a regulator actually does. That reader applies roughly seven rules, in a fixed order, and every one of them is answerable in advance.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Relative time per stage before and after AI, showing that the saved time in gather and extract is where the risk now sits.">
+        <style>
+          .shL { font: 700 12px Inter, sans-serif; fill: #121826; }
+          .shC { font: 600 11px Inter, sans-serif; fill: #69718A; letter-spacing: .6px; }
+          .shR { font: 700 11.5px Inter, sans-serif; fill: #991B1B; }
+          .shM { font: 600 11.5px Inter, sans-serif; fill: #1B2F57; }
+          .shK { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+        </style>
+
+        <text class="shC" x="24" y="42">STAGE</text>
+        <text class="shC" x="168" y="42">TIME BEFORE</text>
+        <text class="shC" x="380" y="42">TIME AFTER</text>
+        <text class="shC" x="596" y="42">WHERE THE RISK SITS NOW</text>
+
+        <rect x="24" y="56" width="826" height="1" fill="#C6CBD8"/>
+
+        <text class="shL" x="24" y="82">1 Question</text>
+        <rect x="168" y="68" width="40" height="20" rx="4" fill="#A7B6D0"/>
+        <rect x="380" y="68" width="40" height="20" rx="4" fill="#34507F"/>
+        <rect x="596" y="66" width="254" height="24" rx="6" fill="#EEF1F7" stroke="#A7B6D0" stroke-width="1.2"/>
+        <text class="shM" x="610" y="82">Low - you still own the framing</text>
+
+        <text class="shL" x="24" y="126">2 Gather</text>
+        <rect x="168" y="112" width="190" height="20" rx="4" fill="#A7B6D0"/>
+        <rect x="380" y="112" width="34" height="20" rx="4" fill="#34507F"/>
+        <rect x="596" y="110" width="254" height="24" rx="6" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="shR" x="610" y="126">HIGH - unmeasured recall gap</text>
+
+        <text class="shL" x="24" y="170">3 Screen</text>
+        <rect x="168" y="156" width="120" height="20" rx="4" fill="#A7B6D0"/>
+        <rect x="380" y="156" width="112" height="20" rx="4" fill="#34507F"/>
+        <rect x="596" y="154" width="254" height="24" rx="6" fill="#EEF1F7" stroke="#A7B6D0" stroke-width="1.2"/>
+        <text class="shM" x="610" y="170">Medium - rules, or hindsight?</text>
+
+        <text class="shL" x="24" y="214">4 Extract</text>
+        <rect x="168" y="200" width="176" height="20" rx="4" fill="#A7B6D0"/>
+        <rect x="380" y="200" width="30" height="20" rx="4" fill="#34507F"/>
+        <rect x="596" y="198" width="254" height="24" rx="6" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="shR" x="610" y="214">HIGH - numbers nobody re-read</text>
+
+        <text class="shL" x="24" y="258">5 Challenge</text>
+        <rect x="168" y="244" width="90" height="20" rx="4" fill="#A7B6D0"/>
+        <rect x="380" y="244" width="88" height="20" rx="4" fill="#34507F"/>
+        <rect x="596" y="242" width="254" height="24" rx="6" fill="#EEF1F7" stroke="#A7B6D0" stroke-width="1.2"/>
+        <text class="shM" x="610" y="258">Medium - first stage to be cut</text>
+
+        <text class="shL" x="24" y="302">6 Synthesise</text>
+        <rect x="168" y="288" width="70" height="20" rx="4" fill="#A7B6D0"/>
+        <rect x="380" y="288" width="68" height="20" rx="4" fill="#34507F"/>
+        <rect x="596" y="286" width="254" height="24" rx="6" fill="#EEF1F7" stroke="#A7B6D0" stroke-width="1.2"/>
+        <text class="shM" x="610" y="302">Low - but confidence drifts up</text>
+
+        <rect x="24" y="350" width="14" height="14" rx="3" fill="#D9E85C"/>
+        <text class="shK" x="48" y="362">Bar lengths are the illustrative shape of a review week, not measured data. The pattern is the point.</text>
+        <rect x="24" y="374" width="14" height="14" rx="3" fill="#D9E85C"/>
+        <text class="shK" x="48" y="386">Risk moved to exactly the two stages where the time was saved. Speed relocated it, it did not remove it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the saved hours and the relocated risk are the same two rows</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The seven rules, at a leader's altitude<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Your researchers learn these as a working audit in the b-track. You need them as a review checklist you can run out loud in a meeting, in this order:</p>
+        <ol>
+          <li><strong>Is it decision-scoped?</strong> If nothing could falsify the claim, no amount of evidence supports it either.</li>
+          <li><strong>Is there any support in our own source set?</strong> A claim whose sources are not in the set is an assertion with a citation-shaped gap behind it.</li>
+          <li><strong>Is the support good enough?</strong> Vendor blogs and forum posts, on their own, cannot carry a decision - however many of them agree.</li>
+          <li><strong>Is anything retracted?</strong> Breadth without screening is exactly how withdrawn work enters a table.</li>
+          <li><strong>Is the number recorded?</strong> A figure with no source, sample or page will drift with every retelling until it is simply wrong.</li>
+          <li><strong>Was disagreement handled?</strong> A flat claim laid over a split literature is the easiest thing in the world to break.</li>
+          <li><strong>Does it hold up twice?</strong> One small study is a hypothesis. Building on it is allowed; doing so silently is not.</li>
+        </ol>
+        <p>Three of those are fatal and cannot be fixed by rewording - not decision-scoped, no support in the set, weakest-tier support only. Two are fixable by work: record the number, screen out the retraction. And two are fixable by <em>honesty</em>: qualify the contradiction, name the thin evidence as thin. Knowing which bucket a failure lands in is what makes you fast in a review rather than slow and anxious.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The ladder - the shape of the problem, in one row of numbers<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The b-track runs a live audit on the Cadence decision: ten claims, a teaching corpus of sources, and a rule engine that applies the seven rules. Your researchers turn on one discipline at a time and watch the number of surviving claims climb:</p>
+        <table class="clean">
+          <thead><tr><th>Discipline turned on</th><th>Claims surviving</th><th>Sources read</th></tr></thead>
+          <tbody>
+            <tr><td>Nothing - a broad question, whatever surfaced</td><td><strong>0 of 10</strong></td><td>9</td></tr>
+            <tr><td>+ sharp, falsifiable question</td><td><strong>1 of 10</strong></td><td>9</td></tr>
+            <tr><td>+ source tiering</td><td><strong>2 of 10</strong></td><td>22</td></tr>
+            <tr><td>+ extraction table</td><td><strong>4 of 10</strong></td><td>22</td></tr>
+            <tr><td>+ contradiction check</td><td><strong>7 of 10</strong></td><td>22</td></tr>
+            <tr><td>+ replication check</td><td><strong>9 of 10</strong></td><td>22</td></tr>
+            <tr><td>then + 40 more unscreened sources</td><td><strong>8 of 10</strong></td><td><strong>62</strong></td></tr>
+          </tbody>
+        </table>
+        <p>Three leader-grade readings of that table. First, <strong>zero of ten survive at the start</strong> - and that starting point is what a competent, well-intentioned, fast piece of work looks like before any discipline is applied. Second, <strong>the two biggest jumps are contradiction (+3) and replication (+2)</strong>: challenge work pays more than gathering work, and challenge work is the first thing a deadline removes. Third, and the one to quote in your next planning meeting: <strong>adding 40 more sources to an already-good review made it worse</strong> - 62 sources read, 8 claims surviving instead of 9, because one of the bulk hits was retracted and it landed in the support for a claim that had been clean. The tenth claim never survives at all, by design, and the correct output for it is "we do not know, here is what it would cost to find out".</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The Tow Center for Digital Journalism, reported in <em>Columbia Journalism Review</em> on 2025-03-06, ran 1,600 queries across eight AI search tools.</strong> Collectively the tools were wrong on <strong>more than 60%</strong> of queries. The spread matters more than the average: Perplexity was <strong>37% incorrect</strong>, ChatGPT Search <strong>67%</strong>, Grok-3 <strong>94%</strong>. And the finding a research leader should carry into every procurement conversation: <strong>the paid tiers performed worse</strong>, because they were more willing to produce a confident answer than to decline. That is not a bug someone forgot to fix - it is what happens when a product is tuned to be useful. Your team is not being lied to; they are being served fluency where they needed abstention. Which is exactly why "it came back with an answer" is never evidence that an answer existed.</p>
+    </div>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Three questions to ask in every research review<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You do not need to audit the work yourself. You need three questions that make the audit visible, and they take about ninety seconds:</p>
+        <ul>
+          <li><strong>"Which claim here is the weakest, and why?"</strong> A team that cannot answer this has not read its own work adversarially. A team that answers instantly is doing the job.</li>
+          <li><strong>"What did we search, and what did we not search?"</strong> This converts unknown recall into known recall. It is also the question that surfaces "we used one tool" before a client does.</li>
+          <li><strong>"What could we not find?"</strong> Absence is information, and it never appears in a summary unless someone asks for it explicitly. Treat a confident memo with no "what we could not find" section as incomplete rather than clean.</li>
+        </ul>
+        <p>Ask these three consistently for a month and the behaviour changes upstream - people start preparing the answers before the meeting, which is the whole point.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3 ============ -->
+  <section class="section" id="three-decisions">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · what you decide this quarter</span>
+      <h2>Three decisions a research leader has to make now <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">None of these three can be delegated, because all three are about what your function is willing to put its name on. They are also all writable in a single page each, this week, which is the standard to hold yourself to. Waiting for the tooling to settle is not a plan - the tools change monthly and the rules underneath them do not.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Decision 1 - what may be delegated to AI, and what never may<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Write the line explicitly, so nobody has to guess in a rush. The defensible split follows the compression map from Part 1 almost exactly:</p>
+        <table class="clean">
+          <thead><tr><th>Delegate freely</th><th>Delegate with verification</th><th>Never delegate</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Finding candidate sources; drafting search strings; deduplicating; translating; reformatting</td>
+              <td>Extracting numbers into a table; summarising a paper you will read; proposing counter-arguments</td>
+              <td>Deciding what the question is; writing inclusion rules; deciding what counts as strong evidence; choosing the confidence wording</td>
+            </tr>
+            <tr>
+              <td>Nothing load-bearing rests on the output</td>
+              <td>Output enters the record only after a human checks it against the page</td>
+              <td>These carry the accountability, so they stay with a named person</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Two rails worth adding on the same page. <strong>Confidential participant or client material does not go into a general-purpose tool</strong> - a4 covers why stripping names is not sufficient. And <strong>every number that reaches a slide has a human who can point to the page it came from</strong>. If you only write one sentence this quarter, write that one.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Decision 2 - what evidence standard the team shares<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Right now, "strong evidence" almost certainly means something different to each of your researchers, and the disagreement only surfaces when a client pushes back. A shared standard is a one-page document with four parts, and <strong>a2 builds all four in detail</strong>:</p>
+        <ul>
+          <li><strong>Source tiers.</strong> Four tiers, from peer-reviewed synthesis and regulator text down to vendor blogs and forum posts, with one hard rule: a claim resting only on the bottom tier fails. Tag the tier at the moment of capture, never afterwards.</li>
+          <li><strong>A certainty word list.</strong> Agree what "the evidence indicates", "one study suggests" and "we do not know" mean, and never let them float. The formal version of this is GRADE, and it exists precisely because clinical teams had the same argument first.</li>
+          <li><strong>Extraction columns.</strong> Every claim carrying a number needs a row: source, year, sample, measure, number, page, funder, population. No row, no number in the deck.</li>
+          <li><strong>Design labels are not appraisals.</strong> "It is a systematic review" is not a quality claim - a2 covers the published critique of the evidence hierarchy that makes this precise.</li>
+        </ul>
+        <p>The point of publishing it is not bureaucracy. It is that a team with a shared standard argues about <em>evidence</em>, and a team without one argues about <em>taste</em> - and the second argument has no ending.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Decision 3 - what gets written down as the audit trail<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The test is simple and unforgiving: <strong>six months from now, someone challenges this decision and the people who made it have left. What is on file?</strong> A defensible trail is short. Aim for one page per project, captured as the work happens rather than reconstructed afterwards:</p>
+        <ol>
+          <li><strong>The claims</strong>, written so each one could have come back false.</li>
+          <li><strong>What was searched</strong> - which databases and tools, which queries, and what was deliberately not searched.</li>
+          <li><strong>The inclusion rules</strong>, with their date, so it is visible they preceded the results.</li>
+          <li><strong>The extraction table</strong>, one row per source, with the page reference for every number.</li>
+          <li><strong>Disagreement found</strong>, and how each claim was qualified in response.</li>
+          <li><strong>Where AI was used</strong>, on which stage, and who verified the output. Disclosure norms differ by venue and a4 covers that divergence.</li>
+          <li><strong>What we could not find</strong>, and the one thing we would test next.</li>
+        </ol>
+        <p>Notice what this list does for you beyond compliance: it is the same seven items the hostile reader asks about, so keeping it is not overhead on top of the work - it <em>is</em> the work, recorded once instead of defended repeatedly.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Take the most recent piece of research your team shipped. List its load-bearing claims, then run the seven rules from Part 2 on each one by hand. Mark every failure as fatal, fixable by work, or fixable by honesty - and count how many are fatal.</li>
+      <li>For that same piece, answer "what did we search and what did we not search?" in writing. If nobody can answer it, you have found your first process gap and it is a cheap one to close.</li>
+      <li>Draft Decision 1 as a single page: the three columns of delegate freely, delegate with verification, and never delegate. Circulate it as a draft and see which row people argue about - that row is where your real risk is.</li>
+      <li>Run the three review questions from Part 2 in your next research review, exactly as written, and note how long the answers take. That timing is your baseline for a2.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This track teaches the working core of the established evidence-synthesis standards and the current published evidence on AI in research. Normative documents stay with their bodies and are linked each session. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Which pipeline stages compress and which do not</span><span class="note">Part 1 · the map the whole leader track hangs on</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Retrieval recall - Chelli et al., <em>JMIR</em> 2024;26:e53164</span><span class="note">11.9% / 13.7% / 0% recall of real systematic-review references</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Database coverage - Bramer et al., <em>Systematic Reviews</em> 2017;6:245</span><span class="note">Single-database recall 34.4-85.9% · four combined 98.3%</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">AI search error rates - Tow Center / <em>CJR</em>, 2025-03-06</span><span class="note">Named here as the confidence problem · full failure catalogue in a3</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The seven audit rules and their standards lineage</span><span class="note">Leader altitude tonight · the standards themselves in a2, the lab in b6</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Which two stages of the research pipeline did AI genuinely compress?</p>
+      <button class="qopt" type="button">A · Question and synthesise - it drafts better prose than most researchers</button>
+      <button class="qopt" type="button">B · Gather and extract - finding candidate sources and pulling structured rows out of them</button>
+      <button class="qopt" type="button">C · Screen and challenge - it is tireless, so it is good at repetitive checking</button>
+      <p class="qwhy">Gathering and extraction went from days to minutes, and that gain is real. Framing the question, writing inclusion rules before you look, hunting for disagreement and calibrating confidence language are unchanged - and those four are where a review actually comes apart.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Chelli et al. found recall of a real systematic review's references at 11.9% for GPT-3.5 and 13.7% for GPT-4. What does that tell a research leader?</p>
+      <button class="qopt" type="button">A · That the tools fabricate references about 87% of the time</button>
+      <button class="qopt" type="button">B · That GPT-4 is roughly as good as a trained searcher</button>
+      <button class="qopt" type="button">C · That even without fabrication the tool surfaces a small fraction of the literature, and presents it in confident prose</button>
+      <p class="qwhy">Recall and fabrication are different failures. Recall is about coverage: what the tool never saw. Bramer's single-database figures make the same point from the other direction - coverage is a design choice, and unknown recall is not the same as good recall.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · In the Tow Center / CJR study of 1,600 queries across eight AI search tools, what happened with the paid tiers?</p>
+      <button class="qopt" type="button">A · They performed worse, because they preferred producing a confident answer to declining</button>
+      <button class="qopt" type="button">B · They matched the free tiers exactly, since they use the same index</button>
+      <button class="qopt" type="button">C · They cut the collective error rate to under 20%</button>
+      <p class="qwhy">The tools were collectively wrong on more than 60% of queries, ranging from Perplexity at 37% incorrect to Grok-3 at 94%, and the paid tiers were worse rather than better. Fluency is the product; abstention is what research needs. "It came back with an answer" is never evidence that an answer existed.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Two of six</b><span>Gather and extract compressed. Question, screen, challenge and synthesise did not move at all - and those four decide whether the work holds.</span></div>
+      <div class="cheat-item"><b>The replacement question</b><span>Not "how fast was it" but "what would a hostile reader break first?" Speed is a fact about the process, not about the evidence.</span></div>
+      <div class="cheat-item"><b>Recall, measured</b><span>Chelli 2024: 11.9% GPT-3.5, 13.7% GPT-4, 0% Bard recall of real references. Fabrication is a separate problem from coverage.</span></div>
+      <div class="cheat-item"><b>Coverage is a choice</b><span>Bramer 2017: Embase 85.9%, MEDLINE 78.8%, Web of Science 68.1%, Google Scholar 34.4%; four combined 98.3%.</span></div>
+      <div class="cheat-item"><b>The seven rules</b><span>Decision-scoped · support exists · support good enough · nothing retracted · number recorded · disagreement handled · holds up twice.</span></div>
+      <div class="cheat-item"><b>The ladder</b><span>0 → 1 → 2 → 4 → 7 → 9 of 10 claims surviving. Anti-lever: +40 unscreened sources gives 62 read and 8 surviving.</span></div>
+      <div class="cheat-item"><b>Three decisions</b><span>What may be delegated and what never · what evidence standard is shared (a2) · what goes in the audit trail.</span></div>
+      <div class="cheat-item"><b>Running decision</b><span>Should Cadence build lecture notes for higher education? Leader verdict, with its trail, due at a6.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 1 of 6 · learn-ai-research-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a2-evidence-quality.html">Next: The evidence standard you share →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

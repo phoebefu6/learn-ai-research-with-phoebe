@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 3 · Search strategy and source tiers - learn ai research with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-research-with-phoebe</a> / Researcher session 3 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Research with Phoebe · Researcher track · Session 3 of 10</div>
+    <h1>Search strategy and <span class="accent">source tiers</span></h1>
+    <p class="sub">Last session the sharpened claims still could not be answered, because the nine sources on the table were whatever happened to rank first. Tonight we fix the gathering end. You get the evidence that one search box is never enough, three ground-truth services with their real current numbers and their real limits, the four-tier system with the three capture rules that make it stick, and the artifact that turns a search into something a second researcher could rerun. Then you turn on Source tiering and watch nine sources become twenty-two.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Researcher track</span>
+      <span class="chip audience">Analysts · academics · UX &amp; market researchers</span>
+      <span class="chip audience">Rung 2</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-2 · Where we left off</span>
+      <span class="a2" style="flex:5">2-20 · Documented search + ground truth + tiers</span>
+      <span class="a3" style="flex:4">20-40 · Build-along: turn on Source tiering</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PART 1: SEARCHING ON PURPOSE ============ -->
+  <section class="section" id="on-purpose">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the discipline</span>
+      <h2>Searching on purpose <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">If you accept what ranked first, your evidence base is a <strong>popularity sample</strong>. Ranking optimises for links, freshness and clicks; it does not optimise for the peer-reviewed study on your population or the regulator's own text. Neither of those tends to rank, which is precisely why our claims about consent and attainment had no support at all in b2. A search you did on purpose has four things a ranked scroll never has: named sources, dates, the actual strings, and a record of what you excluded and why.</p>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why one database is never enough<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This is measured, not asserted. Bramer et al. (<em>Systematic Reviews</em> 2017;6:245) took 58 systematic reviews and asked what proportion of the included studies each database would have found on its own:</p>
+        <table class="clean">
+          <thead><tr><th>Searched alone</th><th>Recall of the included studies</th></tr></thead>
+          <tbody>
+            <tr><td>Embase</td><td>85.9%</td></tr>
+            <tr><td>MEDLINE</td><td>78.8%</td></tr>
+            <tr><td>Web of Science</td><td>68.1%</td></tr>
+            <tr><td>Google Scholar</td><td>34.4%</td></tr>
+            <tr><td>All four combined</td><td>98.3%</td></tr>
+          </tbody>
+        </table>
+        <p>Read the last two rows together. The most familiar tool in the list found about a third of the relevant literature on its own, and the combination found nearly all of it. The paper's own conclusion is a floor, not an aspiration: searches "should search at least Embase, MEDLINE, Web of Science, and Google Scholar as a minimum requirement".</p>
+        <p>Now the honest translation for commercial work, because most of us are not doing health reviews. <strong>There is no equivalent set of four corpora for a market question.</strong> Institutional spend statistics, regulator guidance, procurement case studies, analyst coverage and trade press live in five different places, and no index covers them all. That does not excuse you from the discipline - it raises the bar. If you cannot name the canonical databases, you must name the sources you actually searched, one by one, so a reader can see the shape of the hole. "I searched the web" describes nothing and defends nothing.</p>
+      </div>
+    </details>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 424" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A documented search record template with rows for databases, dates, search strings, filters, exclusions and who ran the search.">
+        <style>
+          .srT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .srL { font: 700 12px Inter, sans-serif; fill: #121826; }
+          .srX { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .srN { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+        </style>
+
+        <rect x="24" y="24" width="826" height="36" rx="8" fill="#0B1428"/>
+        <text class="srT" x="40" y="47">SEARCH RECORD - the artifact that makes a search rerunnable by someone else</text>
+
+        <rect x="24" y="72" width="210" height="44" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="srL" x="38" y="99">Databases searched</text>
+        <rect x="250" y="72" width="600" height="44" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="srX" x="266" y="99">Name each one. Two trade sources and one regulator site are still three named sources</text>
+
+        <rect x="24" y="120" width="210" height="44" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="srL" x="38" y="147">Date run, and range</text>
+        <rect x="250" y="120" width="600" height="44" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="srX" x="266" y="147">Run 2026-08-08 · publications 2019 to 2026 · no language limit applied</text>
+
+        <rect x="24" y="168" width="210" height="44" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="srL" x="38" y="195">The strings, verbatim</text>
+        <rect x="250" y="168" width="600" height="44" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="srX" x="266" y="195">("lecture capture" OR "lecture notes") AND (accessibility OR attainment)</text>
+
+        <rect x="24" y="216" width="210" height="44" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="srL" x="38" y="243">Filters applied</text>
+        <rect x="250" y="216" width="600" height="44" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="srX" x="266" y="243">Peer-reviewed only for tiers 1 and 2 · higher education · both target markets</text>
+
+        <rect x="24" y="264" width="210" height="44" rx="7" fill="#F5F8DE" stroke="#5A6B00" stroke-width="1.5"/>
+        <text class="srL" x="38" y="291">Excluded, and why</text>
+        <rect x="250" y="264" width="600" height="44" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="srX" x="266" y="291">School-age studies (population mismatch) · 3 vendor whitepapers (tier 4 only)</text>
+
+        <rect x="24" y="312" width="210" height="44" rx="7" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="srL" x="38" y="339">Who ran it</text>
+        <rect x="250" y="312" width="600" height="44" rx="7" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="srX" x="266" y="339">A named person, so the same search can be rerun and compared later</text>
+
+        <rect x="24" y="378" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="srN" x="48" y="390">The exclusions row is the one reviewers read first. It is also the one people skip.</text>
+        <rect x="24" y="402" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="srN" x="48" y="414">Write it while you search. Reconstructed from memory a week later, it is fiction.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the six rows that turn a search into a rerunnable record</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Building strings that do not lie to you<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Take the scoped claim from b2 and lift the parts straight out of it. Population becomes one bracket of synonyms, outcome becomes another, and you join them with AND. Everything inside a bracket is an OR list, because vocabulary varies by field: <em>lecture capture</em>, <em>lecture recording</em>, <em>recorded lectures</em>, <em>note-taking support</em>. Miss a synonym and you will believe a literature is thin when it is only differently named.</p>
+        <p>Two habits keep you honest. First, run the string in more than one place and note where the results diverge - a term that works in one index often fails in another, and the divergence is information about coverage. Second, when a search returns almost nothing, treat that as a hypothesis about your string before you treat it as a finding about the world. Absence of evidence and absence of searching look identical in a results page.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: GROUND TRUTH ============ -->
+  <section class="section" id="ground-truth">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the ground-truth layer</span>
+      <h2>Three services worth knowing by name <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Underneath every AI research tool sit a handful of open metadata services. Knowing them directly is useful for two reasons: you can check what a tool claims to have searched, and you can answer questions no chat interface will answer honestly, such as "has this paper been retracted?" All figures below were verified live on 2026-08-08 - treat them as a snapshot, and re-check before you quote them.</p>
+
+    <table class="clean">
+      <thead><tr><th>Service</th><th>Scale, verified 2026-08-08</th><th>What it is for</th><th>The catch</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>OpenAlex</td>
+          <td>323,171,764 works · 123,255,918 authors · 255,204 sources · CC0</td>
+          <td>Open, licence-clean coverage of the scholarly record. The default backbone when you want breadth without a subscription.</td>
+          <td>Documents a metered credit model: $1/day free with an API key, $0.01/day without, search $0.001 per query, PDF download $0.01 per item. An unauthenticated search still returned 200 on test, but treat metering as the forward contract and get a key.</td>
+        </tr>
+        <tr>
+          <td>Crossref</td>
+          <td>185,277,841 records · no sign-up needed</td>
+          <td>The registry behind DOIs, and the place you check <strong>retractions and post-publication updates</strong>. If a citation has been withdrawn, this is where it shows.</td>
+          <td>Adding a <code>mailto</code> to your request moves you into the polite pool and triples your rate limit from 1 per second to 3 per second - verified from the response headers. It costs one parameter and it is rude not to.</td>
+        </tr>
+        <tr>
+          <td>Semantic Scholar</td>
+          <td>214M papers · 2.49B citations · 79M authors</td>
+          <td>Citation graph plus useful per-paper fields, including <code>openAccessPdf</code> - the practical bridge from a hit to a paper you can actually read.</td>
+          <td>Unauthenticated access is "rate-limited to 1000 requests per second shared among all unauthenticated users", while an API key's introductory limit is 1 RPS. The key buys stability, not throughput. And the <code>tldr</code> field is machine-generated: never quote it as the authors' words.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The retraction check is the one that saves a career, and it takes ten seconds.</strong> Before a number goes in your memo, look the DOI up and see whether the record carries a retraction or correction notice. In b1 you watched the anti-lever drop a clean audit from nine claims to eight because one bulk hit was retracted and landed in a previously clean claim's support. That is not an exotic scenario - it is what happens when volume arrives without screening. b4 turns this into a routine step in the pipeline; tonight, just know where the answer lives.</p>
+    </div>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the machine-written summary field matters<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The <code>tldr</code> field is a genuine convenience and a genuine trap. It is generated, not written by the authors, so a sentence lifted from it and quoted in your memo attributes a claim to researchers who never made it. That is the exact failure this whole course is built around: a real source that does not support the sentence written on top of it.</p>
+        <p>The rule is simple and it applies far beyond one field. <strong>Any text a system generated about a source is a pointer, not a quotation.</strong> Machine summaries, AI answer boxes, tool-generated abstracts - use them to decide what to open, never as the thing you cite. What you quote is what you read.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE FOUR TIERS ============ -->
+  <section class="section" id="tiers">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the tier system</span>
+      <h2>Four tiers, and the rules that make them work <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Tiering is how you stop treating a press release and a randomised trial as two data points. Four levels, assigned by what kind of thing the source is, not by whether you agree with it. The tier does not tell you the source is right - it tells you how much weight a claim can put on it before a reviewer objects.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 412" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The four-tier source ladder showing what each tier may carry, plus the three additional checks tier alone does not cover.">
+        <style>
+          .tlT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .tlS { font: 400 11px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .tlDk { font: 700 13px Inter, sans-serif; fill: #121826; }
+          .tlDs { font: 400 11px Inter, sans-serif; fill: #121826; opacity: .82; }
+          .tlX { font: 400 11.5px Inter, sans-serif; fill: #69718A; }
+          .tlR { font: 400 11.5px Inter, sans-serif; fill: #991B1B; }
+          .tlK { font: 600 11.5px Inter, sans-serif; fill: #34507F; }
+          .tlH { font: 700 12px Inter, sans-serif; fill: #121826; }
+          .tlN { font: 600 13px Inter, sans-serif; fill: #1B2200; }
+        </style>
+
+        <text class="tlK" x="24" y="22">WHAT EACH TIER MAY CARRY</text>
+
+        <rect x="24" y="32" width="260" height="48" rx="8" fill="#0B1428"/>
+        <text class="tlT" x="40" y="55">TIER 1</text>
+        <text class="tlS" x="40" y="72">reviews, RCTs, statute, regulators</text>
+        <rect x="300" y="32" width="550" height="48" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="tlX" x="316" y="61">Can carry a load-bearing claim on its own</text>
+
+        <rect x="24" y="88" width="260" height="48" rx="8" fill="#1B2F57"/>
+        <text class="tlT" x="40" y="111">TIER 2</text>
+        <text class="tlS" x="40" y="128">peer-reviewed studies, official stats</text>
+        <rect x="300" y="88" width="550" height="48" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="tlX" x="316" y="117">Can carry a claim once you record sample, population and date</text>
+
+        <rect x="24" y="144" width="260" height="48" rx="8" fill="#34507F"/>
+        <text class="tlT" x="40" y="167">TIER 3</text>
+        <text class="tlS" x="40" y="184">analyst reports, preprints, press</text>
+        <rect x="300" y="144" width="550" height="48" rx="8" fill="#FFFFFF" stroke="#C6CBD8" stroke-width="1.5"/>
+        <text class="tlX" x="316" y="173">Supporting evidence only - never the sole basis for a decision</text>
+
+        <rect x="24" y="200" width="260" height="48" rx="8" fill="#C6CBD8"/>
+        <text class="tlDk" x="40" y="223">TIER 4</text>
+        <text class="tlDs" x="40" y="240">vendor blogs, releases, forums</text>
+        <rect x="300" y="200" width="550" height="48" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="tlR" x="316" y="229">Context and hypotheses only. Tier-4-only support fails outright</text>
+
+        <text class="tlK" x="24" y="278">TIER IS NECESSARY, NOT SUFFICIENT - ALSO CHECK</text>
+
+        <rect x="24" y="290" width="258" height="52" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="tlH" x="40" y="313">FUNDER AND INTEREST</text>
+        <text class="tlX" x="40" y="331">who paid, and what they sell</text>
+
+        <rect x="310" y="290" width="258" height="52" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="tlH" x="326" y="313">DATE VS MECHANISM</text>
+        <text class="tlX" x="326" y="331">what actually changed since?</text>
+
+        <rect x="596" y="290" width="254" height="52" rx="8" fill="#EEF1F7" stroke="#34507F" stroke-width="1.5"/>
+        <text class="tlH" x="612" y="313">POPULATION MATCH</text>
+        <text class="tlX" x="612" y="331">same people as your decision?</text>
+
+        <rect x="24" y="366" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="tlN" x="48" y="378">Tag the tier at capture. Retro-tagging is scored by the argument you already wrote.</text>
+        <rect x="24" y="390" width="14" height="14" rx="3" fill="#5A6B00"/>
+        <text class="tlN" x="48" y="402">A tier-1 label is a design label, not an appraisal. Read the thing before you lean on it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the tier ladder, and the three checks tier alone does not cover</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The three rules that make tiering survive contact with a deadline<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Tag at capture, never retro-tag.</strong> Assign the tier the moment the source enters your list, before you know which claim it will end up supporting. Tier a source after you have written the argument and you will tier it generously, because you now need it to be good. This is the single rule people drop first and regret most.</li>
+          <li><strong>A claim resting only on tier 4 fails outright.</strong> Not "is weaker" - fails. A vendor blog is evidence that a vendor said something, which is occasionally the claim you are making and usually not. In the lab, one claim fails at rung zero for exactly this reason.</li>
+          <li><strong>Tier is not enough on its own.</strong> Check the funder and what they sell. Check the date against what has actually changed in the mechanism - a 2019 procurement study is probably still fine, a 2019 study of AI tool adoption is not, and the question is not the age but whether the thing being measured moved. And check the population: a well-run trial on school-age students is a tier-1 source and the wrong source for a claim about undergraduates.</li>
+        </ul>
+        <p>On that last point, the honest caution from the standards literature applies: a design label is not an appraisal. A credible synthesis can summarise biased studies, and a poor synthesis can summarise good ones. Tier gets you to the right shelf. Reading gets you the answer.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What the AI search tools can and cannot see<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>These tools are genuinely useful and they all have a documented boundary that decides whether their output can carry a tier-1 or tier-2 claim. Learn the boundary, not the interface:</p>
+        <ul>
+          <li><strong>Elicit</strong> works from <strong>title and abstract only</strong> unless the source is open access, or you supply your own subscription plus their browser extension. So an extracted number from a paywalled paper came from an abstract, and abstracts routinely omit the sample and the caveat.</li>
+          <li><strong>Consensus</strong> and its Meter analyse <strong>the top 20 papers for a query</strong>. That is a sample of the top of one ranking, not a synthesis of a literature - and after Bramer, you know what one ranking's top slice is worth.</li>
+          <li><strong>Undermind</strong> has the most interesting published evaluation of the group, including a convergence estimator that judges comprehensiveness by fitting the decay of the discovery curve. Its published evaluation covers <strong>arXiv only</strong>. Excellent for machine learning literature, silent on higher-education policy.</li>
+        </ul>
+        <p>None of this makes them unusable. It makes them <em>gathering</em> tools whose coverage you have to state. If a claim in your memo rests on a tool that read abstracts, that belongs in the record, in the same row as the tier.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Turn on Source tiering <span class="tag demo">★ 14 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">The lab opens where b2 left it: <strong>Sharp question on, 1 of 10, nine sources.</strong> Tonight you turn on Source tiering and the source count goes from <strong>9 to 22</strong>. Watch what arrives: the meta-analysis, the two trials, the replication, the regulator guidance, the compliance review, the spend statistics, the buyer interviews - not one of which a popularity-ranked search returned. Two claims revive on that material. And one claim dies, which is the more interesting half of the lesson.</p>
+
+    <div class="steps">
+      <div class="step"><p>Start from Sharp question only: <strong>1 of 10</strong>, nine sources. Note the survivor and note how many claims fail with "no support in your set".</p></div>
+      <div class="step"><p>Turn on <strong>Source tiering</strong>. Sources go 9 to 22. Read the new arrivals before you read the verdicts - they are all tier 1 and tier 2, and they are all things ranking never showed you.</p></div>
+      <div class="step"><p>Two claims revive: the attainment claim, now resting on a meta-analysis, a trial and a replication, and the accessibility-obligations claim, now resting on regulator text and a compliance review. That is what tiering buys.</p></div>
+      <div class="step"><p>Now the survivor from b2 - "students, not institutions, are the initial buyer" - fails. Tiering surfaced the buyer interviews and the spend statistics, and they point the other way. It was never strong; it was unopposed.</p></div>
+      <div class="step"><p>Net: <strong>2 of 10</strong>. Say the lesson out loud: tiering does not add claims, it adds the sources that decide them - in both directions. Better evidence sometimes takes a claim away from you.</p></div>
+    </div>
+
+    <div class="rlbox" data-mode="lab" data-levers="question"></div>
+
+    <div class="callout tip">
+      <strong>What is real here and what is a teaching corpus</strong>
+      The 22 sources are a teaching corpus built for this one decision - plausible sources, not real publications. Everything around them is real: each source carries a type, tier, year, sample size and funder, and the audit is a rule engine reading those attributes, so every verdict traces to specific source ids. The rules and the tier logic are the transferable part. The corpus is the sandbox.
+    </div>
+
+    <div class="callout win">
+      <strong>★ The move that generalises</strong>
+      When a claim in your own work has no support, the first question is not "is it false?" It is "did I search where the answer would live?" Three of Cadence's ten claims needed regulator text or peer-reviewed trials. No amount of clever prompting over a ranked web search was ever going to produce them.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Fill in the six-row search record for a real question of your own, including the exclusions row. If you cannot name the sources you searched, that is the finding - write it down and then go and name them.</li>
+      <li>Take the last ten sources you cited in anything and tier them retrospectively. Count how many tier 3s and 4s were doing load-bearing work, then notice how tempted you are to grade them up. That temptation is the argument for tagging at capture.</li>
+      <li>Pick one number you have quoted from a paper in the past year, look its DOI up in Crossref, and check for a retraction or correction notice. Add the <code>mailto</code> parameter while you are there and see the polite-pool limit for yourself.</li>
+      <li>For any AI research tool you use, find and write down one sentence of its documented coverage boundary - what corpus, full text or abstract, how many results considered. Keep the sentence. It belongs in your method section.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session covers the gathering half of the evidence-synthesis standards, plus the current verified state of the open metadata layer. Figures were fetched from primary sources on 2026-08-08:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Bramer et al., <em>Systematic Reviews</em> 2017;6:245 - single-database recall</span><span class="note">Part 1 · 85.9 / 78.8 / 68.1 / 34.4%, and 98.3% for the four combined</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The ground-truth layer - OpenAlex, Crossref, Semantic Scholar</span><span class="note">Part 2 · scale, access limits, retraction data, the machine-generated summary field</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The four-tier system and its three capture rules</span><span class="note">Part 3 · plus funder, date-against-mechanism and population checks</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">AI search-tool coverage boundaries - Elicit, Consensus, Undermind</span><span class="note">Named as limits here · reading a vendor benchmark critically is leader session a5</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Screening discipline - inclusion rules, dedupe, retraction checks</span><span class="note">Crossref located tonight · the full screening pipeline is b4</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · In Bramer et al.'s 58 reviews, what did Google Scholar alone recall, and what did the four databases combined recall?</p>
+      <button class="qopt" type="button">A · About 70% alone, and 90% combined - the gain from combining is modest</button>
+      <button class="qopt" type="button">B · 34.4% alone, and 98.3% combined - one familiar tool found about a third of the literature</button>
+      <button class="qopt" type="button">C · 85.9% alone, and 98.3% combined - it was the strongest single database</button>
+      <p class="qwhy">Google Scholar recalled 34.4% on its own; Embase was the strongest single database at 85.9%, then MEDLINE 78.8% and Web of Science 68.1%. All four together reached 98.3%, which is why the paper names those four as a minimum requirement rather than a nice-to-have.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Why does Crossref belong in a researcher's toolkit even if you never build anything?</p>
+      <button class="qopt" type="button">A · It ranks papers by quality, so it saves you tiering them</button>
+      <button class="qopt" type="button">B · It provides full text for paywalled articles</button>
+      <button class="qopt" type="button">C · It carries retraction and post-publication update information, and adding a mailto triples your rate limit from 1 to 3 per second</button>
+      <p class="qwhy">Crossref is where you check whether a citation was withdrawn or corrected - the ten-second check that stops a retracted source carrying a claim. It needs no sign-up, and the polite pool costs one parameter. It does not rank quality and it is not a full-text service.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Why must you tag a source's tier at capture rather than later?</p>
+      <button class="qopt" type="button">A · Once you know which claim a source has to support, you grade it generously - the tier gets scored by the argument you already wrote</button>
+      <button class="qopt" type="button">B · Tiers are only valid for the first 24 hours after capture</button>
+      <button class="qopt" type="button">C · Retro-tagging is slower, and speed is the main benefit of tiering</button>
+      <p class="qwhy">Retro-tagging is motivated reasoning with a spreadsheet. Assign the tier before you know what the source will be needed for, and the label stays honest. This also makes the tier-4-only failure rule enforceable, because nothing has quietly been promoted to tier 3 on its way into the argument.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Ranking is a popularity sample</b><span>Regulator text and peer-reviewed trials rarely rank first. That is why three Cadence claims had no support at all in b2.</span></div>
+      <div class="cheat-item"><b>Bramer numbers</b><span>Single-database recall: Embase 85.9 · MEDLINE 78.8 · Web of Science 68.1 · Google Scholar 34.4. Four combined 98.3%.</span></div>
+      <div class="cheat-item"><b>Commercial equivalent</b><span>No canonical set of four exists for a market question. So name every source you searched, one by one. "I searched the web" defends nothing.</span></div>
+      <div class="cheat-item"><b>The search record</b><span>Databases · date run and range · the strings verbatim · filters · what you excluded and why · who ran it. Write it while you search.</span></div>
+      <div class="cheat-item"><b>Ground truth</b><span>OpenAlex 323,171,764 works, CC0, metered ($1/day free with a key). Crossref 185,277,841 records, retraction data, <code>mailto</code> for 3/s. Semantic Scholar 214M papers, 2.49B citations, <code>openAccessPdf</code>.</span></div>
+      <div class="cheat-item"><b>Never quote a generated summary</b><span>The <code>tldr</code> field is machine-written. Any system-generated text about a source is a pointer, not a quotation.</span></div>
+      <div class="cheat-item"><b>The four tiers</b><span>1 synthesis, RCTs, statute, regulators · 2 peer-reviewed empirical, official stats · 3 analyst, trade press, preprints · 4 vendor blogs, releases, forums. Tier-4-only fails.</span></div>
+      <div class="cheat-item"><b>Tonight's rung</b><span>Sharp question plus Source tiering: 2 of 10, 22 sources. Two claims revive on tier-1 material, and the b2 survivor dies on a contradiction tiering surfaced.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 3 of 10 · learn-ai-research-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b2-question-and-claims.html">← Previous: Decision, question, claims</a> &nbsp;·&nbsp; <a href="b4-screening-at-scale.html">Next: Screening at scale →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/research-live.js?v=1"></script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

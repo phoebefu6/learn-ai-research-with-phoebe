@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>learn ai research with phoebe - a two-track course on research you can defend</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(27,47,87,.12); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#F1F4FA); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-edge { transition: opacity .15s ease; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Research with Phoebe</div>
+    <h1>Two tracks into research a hostile reviewer cannot dismantle</h1>
+    <p class="sub">AI made reading fast and made being wrong fast too. A summary arrives fluent, confident and stripped of the one thing that decides whether you can act on it: how good the evidence underneath actually is. This course is about that layer. A leader track gives research and insights leaders a shared evidence standard, the failure modes to design against, the consent and confidentiality rails, and a way to decide on AI-accelerated evidence without pretending it is the same as slow evidence. A researcher track runs one real decision end to end - should Cadence build a lecture-notes product for higher education - through question framing, tiered search, screening, extraction, contradiction and replication checks, synthesis, and a memo with an audit trail. A live evidence lab runs the audit for you: ten claims, twenty-two sources, real rules, and a climb from 0 to 9 surviving claims. Note what this course does NOT own: catching fabricated citations is the AI + Law course's job. This one is about whether a real source actually supports what you wrote.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="2">2</b><span>tracks</span></div>
+      <div class="stat"><b data-count="16">16</b><span>sessions</span></div>
+      <div class="stat"><b data-count="10">10</b><span>claims audited</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The leader track 🤝 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for research, insights &amp; strategy leads · 6 x 45 min · standards, not tools</span></h2>
+      <p class="plede">Judgement mode: what genuinely accelerates in the research pipeline and what only appears to, the evidence standard your whole team must share, the documented failure modes of AI-assisted research, the consent and confidentiality rails around participant and client data, how to stand up a stack, and how to decide - and defend the decision - when the evidence arrived fast.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/a1-what-ai-changes.html" style="--diff:#34D399">
+        <span class="cicon">🔎</span>
+        <span class="cnum">Leader 1 · easy</span>
+        <h3>What AI changes in the pipeline</h3>
+        <p>Where the hours actually go in research, which stages compress, which stages must not - and why "we finished the review in a day" is not by itself good news.</p>
+        <span class="meta"><span class="pill amber">▶ Leaders start here</span></span>
+      </a>
+      <a class="course-card" href="courses/a2-evidence-quality.html" style="--diff:#34D399">
+        <span class="cicon">⚖️</span>
+        <span class="cnum">Leader 2 · easy</span>
+        <h3>The evidence standard you share</h3>
+        <p>Source tiers, certainty levels, what a sample size buys you, and the one-page standard that stops every review being re-litigated from scratch.</p>
+        <span class="meta"><span class="pill light">The shared rulebook</span></span>
+      </a>
+      <a class="course-card" href="courses/a3-where-ai-fails.html" style="--diff:#FBBF24">
+        <span class="cicon">⚠️</span>
+        <span class="cnum">Leader 3 · medium</span>
+        <h3>Where AI fails research</h3>
+        <p>Corpus gaps, agreeable answers that follow your framing, confident summaries of thin studies, and survivorship in whatever ranked first - the failure modes to design against.</p>
+        <span class="meta"><span class="pill light">The failure catalogue</span></span>
+      </a>
+      <a class="course-card" href="courses/a4-governance-and-consent.html" style="--diff:#FBBF24">
+        <span class="cicon">🔐</span>
+        <span class="cnum">Leader 4 · medium</span>
+        <h3>Consent, confidentiality, governance</h3>
+        <p>Participant transcripts and client material in third-party tools, ethics and data-protection duties, peer-review confidentiality, and what your team may paste where.</p>
+        <span class="meta"><span class="pill light">The rails</span></span>
+      </a>
+      <a class="course-card" href="courses/a5-the-research-stack.html" style="--diff:#FB923C">
+        <span class="cicon">🧰</span>
+        <span class="cnum">Leader 5 · deciding</span>
+        <h3>Standing up the research stack</h3>
+        <p>Search and screening tools, extraction, reference management, qualitative coding - what each layer must do, and what to insist on before you buy anything.</p>
+        <span class="meta"><span class="pill light">Buy / build / skip</span></span>
+      </a>
+      <a class="course-card" href="courses/a6-deciding-on-evidence.html" style="--diff:#FB923C">
+        <span class="cicon">🎯</span>
+        <span class="cnum">Leader 6 · deciding</span>
+        <h3>Deciding on fast evidence</h3>
+        <p>Confidence language that means something, the audit trail that makes a decision defensible months later, and how to say "we do not know yet" without losing the room.</p>
+        <span class="meta"><span class="pill light">Strategy session</span></span>
+      </a>
+    </div>
+
+    <div class="paths">
+      <h2>The researcher track 🔬 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for analysts, academics, UX &amp; market researchers · 10 x 45 min · no coding needed</span></h2>
+      <p class="plede">One running decision, taken through the whole pipeline: should Cadence build a lecture-notes product for higher education. The evidence lab climbs 0 → 1 → 2 → 4 → 7 → 9 surviving claims as the levers come on, and b10 does not ship a memo until every load-bearing claim survives the audit or is honestly marked unknown.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/b1-researchers-ai-loop.html" style="--diff:#34D399">
+        <span class="cicon">🔄</span>
+        <span class="cnum">Researcher 1 · easy</span>
+        <h3>The researcher's AI loop</h3>
+        <p>Question, gather, screen, extract, challenge, synthesise - and the audit that decides whether any of it holds. Start at a humbling 0 of 10 claims surviving.</p>
+        <span class="meta"><span class="pill amber">▶ Researchers start here</span></span>
+      </a>
+      <a class="course-card" href="courses/b2-question-and-claims.html" style="--diff:#34D399">
+        <span class="cicon">❓</span>
+        <span class="cnum">Researcher 2 · easy</span>
+        <h3>Decision, question, claims</h3>
+        <p>Work backwards from the decision to claims that could actually be false - the single change that makes everything downstream checkable.</p>
+        <span class="meta"><span class="pill light">Rung 1</span></span>
+      </a>
+      <a class="course-card" href="courses/b3-search-and-source-tiering.html" style="--diff:#FBBF24">
+        <span class="cicon">🗂️</span>
+        <span class="cnum">Researcher 3 · medium</span>
+        <h3>Search strategy and source tiers</h3>
+        <p>Search on purpose instead of accepting what ranked first: databases, query design, and a tier system your team can apply without arguing.</p>
+        <span class="meta"><span class="pill light">Rung 2</span></span>
+      </a>
+      <a class="course-card" href="courses/b4-screening-at-scale.html" style="--diff:#FBBF24">
+        <span class="cicon">🧹</span>
+        <span class="cnum">Researcher 4 · medium</span>
+        <h3>Screening at scale</h3>
+        <p>Inclusion rules written before you look, dedupe, retraction checks, and AI-assisted triage that stays auditable - plus why more sources can make you worse.</p>
+        <span class="meta"><span class="pill light">The anti-lever explained</span></span>
+      </a>
+      <a class="course-card" href="courses/b5-extraction-tables.html" style="--diff:#FB923C">
+        <span class="cicon">📋</span>
+        <span class="cnum">Researcher 5 · hands-on</span>
+        <h3>Extraction tables</h3>
+        <p>One row per source: sample, measure, number, page, funder. The unglamorous artifact that makes a synthesis reproducible - built with AI, checked by you.</p>
+        <span class="meta"><span class="pill light">Rung 3</span></span>
+      </a>
+      <a class="course-card" href="courses/b6-evidence-lab.html" style="--diff:#FB923C">
+        <span class="cicon">🔬</span>
+        <span class="cnum">Researcher 6 · the heart</span>
+        <h3>The evidence lab</h3>
+        <p>The signature session: run the hostile-reviewer audit on all ten claims, read every failure rule, and learn which failures are fatal and which are just a qualifier away.</p>
+        <span class="meta"><span class="pill light">▶ Audit it live</span></span>
+      </a>
+      <a class="course-card" href="courses/b7-contradictions-and-stats.html" style="--diff:#FB923C">
+        <span class="cicon">🧮</span>
+        <span class="cnum">Researcher 7 · hands-on</span>
+        <h3>Contradictions and statistics</h3>
+        <p>Go looking for the source that disagrees, then read numbers properly: effect size versus significance, intervals, publication bias, and what replication really tells you.</p>
+        <span class="meta"><span class="pill light">Rungs 4 and 5</span></span>
+      </a>
+      <a class="course-card" href="courses/b8-synthesis.html" style="--diff:#FB923C">
+        <span class="cicon">🪡</span>
+        <span class="cnum">Researcher 8 · hands-on</span>
+        <h3>Synthesis you can defend</h3>
+        <p>From extracted rows to a narrative with confidence language that matches the evidence - and disagreement kept visible instead of averaged away.</p>
+        <span class="meta"><span class="pill light">The hard writing</span></span>
+      </a>
+      <a class="course-card" href="courses/b9-qualitative-coding.html" style="--diff:#F87171">
+        <span class="cicon">🎙️</span>
+        <span class="cnum">Researcher 9 · hardest</span>
+        <h3>Interviews and coding at scale</h3>
+        <p>AI-assisted transcript coding without laundering your own assumptions: codebooks, agreement checks, saturation, and the quotes that must stay verbatim.</p>
+        <span class="meta"><span class="pill light">Qualitative rigour</span></span>
+      </a>
+      <a class="course-card" href="courses/b10-capstone-memo.html" style="--diff:#F87171">
+        <span class="cicon">🏆</span>
+        <span class="cnum">Researcher 10 · hardest</span>
+        <h3>Capstone: the research memo</h3>
+        <p>Assemble the whole thing - question, tiers, screening log, extraction table, contradictions, replication - into a memo with an audit trail, and pass the audit.</p>
+        <span class="meta"><span class="pill light">Ship it at 9/10 + one honest unknown</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>easy - everyone</span>
+      <span><i style="background:#FBBF24"></i>medium</span>
+      <span><i style="background:#FB923C"></i>hands-on / deciding</span>
+      <span><i style="background:#F87171"></i>hardest</span>
+    </div>
+
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Two doors into the same conviction: speed is only worth having if the conclusion survives someone reading it closely.</p>
+      <div class="path"><b>🤝 Leader (set the standard)</b>
+        <a class="pstep" href="courses/a1-what-ai-changes.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a2-evidence-quality.html">a2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a3-where-ai-fails.html">a3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a4-governance-and-consent.html">a4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a5-the-research-stack.html">a5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a6-deciding-on-evidence.html">a6</a>
+      </div>
+      <div class="path"><b>🔬 Researcher (run the pipeline)</b>
+        <a class="pstep" href="courses/b1-researchers-ai-loop.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-question-and-claims.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b3-search-and-source-tiering.html">b3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b4-screening-at-scale.html">b4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b5-extraction-tables.html">b5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b6-evidence-lab.html">b6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b7-contradictions-and-stats.html">b7</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b8-synthesis.html">b8</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b9-qualitative-coding.html">b9</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b10-capstone-memo.html">b10</a>
+      </div>
+      <div class="path"><b>📊 Market / UX researcher (fast lane)</b>
+        <a class="pstep" href="courses/b1-researchers-ai-loop.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-question-and-claims.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b6-evidence-lab.html">b6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b9-qualitative-coding.html">b9</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b10-capstone-memo.html">b10</a>
+      </div>
+      <div class="path"><b>🚀 Full journey (lead AND research)</b>
+        <a class="pstep" href="courses/a1-what-ai-changes.html">a1-a6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-researchers-ai-loop.html">b1-b10</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">Both tracks at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-ai-research-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a> · taught from the PRISMA 2020 statement, Cochrane risk-of-bias tools, the GRADE approach, the published replication literature, ICMJE and COPE authorship policies, funder and publisher guidance on AI in peer review, data-protection research provisions, and the vendors' own documentation for the AI research stack</span>
+  </footer>
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "Learn\nAI Research",
+  centerColor: "#0B1428",
+  sessions: [
+    { label: "What AI\nchanges", href: "courses/a1-what-ai-changes.html", color: "#34D399",
+      concepts: [
+        { label: "Which stages compress", href: "courses/a1-what-ai-changes.html" },
+        { label: "Fast is not defensible", href: "courses/a1-what-ai-changes.html" } ] },
+    { label: "Evidence\nstandard", href: "courses/a2-evidence-quality.html", color: "#34D399",
+      concepts: [
+        { label: "Source tiers", href: "courses/a2-evidence-quality.html" },
+        { label: "Certainty levels", href: "courses/a2-evidence-quality.html" } ] },
+    { label: "Where AI\nfails", href: "courses/a3-where-ai-fails.html", color: "#FBBF24",
+      concepts: [
+        { label: "Corpus gaps", href: "courses/a3-where-ai-fails.html" },
+        { label: "Agreeable answers", href: "courses/a3-where-ai-fails.html" } ] },
+    { label: "Consent &\ngovernance", href: "courses/a4-governance-and-consent.html", color: "#FBBF24",
+      concepts: [
+        { label: "Participant data", href: "courses/a4-governance-and-consent.html" },
+        { label: "Peer-review confidentiality", href: "courses/a4-governance-and-consent.html" } ] },
+    { label: "The research\nstack", href: "courses/a5-the-research-stack.html", color: "#FB923C",
+      concepts: [
+        { label: "Layer by layer", href: "courses/a5-the-research-stack.html" },
+        { label: "What to insist on", href: "courses/a5-the-research-stack.html" } ] },
+    { label: "Deciding on\nfast evidence", href: "courses/a6-deciding-on-evidence.html", color: "#FB923C",
+      concepts: [
+        { label: "Confidence language", href: "courses/a6-deciding-on-evidence.html" },
+        { label: "Audit trail", href: "courses/a6-deciding-on-evidence.html" } ] },
+    { label: "Researcher's\nAI loop", href: "courses/b1-researchers-ai-loop.html", color: "#34D399",
+      concepts: [
+        { label: "Question → audit", href: "courses/b1-researchers-ai-loop.html" },
+        { label: "Five levers", href: "courses/b1-researchers-ai-loop.html" },
+        { label: "The 0 → 9 climb", href: "courses/b1-researchers-ai-loop.html" } ] },
+    { label: "Question &\nclaims", href: "courses/b2-question-and-claims.html", color: "#34D399",
+      concepts: [
+        { label: "Falsifiable claims", href: "courses/b2-question-and-claims.html" },
+        { label: "Decision-backwards", href: "courses/b2-question-and-claims.html" } ] },
+    { label: "Search &\ntiering", href: "courses/b3-search-and-source-tiering.html", color: "#FBBF24",
+      concepts: [
+        { label: "Query design", href: "courses/b3-search-and-source-tiering.html" },
+        { label: "The tier table", href: "courses/b3-search-and-source-tiering.html" } ] },
+    { label: "Screening\nat scale", href: "courses/b4-screening-at-scale.html", color: "#FBBF24",
+      concepts: [
+        { label: "Rules before looking", href: "courses/b4-screening-at-scale.html" },
+        { label: "Retraction checks", href: "courses/b4-screening-at-scale.html" } ] },
+    { label: "Extraction\ntables", href: "courses/b5-extraction-tables.html", color: "#FB923C",
+      concepts: [
+        { label: "One row per source", href: "courses/b5-extraction-tables.html" },
+        { label: "Numbers with a page", href: "courses/b5-extraction-tables.html" } ] },
+    { label: "Evidence\nlab", href: "courses/b6-evidence-lab.html", color: "#FB923C",
+      concepts: [
+        { label: "The audit rules", href: "courses/b6-evidence-lab.html" },
+        { label: "Fatal vs qualifiable", href: "courses/b6-evidence-lab.html" },
+        { label: "The 40-source trap", href: "courses/b6-evidence-lab.html" } ] },
+    { label: "Contradictions\n& stats", href: "courses/b7-contradictions-and-stats.html", color: "#FB923C",
+      concepts: [
+        { label: "Effect size vs p", href: "courses/b7-contradictions-and-stats.html" },
+        { label: "Publication bias", href: "courses/b7-contradictions-and-stats.html" } ] },
+    { label: "Synthesis", href: "courses/b8-synthesis.html", color: "#FB923C",
+      concepts: [
+        { label: "Confidence language", href: "courses/b8-synthesis.html" },
+        { label: "Keep disagreement visible", href: "courses/b8-synthesis.html" } ] },
+    { label: "Qualitative\ncoding", href: "courses/b9-qualitative-coding.html", color: "#F87171",
+      concepts: [
+        { label: "Codebook + agreement", href: "courses/b9-qualitative-coding.html" },
+        { label: "Verbatim discipline", href: "courses/b9-qualitative-coding.html" } ] },
+    { label: "Capstone\nmemo", href: "courses/b10-capstone-memo.html", color: "#F87171",
+      concepts: [
+        { label: "Audit trail", href: "courses/b10-capstone-memo.html" },
+        { label: "One honest unknown", href: "courses/b10-capstone-memo.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=2"></script>
+</body>
+</html>
